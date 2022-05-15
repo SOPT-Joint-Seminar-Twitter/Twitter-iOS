@@ -88,5 +88,5 @@ Resolve #이슈번호
 
 ### 🌀 Code Covention
 
-[StyleShare/swift-style-guide](https://github.com/StyleShare/swift-style-guide) 를 따른다.
+[StyleShare/swift-style-guide](https://github.com/StyleShare/swift-style-guide) 를 기본으로 따르고 필요에 따라 추가한다.
 
