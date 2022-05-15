@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */; };
 		4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */; };
-		4D32E1E6283108CC00A3DD31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E5283108CC00A3DD31 /* ViewController.swift */; };
 		4D32E1E9283108CC00A3DD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E1E7283108CC00A3DD31 /* Main.storyboard */; };
 		4D32E1EB283108CF00A3DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E1EA283108CF00A3DD31 /* Assets.xcassets */; };
 		4D32E1EE283108CF00A3DD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E1EC283108CF00A3DD31 /* LaunchScreen.storyboard */; };
+		4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E222283118CF00A3DD31 /* SuYeonWritingViewController.swift */; };
+		4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */; };
+		4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */; };
+		4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2282831192100A3DD31 /* SuYeonProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D32E1E5283108CC00A3DD31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D32E1E8283108CC00A3DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D32E1EA283108CF00A3DD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D32E1ED283108CF00A3DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D32E1EF283108CF00A3DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D32E222283118CF00A3DD31 /* SuYeonWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuYeonWritingViewController.swift; sourceTree = "<group>"; };
+		4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinJaeProfileViewController.swift; sourceTree = "<group>"; };
+		4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuJinProfileViewController.swift; sourceTree = "<group>"; };
+		4D32E2282831192100A3DD31 /* SuYeonProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuYeonProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,362 @@
 		4D32E1E0283108CC00A3DD31 /* Twitter-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */,
-				4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */,
-				4D32E1E5283108CC00A3DD31 /* ViewController.swift */,
-				4D32E1E7283108CC00A3DD31 /* Main.storyboard */,
-				4D32E1EA283108CF00A3DD31 /* Assets.xcassets */,
-				4D32E1EC283108CF00A3DD31 /* LaunchScreen.storyboard */,
-				4D32E1EF283108CF00A3DD31 /* Info.plist */,
+				4D32E1F52831121800A3DD31 /* Global */,
+				4D32E1F62831123000A3DD31 /* Screens */,
 			);
 			path = "Twitter-iOS";
+			sourceTree = "<group>";
+		};
+		4D32E1F52831121800A3DD31 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E1FA2831143300A3DD31 /* Literal */,
+				4D32E1FC2831144A00A3DD31 /* Base */,
+				4D32E1FD2831146000A3DD31 /* Protocol */,
+				4D32E1FE2831148400A3DD31 /* Utils */,
+				4D32E1FF2831148C00A3DD31 /* Extension */,
+				4D32E2002831149300A3DD31 /* Resource */,
+				4D32E2012831149B00A3DD31 /* UIComponent */,
+				4D32E202283114A100A3DD31 /* Supports */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		4D32E1F62831123000A3DD31 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E1F72831124500A3DD31 /* Tabbar */,
+				4D32E1F9283113EB00A3DD31 /* Profile */,
+				4D32E1F82831128B00A3DD31 /* Writing */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4D32E1F72831124500A3DD31 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		4D32E1F82831128B00A3DD31 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E2052831153600A3DD31 /* Suyeon */,
+				4D32E2062831153C00A3DD31 /* Minjae */,
+				4D32E2072831155200A3DD31 /* Yujin */,
+			);
+			path = Writing;
+			sourceTree = "<group>";
+		};
+		4D32E1F9283113EB00A3DD31 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E2082831156500A3DD31 /* Suyeon */,
+				4D32E203283114D000A3DD31 /* Minjae */,
+				4D32E2042831151C00A3DD31 /* Yujin */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4D32E1FA2831143300A3DD31 /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		4D32E1FC2831144A00A3DD31 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4D32E1FD2831146000A3DD31 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4D32E1FE2831148400A3DD31 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4D32E1FF2831148C00A3DD31 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4D32E2002831149300A3DD31 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E1EA283108CF00A3DD31 /* Assets.xcassets */,
+				4D32E1EC283108CF00A3DD31 /* LaunchScreen.storyboard */,
+				4D32E1E7283108CC00A3DD31 /* Main.storyboard */,
+				4D32E221283117E700A3DD31 /* Font */,
+				4D32E220283117DB00A3DD31 /* Lottie */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4D32E2012831149B00A3DD31 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		4D32E202283114A100A3DD31 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */,
+				4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */,
+				4D32E1EF283108CF00A3DD31 /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		4D32E203283114D000A3DD31 /* Minjae */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E20B2831161200A3DD31 /* ViewController */,
+				4D32E2122831169A00A3DD31 /* StoryBoard */,
+				4D32E2112831167900A3DD31 /* Xib */,
+				4D32E20C2831161D00A3DD31 /* Cell */,
+			);
+			path = Minjae;
+			sourceTree = "<group>";
+		};
+		4D32E2042831151C00A3DD31 /* Yujin */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E20D2831162300A3DD31 /* ViewController */,
+				4D32E20F2831163100A3DD31 /* StoryBoard */,
+				4D32E2102831164D00A3DD31 /* Xib */,
+				4D32E20E2831162D00A3DD31 /* Cell */,
+			);
+			path = Yujin;
+			sourceTree = "<group>";
+		};
+		4D32E2052831153600A3DD31 /* Suyeon */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E214283116F300A3DD31 /* ViewController */,
+				4D32E2162831170200A3DD31 /* Component */,
+				4D32E215283116FC00A3DD31 /* Cell */,
+			);
+			path = Suyeon;
+			sourceTree = "<group>";
+		};
+		4D32E2062831153C00A3DD31 /* Minjae */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E21B2831174900A3DD31 /* ViewController */,
+				4D32E21A2831174100A3DD31 /* StoryBoard */,
+				4D32E2192831173E00A3DD31 /* Xib */,
+				4D32E2182831173900A3DD31 /* Cell */,
+			);
+			path = Minjae;
+			sourceTree = "<group>";
+		};
+		4D32E2072831155200A3DD31 /* Yujin */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E21F2831176200A3DD31 /* ViewController */,
+				4D32E21E2831175800A3DD31 /* StoryBoard */,
+				4D32E21D2831175300A3DD31 /* Xib */,
+				4D32E21C2831175100A3DD31 /* Cell */,
+			);
+			path = Yujin;
+			sourceTree = "<group>";
+		};
+		4D32E2082831156500A3DD31 /* Suyeon */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E209283115F000A3DD31 /* ViewController */,
+				4D32E2172831171C00A3DD31 /* Component */,
+				4D32E20A283115FC00A3DD31 /* Cell */,
+			);
+			path = Suyeon;
+			sourceTree = "<group>";
+		};
+		4D32E209283115F000A3DD31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E2282831192100A3DD31 /* SuYeonProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4D32E20A283115FC00A3DD31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D32E20B2831161200A3DD31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4D32E20C2831161D00A3DD31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D32E20D2831162300A3DD31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4D32E20E2831162D00A3DD31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D32E20F2831163100A3DD31 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		4D32E2102831164D00A3DD31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		4D32E2112831167900A3DD31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		4D32E2122831169A00A3DD31 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		4D32E214283116F300A3DD31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D32E222283118CF00A3DD31 /* SuYeonWritingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4D32E215283116FC00A3DD31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D32E2162831170200A3DD31 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		4D32E2172831171C00A3DD31 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		4D32E2182831173900A3DD31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D32E2192831173E00A3DD31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		4D32E21A2831174100A3DD31 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		4D32E21B2831174900A3DD31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4D32E21C2831175100A3DD31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4D32E21D2831175300A3DD31 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		4D32E21E2831175800A3DD31 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		4D32E21F2831176200A3DD31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4D32E220283117DB00A3DD31 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		4D32E221283117E700A3DD31 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D32E1E6283108CC00A3DD31 /* ViewController.swift in Sources */,
+				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
+				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
+				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,
 				4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */,
+				4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +645,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2NP7U5487;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Twitter-iOS/Info.plist";
+				INFOPLIST_FILE = "Twitter-iOS/Global/Supports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +673,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2NP7U5487;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Twitter-iOS/Info.plist";
+				INFOPLIST_FILE = "Twitter-iOS/Global/Supports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
