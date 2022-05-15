@@ -20,6 +20,9 @@
 
 ### 🗂 Foldering
 
+<img width="263" alt="image" src="https://user-images.githubusercontent.com/81313960/168471339-9bdf7902-3568-4e3b-90d0-8a1097599d11.png">
+
+
 
 ### 🔀 Git Branch
 
