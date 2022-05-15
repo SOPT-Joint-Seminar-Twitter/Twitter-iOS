@@ -16,6 +16,8 @@
 		4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */; };
 		4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */; };
 		4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2282831192100A3DD31 /* SuYeonProfileViewController.swift */; };
+		4D32E22C28311B8F00A3DD31 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D32E22B28311B8F00A3DD31 /* Alamofire */; };
+		4D32E22F28311BC400A3DD31 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D32E22E28311BC400A3DD31 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D32E22C28311B8F00A3DD31 /* Alamofire in Frameworks */,
+				4D32E22F28311BC400A3DD31 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +440,10 @@
 			dependencies = (
 			);
 			name = "Twitter-iOS";
+			packageProductDependencies = (
+				4D32E22B28311B8F00A3DD31 /* Alamofire */,
+				4D32E22E28311BC400A3DD31 /* SnapKit */,
+			);
 			productName = "Twitter-iOS";
 			productReference = 4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -464,6 +472,10 @@
 				Base,
 			);
 			mainGroup = 4D32E1D5283108CC00A3DD31;
+			packageReferences = (
+				4D32E22A28311B8F00A3DD31 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4D32E22D28311BC400A3DD31 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4D32E1DF283108CC00A3DD31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -714,6 +726,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D32E22A28311B8F00A3DD31 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		4D32E22D28311BC400A3DD31 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D32E22B28311B8F00A3DD31 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D32E22A28311B8F00A3DD31 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		4D32E22E28311BC400A3DD31 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D32E22D28311BC400A3DD31 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D32E1D6283108CC00A3DD31 /* Project object */;
 }
