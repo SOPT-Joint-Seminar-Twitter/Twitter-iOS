@@ -29,6 +29,15 @@
 		4D32E24128327B6D00A3DD31 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E24028327B6D00A3DD31 /* UIColor+Extension.swift */; };
 		4D32E24328327D3600A3DD31 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E24228327D3600A3DD31 /* Colors.xcassets */; };
 		4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2442832832600A3DD31 /* ImageLiteral.swift */; };
+		4D32E247283284DD00A3DD31 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E246283284DD00A3DD31 /* UIView+Extension.swift */; };
+		4D32E2492832852A00A3DD31 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2482832852A00A3DD31 /* UILabel+Extension.swift */; };
+		4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E24A2832853C00A3DD31 /* UIButton+Extension.swift */; };
+		4D32E24D2832855100A3DD31 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E24C2832855000A3DD31 /* UIViewController+Extension.swift */; };
+		4D32E24F283285B700A3DD31 /* Adjusted+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E24E283285B700A3DD31 /* Adjusted+Extension.swift */; };
+		4D32E251283287D100A3DD31 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E250283287D100A3DD31 /* UITextField+Extension.swift */; };
+		4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25828328A2800A3DD31 /* NSObject+Extension.swift */; };
+		4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */; };
+		4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +63,15 @@
 		4D32E24028327B6D00A3DD31 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4D32E24228327D3600A3DD31 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4D32E2442832832600A3DD31 /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
+		4D32E246283284DD00A3DD31 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4D32E2482832852A00A3DD31 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		4D32E24A2832853C00A3DD31 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		4D32E24C2832855000A3DD31 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4D32E24E283285B700A3DD31 /* Adjusted+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+Extension.swift"; sourceTree = "<group>"; };
+		4D32E250283287D100A3DD31 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		4D32E25828328A2800A3DD31 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +198,15 @@
 			children = (
 				4D32E23E2832771800A3DD31 /* UIFont+Extension.swift */,
 				4D32E24028327B6D00A3DD31 /* UIColor+Extension.swift */,
+				4D32E246283284DD00A3DD31 /* UIView+Extension.swift */,
+				4D32E250283287D100A3DD31 /* UITextField+Extension.swift */,
+				4D32E2482832852A00A3DD31 /* UILabel+Extension.swift */,
+				4D32E24A2832853C00A3DD31 /* UIButton+Extension.swift */,
+				4D32E24C2832855000A3DD31 /* UIViewController+Extension.swift */,
+				4D32E24E283285B700A3DD31 /* Adjusted+Extension.swift */,
+				4D32E25828328A2800A3DD31 /* NSObject+Extension.swift */,
+				4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */,
+				4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -544,14 +571,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */,
+				4D32E251283287D100A3DD31 /* UITextField+Extension.swift in Sources */,
+				4D32E2492832852A00A3DD31 /* UILabel+Extension.swift in Sources */,
+				4D32E24D2832855100A3DD31 /* UIViewController+Extension.swift in Sources */,
+				4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */,
 				4D32E23F2832771800A3DD31 /* UIFont+Extension.swift in Sources */,
+				4D32E24F283285B700A3DD31 /* Adjusted+Extension.swift in Sources */,
+				4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */,
 				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
+				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,
 				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
 				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,
 				4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */,
 				4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */,
+				4D32E247283284DD00A3DD31 /* UIView+Extension.swift in Sources */,
 				4D32E24128327B6D00A3DD31 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
