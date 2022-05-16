@@ -28,6 +28,7 @@
 		4D32E23F2832771800A3DD31 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E23E2832771800A3DD31 /* UIFont+Extension.swift */; };
 		4D32E24128327B6D00A3DD31 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E24028327B6D00A3DD31 /* UIColor+Extension.swift */; };
 		4D32E24328327D3600A3DD31 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E24228327D3600A3DD31 /* Colors.xcassets */; };
+		4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2442832832600A3DD31 /* ImageLiteral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4D32E23E2832771800A3DD31 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		4D32E24028327B6D00A3DD31 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4D32E24228327D3600A3DD31 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4D32E2442832832600A3DD31 /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		4D32E1FA2831143300A3DD31 /* Literal */ = {
 			isa = PBXGroup;
 			children = (
+				4D32E2442832832600A3DD31 /* ImageLiteral.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
+				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
 				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,
 				4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */,
 				4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */,
