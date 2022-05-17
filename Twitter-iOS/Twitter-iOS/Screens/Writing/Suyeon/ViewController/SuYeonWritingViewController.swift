@@ -11,6 +11,14 @@ import SnapKit
 
 class SuYeonWritingViewController: UIViewController {
 
+    private let placeHolder: UILabel = {
+        let label = UILabel()
+        label.text = "무슨 일이 일어나고 있나요?"
+        label.font = .font(.robotoRegular, ofSize: 18)
+        label.textColor = .twitter_gray50
+        return label
+    }()
+
     private lazy var cancleButton: UIButton = {
         var configuration = UIButton.Configuration.plain()
 
@@ -75,6 +83,8 @@ class SuYeonWritingViewController: UIViewController {
     private func render() {
         view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView])
 
+        twitTextView.addSubView(placeHolder)
+
         cancleButton.snp.makeConstraints {
             $0.top.equalToSuperview().inset(59)
             $0.leading.equalToSuperview().inset(16)
@@ -84,6 +94,11 @@ class SuYeonWritingViewController: UIViewController {
             $0.top.equalTo(cancleButton.snp.bottom).offset(14)
             $0.leading.equalToSuperview().inset(16)
             $0.height.width.equalTo(34)
+        }
+
+        placeHolder.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(9)
+            $0.leading.equalToSuperview().inset(5)
         }
 
         twitTextView.snp.makeConstraints {
@@ -123,7 +138,7 @@ class SuYeonWritingViewController: UIViewController {
                 return
             }
         }
-        
+
         twitButton.configurationUpdateHandler = buttonStateHandler
 
     }
@@ -145,6 +160,7 @@ extension SuYeonWritingViewController: UITextViewDelegate {
 
     func textViewDidChange(_ textView: UITextView) {
         twitButton.isEnabled = twitTextView.hasText ? true : false
+        placeHolder.isHidden = twitTextView.text.isEmpty ? false : true
     }
 
     func textViewDidEndEditing(_ textView: UITextView) {
