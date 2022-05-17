@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C317E283362C1007A48A3 /* TabBar.storyboard */; };
-		1A4C3182283362D7007A48A3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Home.storyboard */; };
-		1A4C3184283362DF007A48A3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Search.storyboard */; };
-		1A4C3186283362E7007A48A3 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3185283362E7007A48A3 /* Message.storyboard */; };
+		1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Minjae.storyboard */; };
+		1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Suyeon.storyboard */; };
+		1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3185283362E7007A48A3 /* Yujin.storyboard */; };
 		1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3187283362FF007A48A3 /* Alarm.storyboard */; };
 		4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */; };
 		4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */; };
@@ -47,9 +47,9 @@
 
 /* Begin PBXFileReference section */
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		1A4C3181283362D7007A48A3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		1A4C3183283362DF007A48A3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		1A4C3185283362E7007A48A3 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		1A4C3181283362D7007A48A3 /* Minjae.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Minjae.storyboard; sourceTree = "<group>"; };
+		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suyeon.storyboard; sourceTree = "<group>"; };
+		1A4C3185283362E7007A48A3 /* Yujin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yujin.storyboard; sourceTree = "<group>"; };
 		1A4C3187283362FF007A48A3 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
 		4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,9 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				1A4C317E283362C1007A48A3 /* TabBar.storyboard */,
-				1A4C3181283362D7007A48A3 /* Home.storyboard */,
-				1A4C3183283362DF007A48A3 /* Search.storyboard */,
-				1A4C3185283362E7007A48A3 /* Message.storyboard */,
 				1A4C3187283362FF007A48A3 /* Alarm.storyboard */,
 			);
 			path = TabBar;
@@ -313,6 +310,7 @@
 		4D32E2082831156500A3DD31 /* Suyeon */ = {
 			isa = PBXGroup;
 			children = (
+				1A4C3183283362DF007A48A3 /* Suyeon.storyboard */,
 				4D32E209283115F000A3DD31 /* ViewController */,
 				4D32E2172831171C00A3DD31 /* Component */,
 				4D32E20A283115FC00A3DD31 /* Cell */,
@@ -368,6 +366,7 @@
 		4D32E20F2831163100A3DD31 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				1A4C3185283362E7007A48A3 /* Yujin.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -389,6 +388,7 @@
 		4D32E2122831169A00A3DD31 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				1A4C3181283362D7007A48A3 /* Minjae.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -567,13 +567,13 @@
 			files = (
 				4D32E2372832762100A3DD31 /* Roboto-Regular.ttf in Resources */,
 				4D32E2322832761600A3DD31 /* Helvetica Bold.ttf in Resources */,
-				1A4C3182283362D7007A48A3 /* Home.storyboard in Resources */,
+				1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */,
 				4D32E1EE283108CF00A3DD31 /* LaunchScreen.storyboard in Resources */,
 				1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */,
-				1A4C3184283362DF007A48A3 /* Search.storyboard in Resources */,
+				1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */,
 				4D32E2382832762100A3DD31 /* Roboto-Medium.ttf in Resources */,
 				1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */,
-				1A4C3186283362E7007A48A3 /* Message.storyboard in Resources */,
+				1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */,
 				4D32E1EB283108CF00A3DD31 /* Assets.xcassets in Resources */,
 				4D32E24328327D3600A3DD31 /* Colors.xcassets in Resources */,
 				4D32E23C2832762700A3DD31 /* Roboto-Bold.ttf in Resources */,
