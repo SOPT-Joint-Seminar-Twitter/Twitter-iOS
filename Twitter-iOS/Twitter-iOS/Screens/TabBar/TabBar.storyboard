@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Message-->
+        <!--Alarm-->
         <scene sceneID="BKf-cf-Ffz">
             <objects>
-                <viewControllerPlaceholder storyboardName="Message" id="6mj-rk-k6b" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Alarm" id="6mj-rk-k6b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PhR-iE-3MF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP0-oK-1GG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -23,6 +23,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="czs-VK-5oW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UZB-he-WTK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="twitter_black"/>
                         <color key="barTintColor" name="twitter_white"/>
@@ -49,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-440" y="518"/>
         </scene>
-        <!--Alarm-->
+        <!--Message-->
         <scene sceneID="31e-fq-zpv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Alarm" id="Bx2-rM-7Kf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Message" id="Bx2-rM-7Kf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UHA-mm-uuR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE4-FR-0uP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
