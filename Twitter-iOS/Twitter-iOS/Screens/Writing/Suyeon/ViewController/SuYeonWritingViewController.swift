@@ -74,6 +74,7 @@ class SuYeonWritingViewController: UIViewController {
         render()
         setDelegation()
         setButtonState()
+        setKeyboard()
     }
 
     private func configUI() {
@@ -146,6 +147,10 @@ class SuYeonWritingViewController: UIViewController {
     @objc
     private func twitButtonDidTap(_ button: UIButton) {
         // 피드 화면으로 돌아가기 + 데이터 전달 ! -> dismiss 하면 될거같음 !!
+    }
+
+    private func setKeyboard() {
+        twitTextView.becomeFirstResponder()
     }
 }
 
