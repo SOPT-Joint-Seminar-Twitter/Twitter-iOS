@@ -40,30 +40,30 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
-        <!--Home-->
+        <!--Minjae-->
         <scene sceneID="tqC-yV-FpA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="nWo-K7-TCJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Minjae" id="nWo-K7-TCJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UNl-aB-aAt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ma-JN-n80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-440" y="518"/>
         </scene>
-        <!--Message-->
+        <!--Yujin-->
         <scene sceneID="31e-fq-zpv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Message" id="Bx2-rM-7Kf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Yujin" id="Bx2-rM-7Kf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UHA-mm-uuR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE4-FR-0uP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="201" y="518"/>
         </scene>
-        <!--Search-->
+        <!--Suyeon-->
         <scene sceneID="aIb-Ao-9B3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="ghD-Mg-MB2" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Suyeon" id="ghD-Mg-MB2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wnu-YE-y0r"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dug-iz-JVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
