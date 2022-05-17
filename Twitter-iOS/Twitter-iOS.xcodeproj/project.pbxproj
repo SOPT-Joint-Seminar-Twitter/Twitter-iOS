@@ -48,7 +48,7 @@
 /* Begin PBXFileReference section */
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		1A4C3181283362D7007A48A3 /* Minjae.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Minjae.storyboard; sourceTree = "<group>"; };
-		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suyeon.storyboard; sourceTree = "<group>"; };
+		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Suyeon.storyboard; path = ../Suyeon.storyboard; sourceTree = "<group>"; };
 		1A4C3185283362E7007A48A3 /* Yujin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yujin.storyboard; sourceTree = "<group>"; };
 		1A4C3187283362FF007A48A3 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
 		4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,8 +310,8 @@
 		4D32E2082831156500A3DD31 /* Suyeon */ = {
 			isa = PBXGroup;
 			children = (
-				1A4C3183283362DF007A48A3 /* Suyeon.storyboard */,
 				4D32E209283115F000A3DD31 /* ViewController */,
+				4D32E27F2833BDF500A3DD31 /* Storyboard */,
 				4D32E2172831171C00A3DD31 /* Component */,
 				4D32E20A283115FC00A3DD31 /* Cell */,
 			);
@@ -497,6 +497,14 @@
 				4D32E2312832761600A3DD31 /* Helvetica Light.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		4D32E27F2833BDF500A3DD31 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1A4C3183283362DF007A48A3 /* Suyeon.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

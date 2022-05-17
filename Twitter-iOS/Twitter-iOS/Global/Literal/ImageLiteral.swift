@@ -13,6 +13,24 @@ enum ImageLiteral {
         static var iconHome: UIImage { .load(named: "iconHome")}
     }
 
+    struct Writing {
+        static var iconCamera: UIImage { .load(named: "iconCamera")}
+        static var iconChart: UIImage { .load(named: "iconChart")}
+        static var iconCircle: UIImage { .load(named: "iconCircle")}
+        static var iconEarth: UIImage { .load(named: "iconEarth")}
+        static var iconGif: UIImage { .load(named: "iconGif")}
+        static var iconImage: UIImage { .load(named: "iconImage")}
+        static var iconLocation: UIImage { .load(named: "iconLocation")}
+        static var iconPlus: UIImage { .load(named: "iconPlus")}
+        static var iconSound: UIImage { .load(named: "iconSound")}
+
+        static var imgProfile1: UIImage { .load(named: "imgProfile1")}
+        static var imgProfile2: UIImage { .load(named: "imgProfile2")}
+        static var imgProfile3: UIImage { .load(named: "imgProfile3")}
+        static var imgProfile4: UIImage { .load(named: "imgProfile4")}
+        static var imgProfile5: UIImage { .load(named: "imgProfile5")}
+        static var imgProfile6: UIImage { .load(named: "imgProfile6")}
+    }
 }
 
 
