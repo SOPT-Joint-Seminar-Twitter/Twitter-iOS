@@ -32,7 +32,6 @@ class SuYeonWritingViewController: UIViewController {
 
         configuration.attributedTitle = AttributedString("트윗", attributes: container)
 
-        configuration.baseForegroundColor = UIColor.twitter_blue4
         configuration.background.cornerRadius = 40
         configuration.background.backgroundColor = .twitter_blue3
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)
@@ -56,6 +55,7 @@ class SuYeonWritingViewController: UIViewController {
         textView.text = "무슨 일이 일어나고 있나요?"
         textView.textColor = .twitter_gray50
         textView.tintColor = .twitter_blue1
+        textView.backgroundColor = .twitter_black
         textView.font = .font(.robotoRegular, ofSize: 18)
         return textView
     }()
@@ -105,18 +105,25 @@ class SuYeonWritingViewController: UIViewController {
 
     private func setButtonState() {
         let buttonStateHandler: UIButton.ConfigurationUpdateHandler = { button in
+            var container = AttributeContainer()
+
             switch button.state {
             case .normal:
-                button.configuration?.baseForegroundColor = UIColor.twitter_white
+                container.font = .font(.robotoBold, ofSize: 12)
+                container.foregroundColor = UIColor.twitter_white
+                button.configuration?.attributedTitle = AttributedString("트윗", attributes: container)
                 button.configuration?.background.backgroundColor = .twitter_blue1
             case .disabled:
-                button.configuration?.baseForegroundColor = UIColor.twitter_blue4
+                container.font = .font(.robotoBold, ofSize: 12)
+                container.foregroundColor = UIColor.twitter_blue4
+
+                button.configuration?.attributedTitle = AttributedString("트윗", attributes: container)
                 button.configuration?.background.backgroundColor = .twitter_blue3
             default:
                 return
             }
         }
-
+        
         twitButton.configurationUpdateHandler = buttonStateHandler
 
     }
@@ -128,7 +135,22 @@ class SuYeonWritingViewController: UIViewController {
 }
 
 extension SuYeonWritingViewController: UITextViewDelegate {
-    func textViewDidChangeSelection(_ textView: UITextView) {
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if twitTextView.textColor == .twitter_gray50 {
+            twitTextView.text = nil
+            twitTextView.textColor = .twitter_white
+        }
+    }
+
+    func textViewDidChange(_ textView: UITextView) {
         twitButton.isEnabled = twitTextView.hasText ? true : false
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if twitTextView.text.isEmpty {
+            twitTextView.text = "무슨 일이 일어나고 있나요?"
+            twitTextView.textColor = .twitter_gray50
+        }
     }
 }
