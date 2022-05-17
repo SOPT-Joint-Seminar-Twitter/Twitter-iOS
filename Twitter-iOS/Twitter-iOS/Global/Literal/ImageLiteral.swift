@@ -24,6 +24,7 @@ enum ImageLiteral {
         static var iconPlus: UIImage { .load(named: "iconPlus")}
         static var iconSound: UIImage { .load(named: "iconSound")}
 
+        static var imgCircleProfile: UIImage { .load(named: "imgCircleProfile")}
         static var imgProfile1: UIImage { .load(named: "imgProfile1")}
         static var imgProfile2: UIImage { .load(named: "imgProfile2")}
         static var imgProfile3: UIImage { .load(named: "imgProfile3")}
