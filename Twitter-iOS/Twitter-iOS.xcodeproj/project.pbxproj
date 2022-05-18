@@ -43,6 +43,8 @@
 		4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25828328A2800A3DD31 /* NSObject+Extension.swift */; };
 		4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */; };
 		4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */; };
+		B5939ACA2834F95100A769BF /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5939AC82834F95100A769BF /* TweetTableViewCell.swift */; };
+		B5939ACB2834F95100A769BF /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5939AC92834F95100A769BF /* TweetTableViewCell.xib */; };
 		B5DEFE9F28349C7C00D64C5E /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFE9E28349C7C00D64C5E /* TweetViewController.swift */; };
 		B5DEFEA128349C9900D64C5E /* TweetAndReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA028349C9900D64C5E /* TweetAndReplyViewController.swift */; };
 		B5DEFEA328349CA700D64C5E /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA228349CA700D64C5E /* MediaViewController.swift */; };
@@ -87,6 +89,8 @@
 		4D32E25828328A2800A3DD31 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		B5939AC82834F95100A769BF /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetTableViewCell.swift; path = "Twitter-iOS/Screens/Profile/Minjae/StoryBoard/TweetTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		B5939AC92834F95100A769BF /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TweetTableViewCell.xib; path = "Twitter-iOS/Screens/Profile/Minjae/Xib/TweetTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		B5DEFE9E28349C7C00D64C5E /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		B5DEFEA028349C9900D64C5E /* TweetAndReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetAndReplyViewController.swift; sourceTree = "<group>"; };
 		B5DEFEA228349CA700D64C5E /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +362,7 @@
 		4D32E20C2831161D00A3DD31 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B5939AC82834F95100A769BF /* TweetTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 		4D32E2112831167900A3DD31 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				B5939AC92834F95100A769BF /* TweetTableViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */,
 				1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */,
 				4D32E2382832762100A3DD31 /* Roboto-Medium.ttf in Resources */,
+				B5939ACB2834F95100A769BF /* TweetTableViewCell.xib in Resources */,
 				1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */,
 				1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */,
 				B5DEFEA92834F1BE00D64C5E /* Tweet.storyboard in Resources */,
@@ -624,6 +631,7 @@
 				4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */,
 				4D32E23F2832771800A3DD31 /* UIFont+Extension.swift in Sources */,
 				4D32E24F283285B700A3DD31 /* Adjusted+Extension.swift in Sources */,
+				B5939ACA2834F95100A769BF /* TweetTableViewCell.swift in Sources */,
 				4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */,
 				4D32E225283118FA00A3DD31 /* ProfileViewController.swift in Sources */,
 				B5DEFEA128349C9900D64C5E /* TweetAndReplyViewController.swift in Sources */,
