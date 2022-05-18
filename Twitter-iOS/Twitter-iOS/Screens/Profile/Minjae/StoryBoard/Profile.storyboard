@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Twitter_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-u0-Uf9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezU-ww-ofi" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1270"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="eYQ-iE-iEF">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="zqA-F4-dL6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile5" translatesAutoresizingMaskIntoConstraints="NO" id="Isd-Lq-Jnk">
+                                                <rect key="frame" x="16" y="102" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="5iU-Zu-fpl"/>
+                                                    <constraint firstAttribute="width" secondItem="Isd-Lq-Jnk" secondAttribute="height" multiplier="1:1" id="SoK-0r-xp0"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-MI-Py4">
+                                                <rect key="frame" x="310.5" y="135.5" width="88.5" height="30.5"/>
+                                                <color key="tintColor" name="twitter_white"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="프로필 수정" cornerStyle="capsule">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="strokeColor" name="twitter_white"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-gX-49O" userLabel="ProfileInfoView">
+                                                <rect key="frame" x="16" y="179" width="398" height="116"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먀막" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIy-X9-Jy5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38.5" height="26"/>
+                                                        <color key="tintColor" name="twitter_white"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                        <color key="textColor" name="twitter_white"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0518" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qes-Kk-D23">
+                                                        <rect key="frame" x="0.0" y="30" width="82" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                        <color key="textColor" name="twitter_gray50"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yoa-Wg-7oz">
+                                                        <rect key="frame" x="0.0" y="79" width="125" height="14.5"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icondate" translatesAutoresizingMaskIntoConstraints="NO" id="AIQ-aV-7Wz">
+                                                                <rect key="frame" x="0.0" y="1.5" width="12" height="12"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="AIQ-aV-7Wz" secondAttribute="height" multiplier="1:1" id="KNA-7G-dxo"/>
+                                                                    <constraint firstAttribute="width" constant="12" id="Tyb-LF-dZQ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 11월에 가입함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXh-3O-ulT">
+                                                                <rect key="frame" x="16" y="0.0" width="109" height="14.5"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                <color key="textColor" name="twitter_gray50"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디자인/일상/인사이트/틈새기록/구독계" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKl-lj-5P8">
+                                                        <rect key="frame" x="0.0" y="54.5" width="217" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                        <color key="textColor" name="twitter_gray10"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="cnF-Do-ieE">
+                                                        <rect key="frame" x="0.0" y="101.5" width="104.5" height="14.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="192 팔로잉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-zD-fIc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="14.5"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                <color key="textColor" name="twitter_gray50"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 팔로워" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcB-5z-7yu">
+                                                                <rect key="frame" x="63.5" y="0.0" width="41" height="14.5"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                <color key="textColor" name="twitter_gray50"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="twitter_black"/>
+                                                <constraints>
+                                                    <constraint firstItem="qes-Kk-D23" firstAttribute="leading" secondItem="6Xx-gX-49O" secondAttribute="leading" id="013-Pw-kIi"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cnF-Do-ieE" secondAttribute="bottom" id="2q0-VL-oaY"/>
+                                                    <constraint firstItem="nKl-lj-5P8" firstAttribute="top" secondItem="qes-Kk-D23" secondAttribute="bottom" constant="8" id="Itp-MA-x7L"/>
+                                                    <constraint firstItem="yoa-Wg-7oz" firstAttribute="top" secondItem="nKl-lj-5P8" secondAttribute="bottom" constant="8" id="VQ1-MP-cd9"/>
+                                                    <constraint firstItem="cnF-Do-ieE" firstAttribute="top" secondItem="yoa-Wg-7oz" secondAttribute="bottom" constant="8" id="byJ-hC-779"/>
+                                                    <constraint firstItem="nKl-lj-5P8" firstAttribute="leading" secondItem="6Xx-gX-49O" secondAttribute="leading" id="c0o-XP-5mK"/>
+                                                    <constraint firstItem="yoa-Wg-7oz" firstAttribute="leading" secondItem="6Xx-gX-49O" secondAttribute="leading" id="etu-fz-pMk"/>
+                                                    <constraint firstItem="qes-Kk-D23" firstAttribute="top" secondItem="AIy-X9-Jy5" secondAttribute="bottom" constant="4" id="fDu-Ad-h5m"/>
+                                                    <constraint firstItem="AIy-X9-Jy5" firstAttribute="leading" secondItem="6Xx-gX-49O" secondAttribute="leading" id="gJh-3y-KlW"/>
+                                                    <constraint firstItem="AIy-X9-Jy5" firstAttribute="top" secondItem="6Xx-gX-49O" secondAttribute="top" id="pRi-So-zwC"/>
+                                                    <constraint firstItem="cnF-Do-ieE" firstAttribute="leading" secondItem="6Xx-gX-49O" secondAttribute="leading" id="zJU-Vt-tLR"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="yYZ-FX-eRo">
+                                                <rect key="frame" x="0.0" y="316" width="414" height="30.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-vm-mdD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="30.5"/>
+                                                        <color key="tintColor" name="twitter_white"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="트윗"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="트윗">
+                                                            <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-I6-FKY">
+                                                        <rect key="frame" x="66.5" y="0.0" width="126.5" height="30.5"/>
+                                                        <color key="tintColor" name="twitter_gray50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="트윗 및 답글">
+                                                            <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T51-8S-zu0">
+                                                        <rect key="frame" x="193" y="0.0" width="83" height="30.5"/>
+                                                        <color key="tintColor" name="twitter_gray50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="미디어">
+                                                            <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-yX-Fhw">
+                                                        <rect key="frame" x="276" y="0.0" width="138" height="30.5"/>
+                                                        <color key="tintColor" name="twitter_gray50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="마음에 들어요">
+                                                            <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="476-FD-nxs" userLabel="barBackgroundView">
+                                                <rect key="frame" x="0.0" y="346.5" width="414" height="3"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9V-pz-64A" userLabel="barView">
+                                                        <rect key="frame" x="16" y="0.0" width="56" height="3"/>
+                                                        <color key="backgroundColor" name="twitter_blue1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="6eM-1H-p4T"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" name="twitter_gray100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="u9V-pz-64A" secondAttribute="bottom" id="EZq-a5-bfK"/>
+                                                    <constraint firstItem="u9V-pz-64A" firstAttribute="leading" secondItem="476-FD-nxs" secondAttribute="leading" constant="16" id="nDF-nB-GsQ"/>
+                                                    <constraint firstAttribute="height" constant="3" id="qtG-vN-QvS"/>
+                                                    <constraint firstItem="u9V-pz-64A" firstAttribute="top" secondItem="476-FD-nxs" secondAttribute="top" id="vmr-c3-zVv"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV4-Eh-4fI">
+                                                <rect key="frame" x="16" y="53" width="31" height="31"/>
+                                                <color key="tintColor" name="twitter_white"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
+                                                    <imageReference key="image" image="arrow.left" catalog="system" symbolScale="medium"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWr-mg-xlA">
+                                                <rect key="frame" x="367" y="53" width="31" height="31"/>
+                                                <color key="tintColor" name="twitter_white"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
+                                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="medium"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-CO-bTe">
+                                                <rect key="frame" x="0.0" y="350" width="414" height="920"/>
+                                            </containerView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="twitter_black"/>
+                                        <constraints>
+                                            <constraint firstItem="Isd-Lq-Jnk" firstAttribute="leading" secondItem="ezU-ww-ofi" secondAttribute="leading" constant="16" id="2VF-ht-Tia"/>
+                                            <constraint firstItem="yYZ-FX-eRo" firstAttribute="top" secondItem="6Xx-gX-49O" secondAttribute="bottom" constant="21" id="43x-4d-5Xg"/>
+                                            <constraint firstAttribute="trailing" secondItem="4dk-CO-bTe" secondAttribute="trailing" id="B71-F1-s0C"/>
+                                            <constraint firstItem="6Xx-gX-49O" firstAttribute="leading" secondItem="Isd-Lq-Jnk" secondAttribute="leading" id="Cch-lf-7Uk"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Xx-gX-49O" secondAttribute="trailing" id="DV1-bd-wEa"/>
+                                            <constraint firstAttribute="trailing" secondItem="eYQ-iE-iEF" secondAttribute="trailing" id="Dcx-cU-ScS"/>
+                                            <constraint firstAttribute="trailing" secondItem="PWr-mg-xlA" secondAttribute="trailing" constant="16" id="Ga8-e3-y4a"/>
+                                            <constraint firstItem="yYZ-FX-eRo" firstAttribute="leading" secondItem="ezU-ww-ofi" secondAttribute="leading" id="JkS-7T-Hb0"/>
+                                            <constraint firstItem="6Xx-gX-49O" firstAttribute="top" secondItem="Isd-Lq-Jnk" secondAttribute="bottom" constant="13" id="NMb-og-Xsy"/>
+                                            <constraint firstItem="CV4-Eh-4fI" firstAttribute="leading" secondItem="Isd-Lq-Jnk" secondAttribute="leading" id="Obl-6T-f09"/>
+                                            <constraint firstItem="4dk-CO-bTe" firstAttribute="leading" secondItem="ezU-ww-ofi" secondAttribute="leading" id="Ry4-Nh-bzf"/>
+                                            <constraint firstItem="PWr-mg-xlA" firstAttribute="centerY" secondItem="CV4-Eh-4fI" secondAttribute="centerY" id="SZz-RD-Jd4"/>
+                                            <constraint firstAttribute="trailing" secondItem="yYZ-FX-eRo" secondAttribute="trailing" id="TMi-2s-JEm"/>
+                                            <constraint firstItem="eYQ-iE-iEF" firstAttribute="top" secondItem="ezU-ww-ofi" secondAttribute="top" id="X56-YL-mXd"/>
+                                            <constraint firstAttribute="trailing" secondItem="476-FD-nxs" secondAttribute="trailing" id="bb4-MR-1mP"/>
+                                            <constraint firstItem="4dk-CO-bTe" firstAttribute="top" secondItem="476-FD-nxs" secondAttribute="bottom" id="dof-L3-Bfq"/>
+                                            <constraint firstAttribute="height" priority="250" constant="1270" id="jYE-6J-sJi"/>
+                                            <constraint firstItem="eYQ-iE-iEF" firstAttribute="leading" secondItem="ezU-ww-ofi" secondAttribute="leading" id="kM6-RF-4Vc"/>
+                                            <constraint firstAttribute="trailing" secondItem="XVa-MI-Py4" secondAttribute="trailing" constant="15" id="kcS-Cy-BUz"/>
+                                            <constraint firstItem="476-FD-nxs" firstAttribute="leading" secondItem="ezU-ww-ofi" secondAttribute="leading" id="o9M-dq-jK6"/>
+                                            <constraint firstItem="476-FD-nxs" firstAttribute="top" secondItem="yYZ-FX-eRo" secondAttribute="bottom" id="q1u-NQ-03y"/>
+                                            <constraint firstAttribute="bottom" secondItem="4dk-CO-bTe" secondAttribute="bottom" id="u2U-Iu-Etd"/>
+                                            <constraint firstItem="CV4-Eh-4fI" firstAttribute="top" secondItem="ezU-ww-ofi" secondAttribute="top" constant="53" id="uCn-36-T5q"/>
+                                            <constraint firstItem="XVa-MI-Py4" firstAttribute="bottom" secondItem="Isd-Lq-Jnk" secondAttribute="bottom" id="yT3-X6-l9V"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ezU-ww-ofi" firstAttribute="width" secondItem="MEX-F8-rFq" secondAttribute="width" id="EaS-GD-laa"/>
+                                    <constraint firstItem="ezU-ww-ofi" firstAttribute="leading" secondItem="Uk6-Wv-Bz9" secondAttribute="leading" id="Pq0-mP-z7g"/>
+                                    <constraint firstItem="ezU-ww-ofi" firstAttribute="bottom" secondItem="Uk6-Wv-Bz9" secondAttribute="bottom" id="gtW-Aj-ov6"/>
+                                    <constraint firstItem="ezU-ww-ofi" firstAttribute="top" secondItem="Uk6-Wv-Bz9" secondAttribute="top" id="oYd-Ne-w9M"/>
+                                    <constraint firstItem="ezU-ww-ofi" firstAttribute="trailing" secondItem="Uk6-Wv-Bz9" secondAttribute="trailing" id="pMn-Y8-Jrb"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Uk6-Wv-Bz9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="MEX-F8-rFq"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cLp-u0-Uf9" secondAttribute="bottom" id="BIZ-GU-5oJ"/>
+                            <constraint firstItem="cLp-u0-Uf9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="HdP-WC-f8a"/>
+                            <constraint firstItem="Isd-Lq-Jnk" firstAttribute="top" secondItem="ezU-ww-ofi" secondAttribute="top" constant="102" id="RUR-Jr-Omi"/>
+                            <constraint firstItem="cLp-u0-Uf9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TFe-54-2bf"/>
+                            <constraint firstItem="cLp-u0-Uf9" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="zwE-bD-qOV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="iconHome" id="oH3-Se-gGw">
+                        <color key="badgeColor" name="twitter_white"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1500"/>
+                    <connections>
+                        <outlet property="backArrow" destination="CV4-Eh-4fI" id="4a5-dX-nKt"/>
+                        <outlet property="barBackgroundView" destination="476-FD-nxs" id="Ys4-fs-ym3"/>
+                        <outlet property="barView" destination="u9V-pz-64A" id="5Cw-oG-LTx"/>
+                        <outlet property="barViewLeading" destination="nDF-nB-GsQ" id="8CV-ez-gBS"/>
+                        <outlet property="barViewWidth" destination="6eM-1H-p4T" id="oC8-FX-MYk"/>
+                        <outlet property="containerView" destination="4dk-CO-bTe" id="Oxz-Jj-XYW"/>
+                        <outlet property="profileImageView" destination="Isd-Lq-Jnk" id="Fkf-DX-Wgk"/>
+                        <outlet property="searchButton" destination="PWr-mg-xlA" id="lpK-wi-ZwZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="iconHome" width="48" height="48"/>
+        <image name="icondate" width="12" height="12"/>
+        <image name="imgBackGround" width="390" height="130"/>
+        <image name="imgProfile5" width="436" height="540"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="twitter_black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_blue1">
+            <color red="0.28999999165534973" green="0.59600001573562622" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_gray10">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_gray100">
+            <color red="0.20000000298023224" green="0.21199999749660492" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_gray50">
+            <color red="0.44699999690055847" green="0.46299999952316284" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

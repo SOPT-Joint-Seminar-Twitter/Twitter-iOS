@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C317E283362C1007A48A3 /* TabBar.storyboard */; };
-		1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Minjae.storyboard */; };
+		1A4C3182283362D7007A48A3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Profile.storyboard */; };
 		1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Suyeon.storyboard */; };
 		1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3185283362E7007A48A3 /* Yujin.storyboard */; };
 		1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3187283362FF007A48A3 /* Alarm.storyboard */; };
@@ -18,7 +18,7 @@
 		4D32E1EB283108CF00A3DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E1EA283108CF00A3DD31 /* Assets.xcassets */; };
 		4D32E1EE283108CF00A3DD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E1EC283108CF00A3DD31 /* LaunchScreen.storyboard */; };
 		4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E222283118CF00A3DD31 /* SuYeonWritingViewController.swift */; };
-		4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */; };
+		4D32E225283118FA00A3DD31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E224283118FA00A3DD31 /* ProfileViewController.swift */; };
 		4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */; };
 		4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E2282831192100A3DD31 /* SuYeonProfileViewController.swift */; };
 		4D32E22C28311B8F00A3DD31 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D32E22B28311B8F00A3DD31 /* Alamofire */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		1A4C3181283362D7007A48A3 /* Minjae.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Minjae.storyboard; sourceTree = "<group>"; };
+		1A4C3181283362D7007A48A3 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Suyeon.storyboard; path = ../Suyeon.storyboard; sourceTree = "<group>"; };
 		1A4C3185283362E7007A48A3 /* Yujin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yujin.storyboard; sourceTree = "<group>"; };
 		1A4C3187283362FF007A48A3 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		4D32E1ED283108CF00A3DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D32E1EF283108CF00A3DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D32E222283118CF00A3DD31 /* SuYeonWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuYeonWritingViewController.swift; sourceTree = "<group>"; };
-		4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinJaeProfileViewController.swift; sourceTree = "<group>"; };
+		4D32E224283118FA00A3DD31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuJinProfileViewController.swift; sourceTree = "<group>"; };
 		4D32E2282831192100A3DD31 /* SuYeonProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuYeonProfileViewController.swift; sourceTree = "<group>"; };
 		4D32E2302832761600A3DD31 /* Helvetica Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Helvetica Bold.ttf"; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 		4D32E20B2831161200A3DD31 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4D32E224283118FA00A3DD31 /* MinJaeProfileViewController.swift */,
+				4D32E224283118FA00A3DD31 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 		4D32E2122831169A00A3DD31 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				1A4C3181283362D7007A48A3 /* Minjae.storyboard */,
+				1A4C3181283362D7007A48A3 /* Profile.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -575,7 +575,7 @@
 			files = (
 				4D32E2372832762100A3DD31 /* Roboto-Regular.ttf in Resources */,
 				4D32E2322832761600A3DD31 /* Helvetica Bold.ttf in Resources */,
-				1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */,
+				1A4C3182283362D7007A48A3 /* Profile.storyboard in Resources */,
 				4D32E1EE283108CF00A3DD31 /* LaunchScreen.storyboard in Resources */,
 				1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */,
 				1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */,
@@ -607,7 +607,7 @@
 				4D32E23F2832771800A3DD31 /* UIFont+Extension.swift in Sources */,
 				4D32E24F283285B700A3DD31 /* Adjusted+Extension.swift in Sources */,
 				4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */,
-				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
+				4D32E225283118FA00A3DD31 /* ProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
 				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,

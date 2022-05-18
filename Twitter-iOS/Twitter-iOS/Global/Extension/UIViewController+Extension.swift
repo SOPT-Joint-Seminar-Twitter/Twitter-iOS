@@ -106,4 +106,22 @@ extension UIViewController {
         let generator = UIImpactFeedbackGenerator(style: degree)
         generator.impactOccurred()
     }
+    
+    // 이미지 원형으로 만들어주는 메소드입니다.
+    func makeImageCircle(_ imageView: UIImageView) {
+        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.layer.borderWidth = 4
+        imageView.layer.borderColor = UIColor.twitter_black.cgColor
+        
+        // 뷰의 경계에 맞춰주기
+        imageView.clipsToBounds = true
+    }
+    
+    func makeButtonCircle(_ button: UIButton) {
+        button.backgroundColor = .twitter_black_opacity_50
+        button.layer.cornerRadius = component.frame.height / 2
+        button.layer.borderWidth = 4
+        button.layer.borderColor = UIColor.clear.cgColor
+        button.clipsToBounds = true
+    }
 }
