@@ -45,6 +45,7 @@
 		4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */; };
 		4DC622E028348B0900186517 /* WritingToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622DF28348B0900186517 /* WritingToolBar.swift */; };
 		4DC622E228348F2800186517 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E128348F2800186517 /* UIStackView+Extension.swift */; };
+		4DC622E42834BB9100186517 /* CommentPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E32834BB9100186517 /* CommentPermissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		4DC622DF28348B0900186517 /* WritingToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingToolBar.swift; sourceTree = "<group>"; };
 		4DC622E128348F2800186517 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		4DC622E32834BB9100186517 /* CommentPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPermissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC622DF28348B0900186517 /* WritingToolBar.swift */,
+				4DC622E32834BB9100186517 /* CommentPermissionView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
 				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,
 				4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */,
+				4DC622E42834BB9100186517 /* CommentPermissionView.swift in Sources */,
 				4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */,
 				4D32E247283284DD00A3DD31 /* UIView+Extension.swift in Sources */,
 				4D32E24128327B6D00A3DD31 /* UIColor+Extension.swift in Sources */,

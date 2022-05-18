@@ -69,6 +69,7 @@ class SuYeonWritingViewController: UIViewController {
     }()
 
     private let writingToolBar = WritingToolBar()
+    private let commentPermissionView = CommentPermissionView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +85,7 @@ class SuYeonWritingViewController: UIViewController {
     }
 
     private func render() {
-        view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView, writingToolBar])
+        view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView, writingToolBar, commentPermissionView])
 
         twitTextView.addSubView(placeHolder)
 
@@ -119,7 +120,13 @@ class SuYeonWritingViewController: UIViewController {
         writingToolBar.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview().inset(50)
-            $0.height.equalTo(50)
+            $0.height.equalTo(50.adjustedH)
+        }
+
+        commentPermissionView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(writingToolBar.snp.top)
+            $0.height.equalTo(46.adjustedH)
         }
     }
 
