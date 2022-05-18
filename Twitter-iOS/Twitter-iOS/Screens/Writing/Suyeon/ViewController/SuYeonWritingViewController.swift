@@ -68,6 +68,8 @@ class SuYeonWritingViewController: UIViewController {
         return textView
     }()
 
+    private let writingToolBar = WritingToolBar()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -82,7 +84,7 @@ class SuYeonWritingViewController: UIViewController {
     }
 
     private func render() {
-        view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView])
+        view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView, writingToolBar])
 
         twitTextView.addSubView(placeHolder)
 
@@ -112,6 +114,12 @@ class SuYeonWritingViewController: UIViewController {
         twitButton.snp.makeConstraints {
             $0.top.equalToSuperview().inset(53)
             $0.trailing.equalToSuperview().inset(16)
+        }
+
+        writingToolBar.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(50)
+            $0.height.equalTo(50)
         }
     }
 
