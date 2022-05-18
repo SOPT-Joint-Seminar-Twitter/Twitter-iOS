@@ -47,6 +47,7 @@
 		B5DEFEA128349C9900D64C5E /* TweetAndReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA028349C9900D64C5E /* TweetAndReplyViewController.swift */; };
 		B5DEFEA328349CA700D64C5E /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA228349CA700D64C5E /* MediaViewController.swift */; };
 		B5DEFEA528349CBB00D64C5E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA428349CBB00D64C5E /* FavoriteViewController.swift */; };
+		B5DEFEA92834F1BE00D64C5E /* Tweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DEFEA82834F1BE00D64C5E /* Tweet.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		B5DEFEA028349C9900D64C5E /* TweetAndReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetAndReplyViewController.swift; sourceTree = "<group>"; };
 		B5DEFEA228349CA700D64C5E /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		B5DEFEA428349CBB00D64C5E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		B5DEFEA82834F1BE00D64C5E /* Tweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tweet.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				1A4C3181283362D7007A48A3 /* Profile.storyboard */,
+				B5DEFEA82834F1BE00D64C5E /* Tweet.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				4D32E2382832762100A3DD31 /* Roboto-Medium.ttf in Resources */,
 				1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */,
 				1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */,
+				B5DEFEA92834F1BE00D64C5E /* Tweet.storyboard in Resources */,
 				4D32E1EB283108CF00A3DD31 /* Assets.xcassets in Resources */,
 				4D32E24328327D3600A3DD31 /* Colors.xcassets in Resources */,
 				4D32E23C2832762700A3DD31 /* Roboto-Bold.ttf in Resources */,
