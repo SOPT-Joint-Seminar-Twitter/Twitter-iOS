@@ -140,30 +140,42 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="트윗">
                                                             <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tweetBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yAg-SX-dUU"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-I6-FKY">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-I6-FKY">
                                                         <rect key="frame" x="66.5" y="0.0" width="126.5" height="30.5"/>
                                                         <color key="tintColor" name="twitter_gray50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="트윗 및 답글">
                                                             <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tweetBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ucs-a3-VMP"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T51-8S-zu0">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T51-8S-zu0">
                                                         <rect key="frame" x="193" y="0.0" width="83" height="30.5"/>
                                                         <color key="tintColor" name="twitter_gray50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="미디어">
                                                             <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tweetBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K2S-lQ-ccJ"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-yX-Fhw">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-yX-Fhw">
                                                         <rect key="frame" x="276" y="0.0" width="138" height="30.5"/>
                                                         <color key="tintColor" name="twitter_gray50"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="마음에 들어요">
                                                             <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tweetBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DUM-yw-HAz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -171,17 +183,17 @@
                                                 <rect key="frame" x="0.0" y="346.5" width="414" height="3"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9V-pz-64A" userLabel="barView">
-                                                        <rect key="frame" x="16" y="0.0" width="56" height="3"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="3"/>
                                                         <color key="backgroundColor" name="twitter_blue1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="56" id="6eM-1H-p4T"/>
+                                                            <constraint firstAttribute="width" constant="56" id="6eM-1H-p4T" userLabel="barViewWidth"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" name="twitter_gray100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="u9V-pz-64A" secondAttribute="bottom" id="EZq-a5-bfK"/>
-                                                    <constraint firstItem="u9V-pz-64A" firstAttribute="leading" secondItem="476-FD-nxs" secondAttribute="leading" constant="16" id="nDF-nB-GsQ"/>
+                                                    <constraint firstItem="u9V-pz-64A" firstAttribute="leading" secondItem="476-FD-nxs" secondAttribute="leading" id="nDF-nB-GsQ"/>
                                                     <constraint firstAttribute="height" constant="3" id="qtG-vN-QvS"/>
                                                     <constraint firstItem="u9V-pz-64A" firstAttribute="top" secondItem="476-FD-nxs" secondAttribute="top" id="vmr-c3-zVv"/>
                                                 </constraints>
@@ -203,7 +215,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-CO-bTe">
-                                                <rect key="frame" x="0.0" y="350" width="414" height="920"/>
+                                                <rect key="frame" x="0.0" y="349.5" width="414" height="920.5"/>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" name="twitter_black"/>
@@ -266,10 +278,11 @@
                         <outlet property="barBackgroundView" destination="476-FD-nxs" id="Ys4-fs-ym3"/>
                         <outlet property="barView" destination="u9V-pz-64A" id="5Cw-oG-LTx"/>
                         <outlet property="barViewLeading" destination="nDF-nB-GsQ" id="8CV-ez-gBS"/>
-                        <outlet property="barViewWidth" destination="6eM-1H-p4T" id="oC8-FX-MYk"/>
+                        <outlet property="barViewWidth" destination="6eM-1H-p4T" id="zHP-4s-JGN"/>
                         <outlet property="containerView" destination="4dk-CO-bTe" id="Oxz-Jj-XYW"/>
                         <outlet property="profileImageView" destination="Isd-Lq-Jnk" id="Fkf-DX-Wgk"/>
                         <outlet property="searchButton" destination="PWr-mg-xlA" id="lpK-wi-ZwZ"/>
+                        <outlet property="tabStackView" destination="yYZ-FX-eRo" id="rSu-sl-Ph6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

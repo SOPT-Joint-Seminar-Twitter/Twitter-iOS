@@ -119,7 +119,7 @@ extension UIViewController {
     
     func makeButtonCircle(_ button: UIButton) {
         button.backgroundColor = .twitter_black_opacity_50
-        button.layer.cornerRadius = component.frame.height / 2
+        button.layer.cornerRadius = button.frame.height / 2
         button.layer.borderWidth = 4
         button.layer.borderColor = UIColor.clear.cgColor
         button.clipsToBounds = true
