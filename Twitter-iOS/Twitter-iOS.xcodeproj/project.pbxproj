@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A41E4602835D1BE006073D5 /* TabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E45F2835D1BE006073D5 /* TabManViewController.swift */; };
+		1A41E4622835D2E3006073D5 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */; };
+		1A41E4642835D2F4006073D5 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */; };
+		1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4652835D300006073D5 /* ThirdTabViewController.swift */; };
+		1A41E4682835D317006073D5 /* FourthTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4672835D317006073D5 /* FourthTabViewController.swift */; };
 		1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C317E283362C1007A48A3 /* TabBar.storyboard */; };
 		1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Minjae.storyboard */; };
 		1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Suyeon.storyboard */; };
 		1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3185283362E7007A48A3 /* Yujin.storyboard */; };
 		1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3187283362FF007A48A3 /* Alarm.storyboard */; };
+		1A99661028355E23000A9BC8 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 1A99660F28355E23000A9BC8 /* Tabman */; };
 		4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */; };
 		4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */; };
 		4D32E1E9283108CC00A3DD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E1E7283108CC00A3DD31 /* Main.storyboard */; };
@@ -46,6 +52,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A41E45F2835D1BE006073D5 /* TabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManViewController.swift; sourceTree = "<group>"; };
+		1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
+		1A41E4652835D300006073D5 /* ThirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabViewController.swift; sourceTree = "<group>"; };
+		1A41E4672835D317006073D5 /* FourthTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTabViewController.swift; sourceTree = "<group>"; };
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		1A4C3181283362D7007A48A3 /* Minjae.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Minjae.storyboard; sourceTree = "<group>"; };
 		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Suyeon.storyboard; path = ../Suyeon.storyboard; sourceTree = "<group>"; };
@@ -91,6 +102,7 @@
 			files = (
 				4D32E22C28311B8F00A3DD31 /* Alamofire in Frameworks */,
 				4D32E22F28311BC400A3DD31 /* SnapKit in Frameworks */,
+				1A99661028355E23000A9BC8 /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +364,11 @@
 			isa = PBXGroup;
 			children = (
 				4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */,
+				1A41E45F2835D1BE006073D5 /* TabManViewController.swift */,
+				1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */,
+				1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */,
+				1A41E4652835D300006073D5 /* ThirdTabViewController.swift */,
+				1A41E4672835D317006073D5 /* FourthTabViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -526,6 +543,7 @@
 			packageProductDependencies = (
 				4D32E22B28311B8F00A3DD31 /* Alamofire */,
 				4D32E22E28311BC400A3DD31 /* SnapKit */,
+				1A99660F28355E23000A9BC8 /* Tabman */,
 			);
 			productName = "Twitter-iOS";
 			productReference = 4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */;
@@ -558,6 +576,7 @@
 			packageReferences = (
 				4D32E22A28311B8F00A3DD31 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				4D32E22D28311BC400A3DD31 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1A99660E28355E23000A9BC8 /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = 4D32E1DF283108CC00A3DD31 /* Products */;
 			projectDirPath = "";
@@ -600,7 +619,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */,
+				1A41E4622835D2E3006073D5 /* FirstTabViewController.swift in Sources */,
 				4D32E251283287D100A3DD31 /* UITextField+Extension.swift in Sources */,
+				1A41E4642835D2F4006073D5 /* SecondTabViewController.swift in Sources */,
 				4D32E2492832852A00A3DD31 /* UILabel+Extension.swift in Sources */,
 				4D32E24D2832855100A3DD31 /* UIViewController+Extension.swift in Sources */,
 				4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */,
@@ -609,13 +630,16 @@
 				4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */,
 				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
+				1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
 				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,
 				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
+				1A41E4602835D1BE006073D5 /* TabManViewController.swift in Sources */,
 				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,
 				4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */,
 				4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */,
 				4D32E247283284DD00A3DD31 /* UIView+Extension.swift in Sources */,
+				1A41E4682835D317006073D5 /* FourthTabViewController.swift in Sources */,
 				4D32E24128327B6D00A3DD31 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -836,6 +860,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1A99660E28355E23000A9BC8 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		4D32E22A28311B8F00A3DD31 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -855,6 +887,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A99660F28355E23000A9BC8 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A99660E28355E23000A9BC8 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
 		4D32E22B28311B8F00A3DD31 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4D32E22A28311B8F00A3DD31 /* XCRemoteSwiftPackageReference "Alamofire" */;
