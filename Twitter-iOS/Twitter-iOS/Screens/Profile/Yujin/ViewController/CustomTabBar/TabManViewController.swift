@@ -20,8 +20,7 @@ class TabManViewController: TabmanViewController {
         setupTabMan()
     }
     private func setupTabMan(){
-        let firstVC = FirstTabViewController()
-        //        storyboard?.instantiateViewController(withIdentifier: "FourthTabViewController") as! FourthTabViewController
+        let firstVC = UIStoryboard.init(name: "TableView", bundle: nil).instantiateViewController(withIdentifier: "FirstTabViewController") as! FirstTabViewController
         let secondVC = SecondTabViewController()
         let thirdVC = ThirdTabViewController()
         let fourthVC = FourthTabViewController()
