@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     
     private let contents: [UIViewController] = [
-        TweetViewController(),
+        UIStoryboard(name: "Tweet", bundle: nil).instantiateViewController(withIdentifier: TweetViewController.className),
         TweetAndReplyViewController(),
         MediaViewController(),
         FavoriteViewController()
@@ -46,10 +46,8 @@ class ProfileViewController: UIViewController {
         makeButtonCircle(searchButton)
         
         guard let button = self.tabStackView.arrangedSubviews.first as? UIButton else { return }
-        
-        barViewWidth.constant = CGFloat(self.tabStackView.arrangedSubviews.first?.frame.width ?? 0) - button.layoutMargins.right - button.layoutMargins.left
-//        barViewWidth.constant = CGFloat(tabStackView.arrangedSubviews.first?.frame.width ?? view.frame.width / CGFloat(tabStackView.arrangedSubviews.count))
-//        barViewWidth.constant = view.frame.width / CGFloat(tabStackView.arrangedSubviews.count)
+        barViewWidth.constant = button.contentSize
+        barViewLeading.constant = button.margin
     }
     
     private func setPageVC() {
@@ -60,8 +58,6 @@ class ProfileViewController: UIViewController {
         containerView.frame = pageViewController.view.frame
         // pageVC도 가지고 있는 root view를 컨테이너뷰에 추가
         containerView.addSubView(pageViewController.view)
-        
-        
         pageViewController.didMove(toParent: self)
         
         // Protocol delegate
@@ -155,37 +151,46 @@ extension ProfileViewController: UIPageViewControllerDataSource {
 
 // PageViewController도 scroll view를 상속받음
 extension ProfileViewController: UIScrollViewDelegate {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if btnTapped {
-//            return
-//        }
-//
-//        let offsetX = scrollView.contentOffset.x
-//        let contentWidth = pageViewController.view.frame.width
-//
-//        // 좌우 얼마나 움직였는지 체크
-//        let percent = (offsetX - contentWidth) / contentWidth
-//
-//        guard let button = tabStackView.arrangedSubviews[currentIdx] as? UIButton else { return }
-//
-//        var constant: CGFloat = 0
-//        if currentIdx == 0 {
-//            constant = button.layoutMargins.left
-//        } else {
-//            constant = barView.frame.width * (CGFloat(currentIdx) + percent) + button.layoutMargins.left
-//        }
-//        barView.frame.origin.x = constant
-////        let constant = barView.frame.width * (CGFloat(currentIdx) + percent)
-//
-////        UIView.animate(withDuration: 0.1) {
-////            self.barViewWidth.constant = CGFloat(self.tabStackView.arrangedSubviews[self.currentIdx].intrinsicContentSize.width)
-////
-////            let leadingConstant = self.makePageVCLeadingConstant(index: self.currentIdx)
-////            self.barViewLeading.constant = leadingConstant
-////            self.barBackgroundView.layoutIfNeeded()
-////        }
-//
-//
-//
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard !btnTapped else { return }
+        
+        let scrollOffsetX = scrollView.contentOffset.x
+        // 여기는 왜 size.width? get만 할꺼면 size.width 할필요없고 그냥 frame.width해도 될듯
+        let contentSizeWidth = view.frame.size.width
+        
+        // -1.0 ~ 1.0 (좌우 이동)
+        let movement = (scrollOffsetX - contentSizeWidth) / contentSizeWidth
+        
+        let currentIdx: CGFloat = movement + CGFloat(currentIdx)
+        let percent: CGFloat = currentIdx - CGFloat(Int(currentIdx))
+        
+        var leftWidth: CGFloat = 0, rightWidth: CGFloat = 0
+        var leftX: CGFloat = 0, rightX: CGFloat = 0
+        var leftMargin: CGFloat = 0, rightMargin: CGFloat = 0
+        
+        if let leftButton = tabStackView.arrangedSubviews[Int(currentIdx)] as? UIButton {
+            leftWidth = leftButton.contentSize
+            leftX = leftButton.frame.origin.x
+            leftMargin = leftButton.margin
+        }
+        
+        if Int(currentIdx) + 1 < contents.count, let rightButton = tabStackView.arrangedSubviews[Int(currentIdx) + 1] as? UIButton {
+            rightWidth = rightButton.contentSize
+            rightX = rightButton.frame.origin.x
+            rightMargin = rightButton.margin
+        }
+        
+        if Int(currentIdx) == contents.count - 1 {
+            rightX = view.frame.width
+            rightWidth = leftWidth
+        }
+        
+        
+        // (rightX - leftX) -> 음수
+        let indicatorX = (rightX - leftX) * percent + leftX
+        let indicatorWidth = (rightWidth - leftWidth) * percent  + leftWidth
+        let buttonMargin = (rightMargin - leftMargin) * percent + leftMargin
+        barViewLeading.constant = indicatorX + buttonMargin
+        barViewWidth.constant = indicatorWidth
+    }
 }
