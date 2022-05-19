@@ -12,6 +12,11 @@
 		1A41E4642835D2F4006073D5 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */; };
 		1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4652835D300006073D5 /* ThirdTabViewController.swift */; };
 		1A41E4682835D317006073D5 /* FourthTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4672835D317006073D5 /* FourthTabViewController.swift */; };
+		1A41E46A2835FCC2006073D5 /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E4692835FCC2006073D5 /* TableView.storyboard */; };
+		1A41E47228360504006073D5 /* TwitterRetwittTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E47028360504006073D5 /* TwitterRetwittTableViewCell.swift */; };
+		1A41E47328360504006073D5 /* TwitterRetwittTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */; };
+		1A41E4762836051A006073D5 /* TwitterMyTwittTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */; };
+		1A41E4772836051A006073D5 /* TwitterMyTwittTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */; };
 		1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C317E283362C1007A48A3 /* TabBar.storyboard */; };
 		1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Minjae.storyboard */; };
 		1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Suyeon.storyboard */; };
@@ -57,6 +62,11 @@
 		1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		1A41E4652835D300006073D5 /* ThirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabViewController.swift; sourceTree = "<group>"; };
 		1A41E4672835D317006073D5 /* FourthTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTabViewController.swift; sourceTree = "<group>"; };
+		1A41E4692835FCC2006073D5 /* TableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableView.storyboard; sourceTree = "<group>"; };
+		1A41E47028360504006073D5 /* TwitterRetwittTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterRetwittTableViewCell.swift; sourceTree = "<group>"; };
+		1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterRetwittTableViewCell.xib; sourceTree = "<group>"; };
+		1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterMyTwittTableViewCell.swift; sourceTree = "<group>"; };
+		1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterMyTwittTableViewCell.xib; sourceTree = "<group>"; };
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		1A4C3181283362D7007A48A3 /* Minjae.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Minjae.storyboard; sourceTree = "<group>"; };
 		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suyeon.storyboard; sourceTree = "<group>"; };
@@ -109,6 +119,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A41E46F2835FF7C006073D5 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1A41E45F2835D1BE006073D5 /* TabManViewController.swift */,
+				1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */,
+				1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */,
+				1A41E4652835D300006073D5 /* ThirdTabViewController.swift */,
+				1A41E4672835D317006073D5 /* FourthTabViewController.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		1A4C317D283362A8007A48A3 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,12 +385,12 @@
 		4D32E20D2831162300A3DD31 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A41E46F2835FF7C006073D5 /* CustomTabBar */,
 				4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */,
-				1A41E45F2835D1BE006073D5 /* TabManViewController.swift */,
-				1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */,
-				1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */,
-				1A41E4652835D300006073D5 /* ThirdTabViewController.swift */,
-				1A41E4672835D317006073D5 /* FourthTabViewController.swift */,
+				1A41E47028360504006073D5 /* TwitterRetwittTableViewCell.swift */,
+				1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */,
+				1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */,
+				1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -384,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				1A4C3185283362E7007A48A3 /* Yujin.storyboard */,
+				1A41E4692835FCC2006073D5 /* TableView.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -596,10 +619,13 @@
 				4D32E1EB283108CF00A3DD31 /* Assets.xcassets in Resources */,
 				4D32E24328327D3600A3DD31 /* Colors.xcassets in Resources */,
 				4D32E23C2832762700A3DD31 /* Roboto-Bold.ttf in Resources */,
+				1A41E46A2835FCC2006073D5 /* TableView.storyboard in Resources */,
 				4D32E1E9283108CC00A3DD31 /* Main.storyboard in Resources */,
 				4D32E23D2832762700A3DD31 /* Roboto-Black.ttf in Resources */,
+				1A41E4772836051A006073D5 /* TwitterMyTwittTableViewCell.xib in Resources */,
 				4D32E2392832762100A3DD31 /* Roboto-Light.ttf in Resources */,
 				4D32E2332832761600A3DD31 /* Helvetica Light.ttf in Resources */,
+				1A41E47328360504006073D5 /* TwitterRetwittTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A41E4762836051A006073D5 /* TwitterMyTwittTableViewCell.swift in Sources */,
 				4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */,
 				1A41E4622835D2E3006073D5 /* FirstTabViewController.swift in Sources */,
 				4D32E251283287D100A3DD31 /* UITextField+Extension.swift in Sources */,
@@ -625,6 +652,7 @@
 				1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
 				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,
+				1A41E47228360504006073D5 /* TwitterRetwittTableViewCell.swift in Sources */,
 				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
 				1A41E4602835D1BE006073D5 /* TabManViewController.swift in Sources */,
 				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,

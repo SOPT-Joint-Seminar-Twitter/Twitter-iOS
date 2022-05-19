@@ -9,10 +9,10 @@ import UIKit
 
 class FirstTabViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .twitter_blue2
     }
 
 }

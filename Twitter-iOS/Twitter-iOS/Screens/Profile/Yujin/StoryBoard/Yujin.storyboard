@@ -123,7 +123,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile5" translatesAutoresizingMaskIntoConstraints="NO" id="jiN-GK-5pI">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gh.png" translatesAutoresizingMaskIntoConstraints="NO" id="jiN-GK-5pI">
                                                 <rect key="frame" x="15" y="108" width="64" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="hzJ-IK-VgY"/>
@@ -201,6 +201,16 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="iconBell" id="MDn-UZ-Cxa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="followerCountLabel" destination="25M-Cf-vHg" id="ZbJ-u5-24j"/>
+                        <outlet property="followingCountLabel" destination="7fz-Bb-3hF" id="WEB-pI-Nif"/>
+                        <outlet property="instagramIDLabel" destination="oMd-95-UxU" id="CEZ-YR-469"/>
+                        <outlet property="madeAccoutDateLabel" destination="98A-pi-DjF" id="D2F-Tp-EIx"/>
+                        <outlet property="nameLabel" destination="Vgp-gk-2JZ" id="fJP-5l-BKm"/>
+                        <outlet property="profileContentLabel" destination="hKW-7R-HXH" id="JRa-M6-Tyn"/>
+                        <outlet property="profileImg" destination="jiN-GK-5pI" id="ER3-uz-LAI"/>
+                        <outlet property="profileUpdateButton" destination="v5o-fP-e0v" id="4BT-W1-ZPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,6 +223,7 @@
                     <view key="view" contentMode="scaleToFill" id="LN8-w0-NaL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zjr-ii-L4y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -225,10 +236,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gh.png" width="32" height="32"/>
         <image name="iconBell" width="48" height="48"/>
         <image name="icondate" width="12" height="12"/>
         <image name="imgBackGround" width="390" height="130"/>
-        <image name="imgProfile5" width="436" height="540"/>
         <namedColor name="twitter_black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
