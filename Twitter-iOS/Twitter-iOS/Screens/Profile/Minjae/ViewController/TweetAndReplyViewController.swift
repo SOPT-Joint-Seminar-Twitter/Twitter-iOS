@@ -11,7 +11,7 @@ class TweetAndReplyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .twitter_black
     }
     
 }
