@@ -25,7 +25,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gif-H1-mOt">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile5" translatesAutoresizingMaskIntoConstraints="NO" id="gif-H1-mOt">
                         <rect key="frame" x="16" y="10" width="52" height="52"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="52" id="7GA-D6-wcH"/>
@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="width" constant="24" id="eQo-mw-Uby"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icconRetweetGray"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconRetweetGray"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLE-tY-Gvu">
                                 <rect key="frame" x="140" y="0.0" width="24" height="24"/>
@@ -127,14 +127,26 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chatButton" destination="yXV-AO-g4k" id="Vd9-Kg-XJb"/>
+                <outlet property="contentLabel" destination="khh-Hy-gpt" id="Yje-bG-Sp0"/>
+                <outlet property="heartButton" destination="B0e-1S-JHs" id="Fg5-pf-pKH"/>
+                <outlet property="idLabel" destination="q7I-yt-dYe" id="iI6-4Y-1qp"/>
+                <outlet property="nickNameLabel" destination="cYL-Wb-CrF" id="vUI-iG-QQ9"/>
+                <outlet property="profileImage" destination="gif-H1-mOt" id="OWL-0N-UQu"/>
+                <outlet property="retwittButton" destination="kpA-Ml-4Os" id="djq-8y-Fds"/>
+                <outlet property="shareButton" destination="B0e-1S-JHs" id="msg-eJ-YPx"/>
+                <outlet property="staticsButton" destination="oTQ-J2-HpJ" id="37t-au-5to"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="124.21875"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icconRetweetGray" width="24" height="24"/>
         <image name="iconActivity" width="24" height="24"/>
         <image name="iconComment" width="24" height="24"/>
         <image name="iconHeart" width="24" height="24"/>
+        <image name="iconRetweetGray" width="24" height="24"/>
+        <image name="imgProfile5" width="436" height="540"/>
         <namedColor name="twitter_black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
