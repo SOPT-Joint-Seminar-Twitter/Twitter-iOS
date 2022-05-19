@@ -46,7 +46,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-MI-Py4">
-                                                <rect key="frame" x="310.5" y="135.5" width="88.5" height="30.5"/>
+                                                <rect key="frame" x="310.5" y="140" width="88.5" height="30.5"/>
                                                 <color key="tintColor" name="twitter_white"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="프로필 수정" cornerStyle="capsule">
@@ -216,6 +216,7 @@
                                             </button>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-CO-bTe">
                                                 <rect key="frame" x="0.0" y="349.5" width="414" height="920.5"/>
+                                                <color key="backgroundColor" name="twitter_black"/>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" name="twitter_black"/>
@@ -233,6 +234,7 @@
                                             <constraint firstItem="4dk-CO-bTe" firstAttribute="leading" secondItem="ezU-ww-ofi" secondAttribute="leading" id="Ry4-Nh-bzf"/>
                                             <constraint firstItem="PWr-mg-xlA" firstAttribute="centerY" secondItem="CV4-Eh-4fI" secondAttribute="centerY" id="SZz-RD-Jd4"/>
                                             <constraint firstAttribute="trailing" secondItem="yYZ-FX-eRo" secondAttribute="trailing" id="TMi-2s-JEm"/>
+                                            <constraint firstItem="XVa-MI-Py4" firstAttribute="top" secondItem="eYQ-iE-iEF" secondAttribute="bottom" constant="10" id="TTb-4S-oxO"/>
                                             <constraint firstItem="eYQ-iE-iEF" firstAttribute="top" secondItem="ezU-ww-ofi" secondAttribute="top" id="X56-YL-mXd"/>
                                             <constraint firstAttribute="trailing" secondItem="476-FD-nxs" secondAttribute="trailing" id="bb4-MR-1mP"/>
                                             <constraint firstItem="4dk-CO-bTe" firstAttribute="top" secondItem="476-FD-nxs" secondAttribute="bottom" id="dof-L3-Bfq"/>
@@ -243,7 +245,6 @@
                                             <constraint firstItem="476-FD-nxs" firstAttribute="top" secondItem="yYZ-FX-eRo" secondAttribute="bottom" id="q1u-NQ-03y"/>
                                             <constraint firstAttribute="bottom" secondItem="4dk-CO-bTe" secondAttribute="bottom" id="u2U-Iu-Etd"/>
                                             <constraint firstItem="CV4-Eh-4fI" firstAttribute="top" secondItem="ezU-ww-ofi" secondAttribute="top" constant="53" id="uCn-36-T5q"/>
-                                            <constraint firstItem="XVa-MI-Py4" firstAttribute="bottom" secondItem="Isd-Lq-Jnk" secondAttribute="bottom" id="yT3-X6-l9V"/>
                                         </constraints>
                                     </view>
                                 </subviews>
