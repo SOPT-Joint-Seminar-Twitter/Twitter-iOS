@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="twitter_black"/>
-                        <color key="barTintColor" name="twitter_white"/>
+                        <color key="barTintColor" name="twitter_black"/>
                         <color key="selectedImageTintColor" name="twitter_white"/>
                     </tabBar>
                     <connections>
@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
-        <!--Minjae-->
+        <!--Profile-->
         <scene sceneID="tqC-yV-FpA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Minjae" id="nWo-K7-TCJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" id="nWo-K7-TCJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UNl-aB-aAt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ma-JN-n80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

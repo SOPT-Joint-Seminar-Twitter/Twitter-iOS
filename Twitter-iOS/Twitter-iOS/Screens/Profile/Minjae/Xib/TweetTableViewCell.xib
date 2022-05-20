@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TweetTableViewCell" customModule="Twitter_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NS4-DW-9L4">
+                        <rect key="frame" x="16" y="10" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NS4-DW-9L4" secondAttribute="height" multiplier="1:1" id="2P1-Yk-UxR"/>
+                            <constraint firstAttribute="width" constant="52" id="kNk-gj-phX"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yyb-qb-ZNH">
+                        <rect key="frame" x="76" y="4" width="66.5" height="16.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마먁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGy-JZ-48w" userLabel="ProfileName">
+                                <rect key="frame" x="0.0" y="0.0" width="24.5" height="16.5"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                <color key="textColor" name="twitter_white"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wil-AQ-uKK" userLabel="ProfileId">
+                                <rect key="frame" x="32.5" y="0.0" width="34" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" name="twitter_gray50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKc-WN-12B" userLabel="Content">
+                        <rect key="frame" x="76" y="24.5" width="34" height="16.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="r2P-n4-k70"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                        <color key="textColor" name="twitter_white"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-5t-vcK" userLabel="Option">
+                        <rect key="frame" x="364" y="0.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qJ9-5t-vcK" secondAttribute="height" multiplier="1:1" id="X5b-d2-5ac"/>
+                            <constraint firstAttribute="width" constant="24" id="fck-id-pw5"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="iconMoreButton"/>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="xY5-q0-Bcz">
+                        <rect key="frame" x="76" y="48" width="304" height="24"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owj-Zo-3I1">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Owj-Zo-3I1" secondAttribute="height" multiplier="1:1" id="BCK-1Y-AYl"/>
+                                    <constraint firstAttribute="width" constant="24" id="NLt-9b-M3j"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconComment"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffz-Ss-JwL">
+                                <rect key="frame" x="70" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="dad-oJ-2Lb"/>
+                                    <constraint firstAttribute="width" secondItem="Ffz-Ss-JwL" secondAttribute="height" multiplier="1:1" id="tMI-vR-tZU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconRetweetGray"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmW-Fd-kkk">
+                                <rect key="frame" x="140" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZmW-Fd-kkk" secondAttribute="height" multiplier="1:1" id="1Us-H0-xo4"/>
+                                    <constraint firstAttribute="width" constant="24" id="vMu-W1-ljl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconHeart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bns-9E-W5T">
+                                <rect key="frame" x="210" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bns-9E-W5T" secondAttribute="height" multiplier="1:1" id="07v-F1-gfU"/>
+                                    <constraint firstAttribute="width" constant="24" id="jEK-uh-rDZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconShareButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEi-ma-EZC">
+                                <rect key="frame" x="280" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="ccH-i1-ftg"/>
+                                    <constraint firstAttribute="width" secondItem="YEi-ma-EZC" secondAttribute="height" multiplier="1:1" id="xI4-GL-pRX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconActivity"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" name="twitter_black"/>
+                <constraints>
+                    <constraint firstItem="NS4-DW-9L4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="11l-mC-lo5"/>
+                    <constraint firstItem="yyb-qb-ZNH" firstAttribute="leading" secondItem="NS4-DW-9L4" secondAttribute="trailing" constant="8" id="13d-KX-Y1D"/>
+                    <constraint firstItem="HKc-WN-12B" firstAttribute="leading" secondItem="yyb-qb-ZNH" secondAttribute="leading" id="AU3-Ca-z0S"/>
+                    <constraint firstItem="qJ9-5t-vcK" firstAttribute="centerY" secondItem="yyb-qb-ZNH" secondAttribute="centerY" id="AkK-xo-QMT"/>
+                    <constraint firstItem="xY5-q0-Bcz" firstAttribute="top" secondItem="HKc-WN-12B" secondAttribute="bottom" constant="7" id="CEF-ch-Iad"/>
+                    <constraint firstAttribute="trailing" secondItem="xY5-q0-Bcz" secondAttribute="trailing" constant="18" id="RYd-rf-H9E"/>
+                    <constraint firstAttribute="trailing" secondItem="qJ9-5t-vcK" secondAttribute="trailing" constant="10" id="VmJ-Ew-L1f"/>
+                    <constraint firstItem="NS4-DW-9L4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eAg-zX-3aX"/>
+                    <constraint firstItem="xY5-q0-Bcz" firstAttribute="leading" secondItem="yyb-qb-ZNH" secondAttribute="leading" id="f9m-LV-Sfl"/>
+                    <constraint firstAttribute="bottom" secondItem="xY5-q0-Bcz" secondAttribute="bottom" constant="15" id="kFq-HK-YzB"/>
+                    <constraint firstItem="yyb-qb-ZNH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="mB9-xt-i27"/>
+                    <constraint firstItem="HKc-WN-12B" firstAttribute="top" secondItem="yyb-qb-ZNH" secondAttribute="bottom" constant="4" id="wop-Yr-G5e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentWidth" destination="r2P-n4-k70" id="mdw-fM-YQ8"/>
+                <outlet property="profileIDAndSec" destination="Wil-AQ-uKK" id="wGg-4C-Pz8"/>
+                <outlet property="profileImage" destination="NS4-DW-9L4" id="MN1-ig-XMy"/>
+                <outlet property="profileImageLeading" destination="11l-mC-lo5" id="g18-Mj-igO"/>
+                <outlet property="profileImageTrailing" destination="13d-KX-Y1D" id="HNr-IG-ZD0"/>
+                <outlet property="profileName" destination="hGy-JZ-48w" id="c4m-Vz-YjA"/>
+                <outlet property="tweetContent" destination="HKc-WN-12B" id="vKc-fa-ITZ"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="132"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconActivity" width="24" height="24"/>
+        <image name="iconComment" width="24" height="24"/>
+        <image name="iconHeart" width="24" height="24"/>
+        <image name="iconMoreButton" width="24" height="24"/>
+        <image name="iconRetweetGray" width="24" height="24"/>
+        <image name="iconShareButton" width="24" height="24"/>
+        <namedColor name="twitter_black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_gray50">
+            <color red="0.44699999690055847" green="0.46299999952316284" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="twitter_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

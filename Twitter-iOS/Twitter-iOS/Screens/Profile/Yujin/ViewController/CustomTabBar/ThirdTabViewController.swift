@@ -1,18 +1,18 @@
 //
-//  MinJaeProfileViewController.swift
+//  ThirdTabViewController.swift
 //  Twitter-iOS
 //
-//  Created by 김수연 on 2022/05/15.
+//  Created by 한유진 on 2022/05/19.
 //
 
 import UIKit
 
-class MinJaeProfileViewController: UIViewController {
+class ThirdTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .twitter_blue4
     }
     
 
