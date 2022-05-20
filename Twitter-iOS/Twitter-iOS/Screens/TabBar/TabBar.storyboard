@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="twitter_black"/>
-                        <color key="barTintColor" name="twitter_white"/>
+                        <color key="barTintColor" name="twitter_black"/>
                         <color key="selectedImageTintColor" name="twitter_white"/>
                     </tabBar>
                     <connections>

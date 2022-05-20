@@ -2,27 +2,44 @@
 🐥합동세미나 9조 짹짹 아요🐥
 
 
+</br>
+
 ### 👩🏻‍💻 Developers
 
 민재 수연 유진 -> 나중에 미모티콘 추가하기
+
+</br>
 
 ### 👀 Simulator
 
 구현화면 공간
 
+</br>
+
 ### 🛠 Development Environment
 
+<img width="77" alt="스크린샷 2021-11-19 오후 3 52 02" src="https://img.shields.io/badge/iOS-15.0+-silver"> <img width="93" alt="스크린샷 2021-11-19 오후 3 52 02" src="https://img.shields.io/badge/Xcode-13.3.1-blue">
 
+</br>
 
 
 ### 🎁 Library
 
+| 라이브러리        | Version |       |
+| ----------------- | :-----: | ----- |
+| Alamofire           | `5.6.1` | `SPM` |
+| SnapKit           | `5.6.0` | `SPM` |
+
+
+
+</br>
 
 ### 🗂 Foldering
 
 <img width="263" alt="image" src="https://user-images.githubusercontent.com/81313960/168471339-9bdf7902-3568-4e3b-90d0-8a1097599d11.png">
 
 
+</br>
 
 ### 🔀 Git Branch
 
@@ -39,6 +56,8 @@ Issue 작성 후 생성되는 번호와 Issue의 간략한 설명 등을 조합�
 - `hotfix` : 정말 급하게, 데모데이 직전에 에러가 난 경우 사용하는 브렌치
 
 
+</br>
+
 ### 👊🏻 Git Flow
 
 1. Issue를 생성한다.
@@ -48,6 +67,8 @@ Issue 작성 후 생성되는 번호와 Issue의 간략한 설명 등을 조합�
 5. Code Review가 완료되면 Pull Request 작성자가 develop Branch로 merge 한다.
 6. 종료된 Issue와 Pull Request의 Label과 Project를 관리한다.
 
+
+</br>
 
 ### ⚠️ Issue Naming Rule
 
@@ -60,6 +81,7 @@ Issue 작성 후 생성되는 번호와 Issue의 간략한 설명 등을 조합�
 [STYLE] 폰트 변경
 ```
 
+</br>
 
 ### 🍗 Commit Message Convention
 
@@ -88,6 +110,7 @@ Resolve #이슈번호
 ```
 
 
+</br>
 
 ### 🌀 Code Covention
 
