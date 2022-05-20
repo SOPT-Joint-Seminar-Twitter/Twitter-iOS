@@ -9,10 +9,12 @@ import UIKit
 
 class TwitterRetwittTableViewCell: UITableViewCell {
 
+    static let identifier = "TwitterRetwittTableViewCell"
+    
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var didRetwittLabel: UILabel!
-    @IBOutlet weak var idLabel: UIView!
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var commentButton: UIButton!
@@ -31,6 +33,12 @@ class TwitterRetwittTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func setData(_ reTwittModel : TwittModel) {
+        profileImg.image = reTwittModel.profileImage
+        nameLabel.text = reTwittModel.nickName
+        idLabel.text = reTwittModel.idLabel
+        contentLabel.text = reTwittModel.content
     }
     
 }

@@ -9,6 +9,9 @@ import UIKit
 
 class TwitterMyTwittTableViewCell: UITableViewCell {
 
+    /// Cell구분 위한 identifier
+    static let identifier = "TwitterMyTwittTableViewCell"
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
@@ -29,6 +32,13 @@ class TwitterMyTwittTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(_ myTwittData : TwittModel) {
+        profileImage.image = myTwittData.profileImage
+        nickNameLabel.text = myTwittData.nickName
+        idLabel.text = myTwittData.idLabel
+        contentLabel.text = myTwittData.content
     }
     
 }
