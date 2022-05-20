@@ -68,6 +68,10 @@ class SuYeonWritingViewController: UIViewController {
         return textView
     }()
 
+    private let writingToolBar = WritingToolBar()
+    private let commentPermissionView = CommentPermissionView()
+    private lazy var albumCollectionView = AlbumCollectionView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -75,6 +79,7 @@ class SuYeonWritingViewController: UIViewController {
         setDelegation()
         setButtonState()
         setKeyboard()
+        registerCell()
     }
 
     private func configUI() {
@@ -82,7 +87,7 @@ class SuYeonWritingViewController: UIViewController {
     }
 
     private func render() {
-        view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView])
+        view.addSubViews([cancleButton, twitButton, twitTextView, profileImageView, writingToolBar, commentPermissionView, albumCollectionView])
 
         twitTextView.addSubView(placeHolder)
 
@@ -113,10 +118,29 @@ class SuYeonWritingViewController: UIViewController {
             $0.top.equalToSuperview().inset(53)
             $0.trailing.equalToSuperview().inset(16)
         }
+
+        writingToolBar.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(view.keyboardLayoutGuide.snp.top)
+            $0.height.equalTo(50.adjustedH)
+        }
+
+        commentPermissionView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(writingToolBar.snp.top)
+            $0.height.equalTo(46.adjustedH)
+        }
+
+        albumCollectionView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(commentPermissionView.snp.top).offset(-10)
+            $0.height.equalTo(78.adjustedH)
+        }
     }
 
     private func setDelegation() {
         twitTextView.delegate = self
+        albumCollectionView.dataSource = self
     }
 
     private func setButtonState() {
@@ -151,6 +175,11 @@ class SuYeonWritingViewController: UIViewController {
 
     private func setKeyboard() {
         twitTextView.becomeFirstResponder()
+    }
+
+    private func registerCell() {
+        albumCollectionView.register(cell: IconCollectionViewCell.self)
+        albumCollectionView.register(cell: ImageCollectionViewCell.self)
     }
 }
 
