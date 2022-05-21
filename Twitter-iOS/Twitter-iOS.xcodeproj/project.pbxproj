@@ -17,8 +17,6 @@
 		1A41E47328360504006073D5 /* TwitterRetwittTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */; };
 		1A41E4762836051A006073D5 /* TwitterMyTwittTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */; };
 		1A41E4772836051A006073D5 /* TwitterMyTwittTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */; };
-		1A457DCB28374DD900DD123C /* MyTwittModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A457DCA28374DD900DD123C /* MyTwittModel.swift */; };
-		1A457DCD28374EC300DD123C /* RetwittModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A457DCC28374EC300DD123C /* RetwittModel.swift */; };
 		1A457DD12837753700DD123C /* TwittModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A457DD02837753700DD123C /* TwittModel.swift */; };
 		1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C317E283362C1007A48A3 /* TabBar.storyboard */; };
 		1A4C3182283362D7007A48A3 /* Minjae.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Minjae.storyboard */; };
@@ -70,8 +68,6 @@
 		1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterRetwittTableViewCell.xib; sourceTree = "<group>"; };
 		1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterMyTwittTableViewCell.swift; sourceTree = "<group>"; };
 		1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterMyTwittTableViewCell.xib; sourceTree = "<group>"; };
-		1A457DCA28374DD900DD123C /* MyTwittModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwittModel.swift; sourceTree = "<group>"; };
-		1A457DCC28374EC300DD123C /* RetwittModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetwittModel.swift; sourceTree = "<group>"; };
 		1A457DD02837753700DD123C /* TwittModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittModel.swift; sourceTree = "<group>"; };
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		1A4C3181283362D7007A48A3 /* Minjae.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Minjae.storyboard; sourceTree = "<group>"; };
@@ -159,8 +155,6 @@
 		1A457DC928374D9800DD123C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1A457DCA28374DD900DD123C /* MyTwittModel.swift */,
-				1A457DCC28374EC300DD123C /* RetwittModel.swift */,
 				1A457DD02837753700DD123C /* TwittModel.swift */,
 			);
 			path = Model;
@@ -688,14 +682,12 @@
 				4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */,
 				4D32E23F2832771800A3DD31 /* UIFont+Extension.swift in Sources */,
 				4D32E24F283285B700A3DD31 /* Adjusted+Extension.swift in Sources */,
-				1A457DCD28374EC300DD123C /* RetwittModel.swift in Sources */,
 				4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */,
 				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
 				1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
 				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,
-				1A457DCB28374DD900DD123C /* MyTwittModel.swift in Sources */,
 				1A41E47228360504006073D5 /* TwitterRetwittTableViewCell.swift in Sources */,
 				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
 				1A41E4602835D1BE006073D5 /* TabManViewController.swift in Sources */,

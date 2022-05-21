@@ -20,9 +20,14 @@ public struct TwittModel {
     let content : String
     let id : String
     let time : String
+    
     var idLabel : String? {
         return "@\(id) · \(time)초"
     }
+    //옵셔널 값
+    var commentCount : String?
+    var heartCount : String?
+    var retwittCount : String?
 }
 extension TwittModel{
     static let sampleData : [TwittModel] = [

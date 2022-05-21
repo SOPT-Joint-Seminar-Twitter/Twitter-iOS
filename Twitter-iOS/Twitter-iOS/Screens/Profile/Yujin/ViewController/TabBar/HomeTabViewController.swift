@@ -10,13 +10,17 @@ import UIKit
 class HomeTabVHomeTabViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var twittCells : [TwittModel] = []
+    
+//    var twittCells : [TwittModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerCell()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        registerCell()
+//        setTwitt()
         
     }
     private func registerCell() {
@@ -26,7 +30,6 @@ class HomeTabVHomeTabViewController: UIViewController {
         tableView.register(myTwittNib, forCellReuseIdentifier: TwitterMyTwittTableViewCell.identifier)
         tableView.register(reTwittNib, forCellReuseIdentifier: TwitterRetwittTableViewCell.identifier)
     }
-    
 }
 extension HomeTabVHomeTabViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -34,13 +37,20 @@ extension HomeTabVHomeTabViewController : UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        let twitt = TwittModel.sampleData[indexPath.row]
+        switch twitt.type {
+        case .myTwitt:
+            return 87
+
+        default:
+            return 204
+        }
     }
     
 }
 extension HomeTabVHomeTabViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let twittCells = twittCells[indexPath.row]
+        let twittCells = TwittModel.sampleData[indexPath.row]
         
         switch twittCells.type {
             
