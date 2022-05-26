@@ -51,7 +51,7 @@
                             <constraint firstAttribute="width" constant="24" id="xlH-3x-9ZT"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="menu"/>
+                        <buttonConfiguration key="configuration" style="plain" image="iconMoreButton"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="트위터로 글 작성하기~!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-Hy-gpt">
                         <rect key="frame" x="76" y="28.5" width="129.5" height="16.5"/>
@@ -96,7 +96,7 @@
                                     <constraint firstAttribute="height" constant="24" id="eC4-fU-VO2"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <buttonConfiguration key="configuration" style="plain" image="iconShare"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-J2-HpJ">
                                 <rect key="frame" x="280" y="0.0" width="24" height="24"/>
@@ -147,7 +147,9 @@
         <image name="iconActivity" width="24" height="24"/>
         <image name="iconComment" width="24" height="24"/>
         <image name="iconHeart" width="24" height="24"/>
+        <image name="iconMoreButton" width="24" height="24"/>
         <image name="iconRetweetGray" width="24" height="24"/>
+        <image name="iconShare" width="24" height="24"/>
         <image name="imgProfile5" width="436" height="540"/>
         <namedColor name="twitter_black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

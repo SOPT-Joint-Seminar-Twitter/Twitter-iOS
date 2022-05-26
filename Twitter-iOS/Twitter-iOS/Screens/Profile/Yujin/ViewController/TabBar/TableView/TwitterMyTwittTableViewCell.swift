@@ -25,9 +25,12 @@ class TwitterMyTwittTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUI()
     }
-
+    func setUI() {
+        makeImageCircle(profileImage)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -41,4 +44,14 @@ class TwitterMyTwittTableViewCell: UITableViewCell {
         contentLabel.text = myTwittData.content
     }
     
+}
+extension TwitterMyTwittTableViewCell{
+    func makeImageCircle(_ imageView: UIImageView) {
+        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.layer.borderWidth = 4
+        imageView.layer.borderColor = UIColor.twitter_black.cgColor
+        
+        // 뷰의 경계에 맞춰주기
+        imageView.clipsToBounds = true
+    }
 }
