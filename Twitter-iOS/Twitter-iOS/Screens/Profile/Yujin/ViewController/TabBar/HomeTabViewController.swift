@@ -11,8 +11,6 @@ class HomeTabVHomeTabViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var twittCells : [TwittModel] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,8 +18,15 @@ class HomeTabVHomeTabViewController: UIViewController {
         tableView.dataSource = self
         
         registerCell()
-//        setTwitt()
         
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        let tables = tableView.compactMap { $0 as? UITableViewController }
+//        tables.forEach {
+//            $0.tableView.contentInset = UIEdgeInsets(top: headerView.bounds.height, left: 0, bottom: 0, right: 0)
+//            $0.tableView.contentOffset = CGPoint(x: 0, y: -headerView.bounds.height)
+//        }
     }
     private func registerCell() {
         let myTwittNib = UINib(nibName: TwitterMyTwittTableViewCell.identifier, bundle: nil)
@@ -30,23 +35,18 @@ class HomeTabVHomeTabViewController: UIViewController {
         tableView.register(myTwittNib, forCellReuseIdentifier: TwitterMyTwittTableViewCell.identifier)
         tableView.register(reTwittNib, forCellReuseIdentifier: TwitterRetwittTableViewCell.identifier)
     }
+    
 }
 extension HomeTabVHomeTabViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        //        let twitt = TwittModel.sampleData[indexPath.row]
+        //        switch twitt.type {
+        //        case .myTwitt:
+        //            return 87
+        //        default:
+        //            return 204
         return UITableView.automaticDimension
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let twitt = TwittModel.sampleData[indexPath.row]
-        switch twitt.type {
-        case .myTwitt:
-            return 87
-
-        default:
-            return 204
-        }
-    }
-    
 }
 extension HomeTabVHomeTabViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

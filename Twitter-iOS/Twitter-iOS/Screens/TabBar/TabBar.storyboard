@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alarm-->
+        <!--YujinStoryboard2-->
         <scene sceneID="BKf-cf-Ffz">
             <objects>
-                <viewControllerPlaceholder storyboardName="Alarm" id="6mj-rk-k6b" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="YujinStoryboard2" id="6mj-rk-k6b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PhR-iE-3MF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP0-oK-1GG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

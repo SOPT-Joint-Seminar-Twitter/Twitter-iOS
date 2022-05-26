@@ -33,13 +33,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먀막" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-Wb-CrF">
-                        <rect key="frame" x="76" y="5" width="24.5" height="16.5"/>
+                        <rect key="frame" x="76" y="5" width="24.5" height="19.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_white"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0518 · 2초" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7I-yt-dYe">
-                        <rect key="frame" x="108.5" y="5" width="112.5" height="16.5"/>
+                        <rect key="frame" x="108.5" y="5" width="112.5" height="19.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_gray50"/>
                         <nil key="highlightedColor"/>
@@ -53,8 +53,8 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="menu"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="트위터로 글 작성하기~!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-Hy-gpt">
-                        <rect key="frame" x="76" y="25.5" width="129.5" height="16.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="트위터로 글 작성하기~!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-Hy-gpt">
+                        <rect key="frame" x="76" y="28.5" width="129.5" height="16.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_white"/>
                         <nil key="highlightedColor"/>
@@ -115,6 +115,7 @@
                     <constraint firstItem="gif-H1-mOt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6X6-Ck-IHn"/>
                     <constraint firstItem="YhB-nc-DCA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7lo-VQ-vNg"/>
                     <constraint firstItem="q7I-yt-dYe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="8n5-CQ-PHx"/>
+                    <constraint firstItem="khh-Hy-gpt" firstAttribute="top" secondItem="q7I-yt-dYe" secondAttribute="bottom" constant="4" id="Dxx-oM-GIB"/>
                     <constraint firstItem="gif-H1-mOt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GJl-KI-uAk"/>
                     <constraint firstAttribute="bottom" secondItem="J3V-tS-0x1" secondAttribute="bottom" constant="13" id="NiV-SP-CpA"/>
                     <constraint firstItem="J3V-tS-0x1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="72" id="Pqg-ax-tPb"/>
@@ -122,6 +123,7 @@
                     <constraint firstItem="q7I-yt-dYe" firstAttribute="leading" secondItem="cYL-Wb-CrF" secondAttribute="trailing" constant="8" id="aQj-JR-f6v"/>
                     <constraint firstAttribute="trailing" secondItem="YhB-nc-DCA" secondAttribute="trailing" constant="10" id="cZz-1x-jj7"/>
                     <constraint firstItem="khh-Hy-gpt" firstAttribute="leading" secondItem="gif-H1-mOt" secondAttribute="trailing" constant="8" id="dls-0B-2Q9"/>
+                    <constraint firstItem="J3V-tS-0x1" firstAttribute="top" secondItem="khh-Hy-gpt" secondAttribute="bottom" constant="5" id="thV-7p-XXZ"/>
                     <constraint firstItem="cYL-Wb-CrF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="76" id="vyM-gr-Bv2"/>
                     <constraint firstItem="cYL-Wb-CrF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="y2n-mE-iE7"/>
                 </constraints>

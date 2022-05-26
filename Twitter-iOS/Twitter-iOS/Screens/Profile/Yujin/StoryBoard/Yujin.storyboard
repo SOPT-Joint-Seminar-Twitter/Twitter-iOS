@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,14 +21,14 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="YuJinProfileViewController" customModule="Twitter_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="N07-rx-FVi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="917"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIE-TD-Fuu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="xLo-uU-tqP">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -123,7 +122,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gh.png" translatesAutoresizingMaskIntoConstraints="NO" id="jiN-GK-5pI">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile6" translatesAutoresizingMaskIntoConstraints="NO" id="jiN-GK-5pI">
                                                 <rect key="frame" x="15" y="108" width="64" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="hzJ-IK-VgY"/>
@@ -142,7 +141,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcq-1f-3J9">
-                                                <rect key="frame" x="0.0" y="309" width="414" height="2691"/>
+                                                <rect key="frame" x="0.0" y="309" width="414" height="1191"/>
                                                 <connections>
                                                     <segue destination="Wq7-VE-Nei" kind="embed" id="Lp3-75-Wgk"/>
                                                 </connections>
@@ -150,57 +149,62 @@
                                         </subviews>
                                         <color key="backgroundColor" name="twitter_black"/>
                                         <constraints>
-                                            <constraint firstItem="dcq-1f-3J9" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" id="65B-bw-UqW"/>
+                                            <constraint firstAttribute="width" constant="414" id="2zb-Jq-wNU"/>
                                             <constraint firstItem="xLo-uU-tqP" firstAttribute="top" secondItem="ZIE-TD-Fuu" secondAttribute="top" id="BYZ-sb-iS9"/>
                                             <constraint firstItem="gEo-by-yKo" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" constant="16" id="F85-XS-pNt"/>
-                                            <constraint firstAttribute="trailing" secondItem="dcq-1f-3J9" secondAttribute="trailing" id="FUj-Xu-eKr"/>
                                             <constraint firstItem="jiN-GK-5pI" firstAttribute="top" secondItem="ZIE-TD-Fuu" secondAttribute="top" constant="108" id="JNh-Gb-DzH"/>
                                             <constraint firstItem="98A-pi-DjF" firstAttribute="centerY" secondItem="gEo-by-yKo" secondAttribute="centerY" id="KDg-Hl-OUf"/>
-                                            <constraint firstAttribute="bottom" secondItem="dcq-1f-3J9" secondAttribute="bottom" id="SYe-f7-wsL"/>
+                                            <constraint firstAttribute="bottom" secondItem="dcq-1f-3J9" secondAttribute="bottom" id="MBp-Re-vSf"/>
+                                            <constraint firstAttribute="height" constant="1500" id="MQP-rm-1Eu"/>
                                             <constraint firstItem="J4Z-YK-Ltj" firstAttribute="top" secondItem="98A-pi-DjF" secondAttribute="bottom" constant="8" id="YIY-NK-OSN"/>
                                             <constraint firstItem="jZ5-L9-ZgH" firstAttribute="top" secondItem="98A-pi-DjF" secondAttribute="bottom" constant="8" id="cej-vv-o0P"/>
                                             <constraint firstItem="v5o-fP-e0v" firstAttribute="top" secondItem="xLo-uU-tqP" secondAttribute="bottom" constant="10" id="eEr-9s-XWs"/>
                                             <constraint firstItem="Vgp-gk-2JZ" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" constant="16" id="eMc-bf-vgW"/>
+                                            <constraint firstItem="dcq-1f-3J9" firstAttribute="top" secondItem="J4Z-YK-Ltj" secondAttribute="bottom" id="egN-SL-Iao"/>
                                             <constraint firstItem="xLo-uU-tqP" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" id="f8i-xp-Pjq"/>
+                                            <constraint firstAttribute="trailing" secondItem="dcq-1f-3J9" secondAttribute="trailing" id="fpB-uq-FNj"/>
                                             <constraint firstItem="oMd-95-UxU" firstAttribute="top" secondItem="Vgp-gk-2JZ" secondAttribute="bottom" constant="4" id="ft7-Ee-ejq"/>
+                                            <constraint firstItem="dcq-1f-3J9" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" id="gft-HB-MfT"/>
                                             <constraint firstAttribute="trailing" secondItem="xLo-uU-tqP" secondAttribute="trailing" id="h71-8l-hmz"/>
                                             <constraint firstItem="gEo-by-yKo" firstAttribute="top" secondItem="hKW-7R-HXH" secondAttribute="bottom" constant="18" id="loY-4r-Qxa"/>
                                             <constraint firstItem="jZ5-L9-ZgH" firstAttribute="leading" secondItem="J4Z-YK-Ltj" secondAttribute="trailing" constant="9" id="qbs-dL-boT"/>
                                             <constraint firstItem="hKW-7R-HXH" firstAttribute="top" secondItem="oMd-95-UxU" secondAttribute="bottom" constant="8" id="rRC-uC-4SB"/>
                                             <constraint firstItem="Vgp-gk-2JZ" firstAttribute="top" secondItem="xLo-uU-tqP" secondAttribute="bottom" constant="52" id="sIH-Ql-rQE"/>
                                             <constraint firstItem="jiN-GK-5pI" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" constant="15" id="thd-GL-84o"/>
-                                            <constraint firstAttribute="height" priority="250" constant="3000" id="vkC-ef-7ZM"/>
                                             <constraint firstAttribute="trailing" secondItem="v5o-fP-e0v" secondAttribute="trailing" constant="15" id="wDa-RB-S13"/>
                                             <constraint firstItem="J4Z-YK-Ltj" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" constant="16" id="wTz-5p-ifS"/>
                                             <constraint firstItem="oMd-95-UxU" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" constant="16" id="xyt-Td-vzp"/>
                                             <constraint firstItem="98A-pi-DjF" firstAttribute="leading" secondItem="gEo-by-yKo" secondAttribute="trailing" constant="4" id="yUW-de-4YN"/>
-                                            <constraint firstItem="dcq-1f-3J9" firstAttribute="top" secondItem="J4Z-YK-Ltj" secondAttribute="bottom" id="ydT-JL-Fw6"/>
                                             <constraint firstItem="hKW-7R-HXH" firstAttribute="leading" secondItem="ZIE-TD-Fuu" secondAttribute="leading" constant="16" id="zfn-eG-RjQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="leading" secondItem="z0w-Wj-dlx" secondAttribute="leading" id="1tK-2k-cIv"/>
-                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="width" secondItem="3aM-Kw-oor" secondAttribute="width" id="Bf7-lR-5mp"/>
-                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="trailing" secondItem="z0w-Wj-dlx" secondAttribute="trailing" id="FEa-nz-XD7"/>
-                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="top" secondItem="z0w-Wj-dlx" secondAttribute="top" id="Xpq-MH-C7T"/>
-                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="bottom" secondItem="z0w-Wj-dlx" secondAttribute="bottom" id="pZ8-OC-ayt"/>
+                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="width" secondItem="3aM-Kw-oor" secondAttribute="width" id="08Q-hs-gDc"/>
+                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="top" secondItem="z0w-Wj-dlx" secondAttribute="top" id="4pp-x9-PfF"/>
+                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="trailing" secondItem="z0w-Wj-dlx" secondAttribute="trailing" id="AqL-sE-00F"/>
+                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="bottom" secondItem="z0w-Wj-dlx" secondAttribute="bottom" id="SZR-DJ-Zna"/>
+                                    <constraint firstItem="ZIE-TD-Fuu" firstAttribute="leading" secondItem="z0w-Wj-dlx" secondAttribute="leading" id="i2P-5E-iGF"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="z0w-Wj-dlx"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="3aM-Kw-oor"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="twitter_black"/>
+                        <color key="tintColor" name="twitter_white"/>
                         <constraints>
-                            <constraint firstItem="N07-rx-FVi" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="QBT-QX-D5v"/>
-                            <constraint firstItem="N07-rx-FVi" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="v8m-iS-zVd"/>
-                            <constraint firstItem="N07-rx-FVi" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="y7d-VP-yCw"/>
-                            <constraint firstItem="N07-rx-FVi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zbT-fJ-C7p"/>
+                            <constraint firstItem="N07-rx-FVi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cC6-sk-R8Z"/>
+                            <constraint firstItem="N07-rx-FVi" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qW9-cl-4Eo"/>
+                            <constraint firstItem="N07-rx-FVi" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="x60-q1-Ifg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N07-rx-FVi" secondAttribute="trailing" id="zom-5C-sQP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="iconBell" id="MDn-UZ-Cxa"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconBell" id="MDn-UZ-Cxa">
+                        <color key="badgeColor" name="twitter_white"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="followerCountLabel" destination="25M-Cf-vHg" id="ZbJ-u5-24j"/>
                         <outlet property="followingCountLabel" destination="7fz-Bb-3hF" id="WEB-pI-Nif"/>
@@ -210,6 +214,7 @@
                         <outlet property="profileContentLabel" destination="hKW-7R-HXH" id="JRa-M6-Tyn"/>
                         <outlet property="profileImg" destination="jiN-GK-5pI" id="ER3-uz-LAI"/>
                         <outlet property="profileUpdateButton" destination="v5o-fP-e0v" id="4BT-W1-ZPL"/>
+                        <outlet property="scrollView" destination="N07-rx-FVi" id="uyU-kJ-z53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,12 +225,13 @@
         <scene sceneID="Idn-T2-pxE">
             <objects>
                 <viewController id="Wq7-VE-Nei" customClass="TabManViewController" customModule="Twitter_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LN8-w0-NaL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="2691"/>
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LN8-w0-NaL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1491"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Zjr-ii-L4y"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="twitter_black"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1491"/>
                     <connections>
                         <outlet property="tabView" destination="LN8-w0-NaL" id="MdE-UR-UST"/>
                     </connections>
@@ -236,10 +242,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gh.png" width="32" height="32"/>
         <image name="iconBell" width="48" height="48"/>
         <image name="icondate" width="12" height="12"/>
         <image name="imgBackGround" width="390" height="130"/>
+        <image name="imgProfile6" width="400" height="533"/>
         <namedColor name="twitter_black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -249,8 +255,5 @@
         <namedColor name="twitter_white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

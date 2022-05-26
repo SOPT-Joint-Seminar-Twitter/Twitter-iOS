@@ -48,13 +48,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먀막" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIf-yX-LTH">
-                        <rect key="frame" x="76" y="32" width="24.5" height="16.5"/>
+                        <rect key="frame" x="76" y="32.5" width="24.5" height="22"/>
                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_white"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@nothingbuttfg·3일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="536-6R-Rdu">
-                        <rect key="frame" x="108.5" y="32" width="120.5" height="16.5"/>
+                        <rect key="frame" x="108.5" y="35" width="120.5" height="16.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_gray50"/>
                         <nil key="highlightedColor"/>
@@ -68,15 +68,21 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="menu"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-Kw-mTW">
-                        <rect key="frame" x="75" y="53.5" width="288" height="100.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-Kw-mTW">
+                        <rect key="frame" x="75" y="59.5" width="288" height="100.5"/>
                         <string key="text">샤워, 잠 , 운동 이 세가지의 공통점은 이들은 모두 잡다한 번뇌와 고민으로부터 잠시 분리되어 오로지 나 자신에게만 집중하는 시간이라는 것에 있다. 삶을 유지하는 것에는 의도적인 쉼이 필요하다. 고속도로 처럼 바쁘고 빠른 일상 속에도 반드시 중간중간 휴게소룰 설치해놔야 하는 이유.</string>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                         <color key="textColor" name="twitter_white"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내가 리트윗 했습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sig-kS-Efv">
+                        <rect key="frame" x="76" y="13" width="99.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                        <color key="textColor" name="twitter_gray50"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="KUa-hS-aRg">
-                        <rect key="frame" x="75" y="153" width="242" height="24"/>
+                        <rect key="frame" x="75" y="164" width="242" height="24"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="crg-fy-kM6">
                                 <rect key="frame" x="0.0" y="0.0" width="35" height="24"/>
@@ -140,12 +146,6 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내가 리트윗 했습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sig-kS-Efv">
-                        <rect key="frame" x="76" y="13" width="99.5" height="14.5"/>
-                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
-                        <color key="textColor" name="twitter_gray50"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" name="twitter_black"/>
                 <constraints>
@@ -162,10 +162,11 @@
                     <constraint firstItem="OIf-yX-LTH" firstAttribute="leading" secondItem="0SV-3q-S4S" secondAttribute="trailing" constant="8" id="UFY-fb-YWh"/>
                     <constraint firstItem="Sig-kS-Efv" firstAttribute="centerY" secondItem="e0j-GB-WKn" secondAttribute="centerY" id="YZs-OS-uGs"/>
                     <constraint firstItem="0SV-3q-S4S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cqx-nE-T62"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="KUa-hS-aRg" secondAttribute="bottom" constant="16" id="exU-yh-EAY"/>
                     <constraint firstItem="536-6R-Rdu" firstAttribute="leading" secondItem="OIf-yX-LTH" secondAttribute="trailing" constant="8" id="iUd-5s-zNT"/>
-                    <constraint firstItem="OIf-yX-LTH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="mAP-ay-Rlg"/>
+                    <constraint firstItem="OIf-yX-LTH" firstAttribute="top" secondItem="Sig-kS-Efv" secondAttribute="bottom" constant="5" id="k8b-LV-TyZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KUa-hS-aRg" secondAttribute="bottom" constant="5" id="rH0-Um-MUi"/>
                     <constraint firstItem="e0j-GB-WKn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="46" id="sjr-aN-ifc"/>
+                    <constraint firstItem="KUa-hS-aRg" firstAttribute="top" secondItem="cIt-Kw-mTW" secondAttribute="bottom" constant="4" id="t7Z-7C-Ql4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Tabman
-import Pageboy
 
 class YuJinProfileViewController: UIViewController {
 
@@ -19,11 +17,20 @@ class YuJinProfileViewController: UIViewController {
     @IBOutlet weak var followingCountLabel: UILabel!
     @IBOutlet weak var followerCountLabel: UILabel!
     @IBOutlet weak var profileUpdateButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
     }
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView == self.scrollView {
+//            tableView.isScrollEnabled = (self.scrollView.contentOffset.y >= 200)
+//        }
+//
+//        if scrollView == self.tableView {
+//            self.tableView.isScrollEnabled = (tableView.contentOffset.y > 0)
+//        }
+    }
 }
