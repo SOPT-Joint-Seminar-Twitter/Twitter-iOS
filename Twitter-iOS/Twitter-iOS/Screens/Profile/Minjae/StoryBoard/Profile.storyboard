@@ -286,8 +286,6 @@
                         <outlet property="barViewWidth" destination="6eM-1H-p4T" id="zHP-4s-JGN"/>
                         <outlet property="containerView" destination="4dk-CO-bTe" id="Oxz-Jj-XYW"/>
                         <outlet property="containerViewHeight" destination="5cX-HP-TZC" id="nMn-dS-clQ"/>
-                        <outlet property="profileBackgroundImage" destination="eYQ-iE-iEF" id="wXm-HT-J7d"/>
-                        <outlet property="profileBackgroundImageHeight" destination="zqA-F4-dL6" id="4ES-9J-MeX"/>
                         <outlet property="profileImageView" destination="Isd-Lq-Jnk" id="Fkf-DX-Wgk"/>
                         <outlet property="scrollView" destination="cLp-u0-Uf9" id="9rj-wj-m67"/>
                         <outlet property="searchButton" destination="PWr-mg-xlA" id="lpK-wi-ZwZ"/>
