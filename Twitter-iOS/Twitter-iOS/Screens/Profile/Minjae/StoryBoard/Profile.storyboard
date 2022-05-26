@@ -217,6 +217,9 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-CO-bTe">
                                                 <rect key="frame" x="0.0" y="349.5" width="414" height="920.5"/>
                                                 <color key="backgroundColor" name="twitter_black"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="920.5" id="5cX-HP-TZC"/>
+                                                </constraints>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" name="twitter_black"/>
@@ -248,6 +251,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="twitter_black"/>
                                 <constraints>
                                     <constraint firstItem="ezU-ww-ofi" firstAttribute="width" secondItem="MEX-F8-rFq" secondAttribute="width" id="EaS-GD-laa"/>
                                     <constraint firstItem="ezU-ww-ofi" firstAttribute="leading" secondItem="Uk6-Wv-Bz9" secondAttribute="leading" id="Pq0-mP-z7g"/>
@@ -281,7 +285,11 @@
                         <outlet property="barViewLeading" destination="nDF-nB-GsQ" id="8CV-ez-gBS"/>
                         <outlet property="barViewWidth" destination="6eM-1H-p4T" id="zHP-4s-JGN"/>
                         <outlet property="containerView" destination="4dk-CO-bTe" id="Oxz-Jj-XYW"/>
+                        <outlet property="containerViewHeight" destination="5cX-HP-TZC" id="nMn-dS-clQ"/>
+                        <outlet property="profileBackgroundImage" destination="eYQ-iE-iEF" id="wXm-HT-J7d"/>
+                        <outlet property="profileBackgroundImageHeight" destination="zqA-F4-dL6" id="4ES-9J-MeX"/>
                         <outlet property="profileImageView" destination="Isd-Lq-Jnk" id="Fkf-DX-Wgk"/>
+                        <outlet property="scrollView" destination="cLp-u0-Uf9" id="9rj-wj-m67"/>
                         <outlet property="searchButton" destination="PWr-mg-xlA" id="lpK-wi-ZwZ"/>
                         <outlet property="tabStackView" destination="yYZ-FX-eRo" id="rSu-sl-Ph6"/>
                     </connections>

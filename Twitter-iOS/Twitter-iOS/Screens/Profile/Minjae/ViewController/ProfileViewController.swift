@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tabStackView: UIStackView!
     @IBOutlet weak var barView: UIView!
     @IBOutlet weak var barBackgroundView: UIView!
@@ -20,6 +21,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var barViewWidth: NSLayoutConstraint!
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     
@@ -34,9 +36,25 @@ class ProfileViewController: UIViewController {
     private var currentIdx = 0
     private var btnTapped = false
     
+    private let floatingButton = UIButton()
+    
+    private func setFloatingButton() {
+        floatingButton.frame = CGRect(x: self.view.frame.size.width - 112, y: UIScreen.main.bounds.height - 160, width: 56, height: 56)
+        floatingButton.setImage(ImageLiteral.Writing.iconBigPlus, for: .normal)
+        floatingButton.addTarget(self, action: #selector(plutBtnTapped), for: .touchUpInside)
+        self.view.addSubview(floatingButton)
+    }
+    
+    @objc func plutBtnTapped() {
+        let writingVC = SuYeonWritingViewController()
+        writingVC.modalPresentationStyle = .fullScreen
+        self.present(writingVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setProfileUI()
+        setFloatingButton()
         setPageVC()
     }
     
