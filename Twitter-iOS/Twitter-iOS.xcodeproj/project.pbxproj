@@ -62,6 +62,14 @@
 		B5DEFEA328349CA700D64C5E /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA228349CA700D64C5E /* MediaViewController.swift */; };
 		B5DEFEA528349CBB00D64C5E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFEA428349CBB00D64C5E /* FavoriteViewController.swift */; };
 		B5DEFEA92834F1BE00D64C5E /* Tweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DEFEA82834F1BE00D64C5E /* Tweet.storyboard */; };
+		4DC622E028348B0900186517 /* WritingToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622DF28348B0900186517 /* WritingToolBar.swift */; };
+		4DC622E228348F2800186517 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E128348F2800186517 /* UIStackView+Extension.swift */; };
+		4DC622E42834BB9100186517 /* CommentPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E32834BB9100186517 /* CommentPermissionView.swift */; };
+		4DC622E62834BE3D00186517 /* AlbumCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E52834BE3D00186517 /* AlbumCollectionView.swift */; };
+		4DC622E82834C4D400186517 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E72834C4D400186517 /* IconCollectionViewCell.swift */; };
+		4DC622EA2834C4E800186517 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622E92834C4E800186517 /* ImageCollectionViewCell.swift */; };
+		4DC622EC2834C6F700186517 /* WritingViewController+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622EB2834C6F700186517 /* WritingViewController+Extesion.swift */; };
+		4DC622EE2834DA5300186517 /* MyPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC622ED2834DA5300186517 /* MyPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +127,14 @@
 		B5DEFEA228349CA700D64C5E /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		B5DEFEA428349CBB00D64C5E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		B5DEFEA82834F1BE00D64C5E /* Tweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tweet.storyboard; sourceTree = "<group>"; };
+		4DC622DF28348B0900186517 /* WritingToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingToolBar.swift; sourceTree = "<group>"; };
+		4DC622E128348F2800186517 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		4DC622E32834BB9100186517 /* CommentPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPermissionView.swift; sourceTree = "<group>"; };
+		4DC622E52834BE3D00186517 /* AlbumCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionView.swift; sourceTree = "<group>"; };
+		4DC622E72834C4D400186517 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DC622E92834C4E800186517 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DC622EB2834C6F700186517 /* WritingViewController+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WritingViewController+Extesion.swift"; sourceTree = "<group>"; };
+		4DC622ED2834DA5300186517 /* MyPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +285,7 @@
 				4D32E25828328A2800A3DD31 /* NSObject+Extension.swift */,
 				4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */,
 				4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */,
+				4DC622E128348F2800186517 /* UIStackView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -329,6 +346,7 @@
 		4D32E2052831153600A3DD31 /* Suyeon */ = {
 			isa = PBXGroup;
 			children = (
+				4DC622EF2834DA5E00186517 /* Model */,
 				4D32E214283116F300A3DD31 /* ViewController */,
 				4D32E2162831170200A3DD31 /* Component */,
 				4D32E215283116FC00A3DD31 /* Cell */,
@@ -461,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				4D32E222283118CF00A3DD31 /* SuYeonWritingViewController.swift */,
+				4DC622EB2834C6F700186517 /* WritingViewController+Extesion.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -468,6 +487,8 @@
 		4D32E215283116FC00A3DD31 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4DC622E72834C4D400186517 /* IconCollectionViewCell.swift */,
+				4DC622E92834C4E800186517 /* ImageCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -475,6 +496,9 @@
 		4D32E2162831170200A3DD31 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				4DC622DF28348B0900186517 /* WritingToolBar.swift */,
+				4DC622E32834BB9100186517 /* CommentPermissionView.swift */,
+				4DC622E52834BE3D00186517 /* AlbumCollectionView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -587,6 +611,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4DC622EF2834DA5E00186517 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DC622ED2834DA5300186517 /* MyPhoto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -694,7 +726,9 @@
 				4D32E251283287D100A3DD31 /* UITextField+Extension.swift in Sources */,
 				1A41E4642835D2F4006073D5 /* SecondTabViewController.swift in Sources */,
 				4D32E2492832852A00A3DD31 /* UILabel+Extension.swift in Sources */,
+				4DC622E82834C4D400186517 /* IconCollectionViewCell.swift in Sources */,
 				4D32E24D2832855100A3DD31 /* UIViewController+Extension.swift in Sources */,
+				4DC622E028348B0900186517 /* WritingToolBar.swift in Sources */,
 				4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */,
 				4D32E23F2832771800A3DD31 /* UIFont+Extension.swift in Sources */,
 				4D32E24F283285B700A3DD31 /* Adjusted+Extension.swift in Sources */,
@@ -702,19 +736,26 @@
 				4D32E25B28328A6700A3DD31 /* UITableView+Extension.swift in Sources */,
 				4D32E225283118FA00A3DD31 /* ProfileViewController.swift in Sources */,
 				B5DEFEA128349C9900D64C5E /* TweetAndReplyViewController.swift in Sources */,
+				4DC622EC2834C6F700186517 /* WritingViewController+Extesion.swift in Sources */,
+				4D32E225283118FA00A3DD31 /* MinJaeProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
 				1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */,
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
+				4DC622EE2834DA5300186517 /* MyPhoto.swift in Sources */,
 				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,
+				4DC622E228348F2800186517 /* UIStackView+Extension.swift in Sources */,
 				1A41E47228360504006073D5 /* TwitterRetwittTableViewCell.swift in Sources */,
 				4D32E2452832832600A3DD31 /* ImageLiteral.swift in Sources */,
 				1A41E4602835D1BE006073D5 /* TabManViewController.swift in Sources */,
 				4D32E223283118CF00A3DD31 /* SuYeonWritingViewController.swift in Sources */,
 				4D32E1E4283108CC00A3DD31 /* SceneDelegate.swift in Sources */,
+				4DC622EA2834C4E800186517 /* ImageCollectionViewCell.swift in Sources */,
+				4DC622E42834BB9100186517 /* CommentPermissionView.swift in Sources */,
 				4D32E2272831190D00A3DD31 /* YuJinProfileViewController.swift in Sources */,
 				4D32E247283284DD00A3DD31 /* UIView+Extension.swift in Sources */,
 				1A41E4682835D317006073D5 /* FourthTabViewController.swift in Sources */,
 				B5D95D462835329800AA3C1F /* TweetModel.swift in Sources */,
+				4DC622E62834BE3D00186517 /* AlbumCollectionView.swift in Sources */,
 				4D32E24128327B6D00A3DD31 /* UIColor+Extension.swift in Sources */,
 				B5DEFE9F28349C7C00D64C5E /* TweetViewController.swift in Sources */,
 			);
