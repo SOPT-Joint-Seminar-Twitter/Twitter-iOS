@@ -11,6 +11,8 @@ class TweetViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    
     private var tweetDataList = TweetResponse.sampleData
     
     override func viewDidLoad() {
@@ -25,7 +27,8 @@ class TweetViewController: UIViewController {
     }
 
     private func setTableView() {
-        tableView.delegate = self
+//        tableView.delegate = self
+        tableView.isScrollEnabled = false
         tableView.dataSource = self
 
         tableView.rowHeight = UITableView.automaticDimension
