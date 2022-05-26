@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디자인/일상/인사이트/틈새기록/구독계" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzB-gl-ygQ">
-                                                <rect key="frame" x="16" y="236.5" width="217" height="16.5"/>
+                                                <rect key="frame" x="16" y="236.5" width="212.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_white"/>
                                                 <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                                                 <rect key="frame" x="16" y="271" width="12" height="12"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="qfb-l9-BXy">
-                                                <rect key="frame" x="16" y="292.5" width="62" height="16.5"/>
+                                                <rect key="frame" x="16" y="292" width="62" height="16.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="192" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNV-nN-rtY">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="16.5"/>
@@ -114,19 +114,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0518" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg9-K6-YaR">
-                                                <rect key="frame" x="16" y="212" width="82" height="16.5"/>
+                                                <rect key="frame" x="16" y="212" width="81" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 11월에 가입함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-rB-kOV">
-                                                <rect key="frame" x="32" y="270" width="109" height="14.5"/>
+                                                <rect key="frame" x="32" y="270" width="109" height="14"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iBw-68-mc3">
-                                                <rect key="frame" x="87" y="292.5" width="46.5" height="16.5"/>
+                                                <rect key="frame" x="87" y="292" width="46.5" height="16.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ5-Vw-dFP">
                                                         <rect key="frame" x="0.0" y="0.0" width="8" height="16.5"/>
@@ -173,7 +173,7 @@
                                         <rect key="frame" x="0.0" y="280" width="414" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="트윗 및 답글" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-1b-5FV">
-                                                <rect key="frame" x="96.5" y="27" width="68" height="16.5"/>
+                                                <rect key="frame" x="96.5" y="27" width="68.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>
@@ -185,13 +185,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음에 들어요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-ky-Gn3">
-                                                <rect key="frame" x="311.5" y="27" width="76.5" height="16.5"/>
+                                                <rect key="frame" x="311" y="27" width="77" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="미디어" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqK-uT-fM7">
-                                                <rect key="frame" x="235" y="27" width="36.5" height="16.5"/>
+                                                <rect key="frame" x="234.5" y="27" width="36.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>

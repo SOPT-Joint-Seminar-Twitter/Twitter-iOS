@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
-        <!--Minjae-->
+        <!--Profile-->
         <scene sceneID="tqC-yV-FpA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Minjae" id="nWo-K7-TCJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" id="nWo-K7-TCJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UNl-aB-aAt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ma-JN-n80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
