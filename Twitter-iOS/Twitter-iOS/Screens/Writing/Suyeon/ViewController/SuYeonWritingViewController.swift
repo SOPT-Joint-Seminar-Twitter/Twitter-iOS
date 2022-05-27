@@ -171,14 +171,18 @@ class SuYeonWritingViewController: UIViewController {
 
     @objc
     private func twitButtonDidTap(_ button: UIButton) {
+        writingToolBar.isHidden = true
+        albumCollectionView.isHidden = true
+        commentPermissionView.isHidden = true
         self.dismiss(animated: true)
     }
 
     @objc
     private func cancelButtonDidTap(_ button: UIButton) {
-        self.makeAlertWithCancel(okTitle: "작성을 취소하시겠습니까?", okAction: { [weak self] _ in
-            self?.dismiss(animated: true)
-        })
+        writingToolBar.isHidden = true
+        albumCollectionView.isHidden = true
+        commentPermissionView.isHidden = true
+        self.dismiss(animated: true)
     }
 
     private func setKeyboard() {
