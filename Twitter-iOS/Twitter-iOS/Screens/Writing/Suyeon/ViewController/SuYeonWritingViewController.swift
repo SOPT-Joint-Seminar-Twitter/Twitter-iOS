@@ -30,6 +30,7 @@ class SuYeonWritingViewController: UIViewController {
         configuration.contentInsets = .zero
 
         let button = UIButton(configuration: configuration, primaryAction: nil)
+        button.addTarget(self, action: #selector(cancelButtonDidTap(_:)), for: .touchUpInside)
         return button
     }()
 
@@ -170,7 +171,18 @@ class SuYeonWritingViewController: UIViewController {
 
     @objc
     private func twitButtonDidTap(_ button: UIButton) {
-        // 피드 화면으로 돌아가기 + 데이터 전달 ! -> dismiss 하면 될거같음 !!
+        writingToolBar.isHidden = true
+        albumCollectionView.isHidden = true
+        commentPermissionView.isHidden = true
+        self.dismiss(animated: true)
+    }
+
+    @objc
+    private func cancelButtonDidTap(_ button: UIButton) {
+        writingToolBar.isHidden = true
+        albumCollectionView.isHidden = true
+        commentPermissionView.isHidden = true
+        self.dismiss(animated: true)
     }
 
     private func setKeyboard() {

@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var backArrow: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tabStackView: UIStackView!
     @IBOutlet weak var barView: UIView!
     @IBOutlet weak var barBackgroundView: UIView!
@@ -20,6 +21,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var barViewWidth: NSLayoutConstraint!
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     
@@ -30,14 +32,34 @@ class ProfileViewController: UIViewController {
         FavoriteViewController()
     ]
     
+    private lazy var tweetSB = contents.first
+    
     // 현재 몇번째 페이지를 보고있는지 확인 위한 idx 변수
     private var currentIdx = 0
     private var btnTapped = false
     
+    private let floatingButton = UIButton()
+    
+    private func setFloatingButton() {
+        floatingButton.frame = CGRect(x: self.view.frame.size.width - 112, y: UIScreen.main.bounds.height - 160, width: 56, height: 56)
+        floatingButton.setImage(ImageLiteral.Writing.iconBigPlus, for: .normal)
+        floatingButton.addTarget(self, action: #selector(plutBtnTapped), for: .touchUpInside)
+        self.view.addSubview(floatingButton)
+    }
+    
+    @objc func plutBtnTapped() {
+        let writingVC = SuYeonWritingViewController()
+        writingVC.modalPresentationStyle = .fullScreen
+        self.present(writingVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setProfileUI()
+        setFloatingButton()
         setPageVC()
+        
+        scrollView.delegate = self
     }
     
     private func setProfileUI() {
@@ -64,9 +86,10 @@ class ProfileViewController: UIViewController {
         pageViewController.delegate = self
         pageViewController.dataSource = self
         
-        
         if let tweetVC = contents.first {
             pageViewController.setViewControllers([tweetVC], direction: .forward, animated: true)
+            guard let vc = tweetVC as? TweetViewController else { return }
+            vc.tableView.delegate = self
         }
         
         
@@ -152,45 +175,75 @@ extension ProfileViewController: UIPageViewControllerDataSource {
 // PageViewController도 scroll view를 상속받음
 extension ProfileViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard !btnTapped else { return }
         
-        let scrollOffsetX = scrollView.contentOffset.x
-        // 여기는 왜 size.width? get만 할꺼면 size.width 할필요없고 그냥 frame.width해도 될듯
-        let contentSizeWidth = view.frame.size.width
+        guard let tweetVC = tweetSB as? TweetViewController else { return }
+        let tweetTableView = tweetVC.tableView
+
+        let yOffset = self.scrollView.contentOffset.y
+        let tableOffsetY = tweetTableView?.contentOffset.y ?? 0
         
-        // -1.0 ~ 1.0 (좌우 이동)
-        let movement = (scrollOffsetX - contentSizeWidth) / contentSizeWidth
-        
-        let currentIdx: CGFloat = movement + CGFloat(currentIdx)
-        let percent: CGFloat = currentIdx - CGFloat(Int(currentIdx))
-        
-        var leftWidth: CGFloat = 0, rightWidth: CGFloat = 0
-        var leftX: CGFloat = 0, rightX: CGFloat = 0
-        var leftMargin: CGFloat = 0, rightMargin: CGFloat = 0
-        
-        if let leftButton = tabStackView.arrangedSubviews[Int(currentIdx)] as? UIButton {
-            leftWidth = leftButton.contentSize
-            leftX = leftButton.frame.origin.x
-            leftMargin = leftButton.margin
+        if yOffset >= containerView.frame.origin.y {
+            tweetTableView?.isScrollEnabled = true
         }
         
-        if Int(currentIdx) + 1 < contents.count, let rightButton = tabStackView.arrangedSubviews[Int(currentIdx) + 1] as? UIButton {
-            rightWidth = rightButton.contentSize
-            rightX = rightButton.frame.origin.x
-            rightMargin = rightButton.margin
+        if scrollView == tweetTableView {
+            if tableOffsetY <= 0 {
+                tweetTableView?.isScrollEnabled = false
+            }
+        }
+
+        if scrollView == pageViewController.scrollView {
+            
+            guard !btnTapped else { return }
+            
+            let scrollOffsetX = scrollView.contentOffset.x
+            // 여기는 왜 size.width? get만 할꺼면 size.width 할필요없고 그냥 frame.width해도 될듯
+            let contentSizeWidth = view.frame.size.width
+            
+            // -1.0 ~ 1.0 (좌우 이동)
+            let movement = (scrollOffsetX - contentSizeWidth) / contentSizeWidth
+            
+            let currentIdx: CGFloat = movement + CGFloat(currentIdx)
+            let percent: CGFloat = currentIdx - CGFloat(Int(currentIdx))
+            
+            var leftWidth: CGFloat = 0, rightWidth: CGFloat = 0
+            var leftX: CGFloat = 0, rightX: CGFloat = 0
+            var leftMargin: CGFloat = 0, rightMargin: CGFloat = 0
+            
+            if let leftButton = tabStackView.arrangedSubviews[Int(currentIdx)] as? UIButton {
+                leftWidth = leftButton.contentSize
+                leftX = leftButton.frame.origin.x
+                leftMargin = leftButton.margin
+            }
+            
+            if Int(currentIdx) + 1 < contents.count, let rightButton = tabStackView.arrangedSubviews[Int(currentIdx) + 1] as? UIButton {
+                rightWidth = rightButton.contentSize
+                rightX = rightButton.frame.origin.x
+                rightMargin = rightButton.margin
+            }
+            
+            if Int(currentIdx) == contents.count - 1 {
+                rightX = view.frame.width
+                rightWidth = leftWidth
+            }
+            
+            
+            // (rightX - leftX) -> 음수
+            let indicatorX = (rightX - leftX) * percent + leftX
+            let indicatorWidth = (rightWidth - leftWidth) * percent  + leftWidth
+            let buttonMargin = (rightMargin - leftMargin) * percent + leftMargin
+            barViewLeading.constant = indicatorX + buttonMargin
+            barViewWidth.constant = indicatorWidth
         }
         
-        if Int(currentIdx) == contents.count - 1 {
-            rightX = view.frame.width
-            rightWidth = leftWidth
-        }
-        
-        
-        // (rightX - leftX) -> 음수
-        let indicatorX = (rightX - leftX) * percent + leftX
-        let indicatorWidth = (rightWidth - leftWidth) * percent  + leftWidth
-        let buttonMargin = (rightMargin - leftMargin) * percent + leftMargin
-        barViewLeading.constant = indicatorX + buttonMargin
-        barViewWidth.constant = indicatorWidth
+    }
+}
+
+// PageViewController의 scrollView 접근
+extension UIPageViewController {
+
+    var scrollView: UIScrollView? {
+
+        return view.subviews.filter { $0 is UIScrollView }.first as? UIScrollView
     }
 }

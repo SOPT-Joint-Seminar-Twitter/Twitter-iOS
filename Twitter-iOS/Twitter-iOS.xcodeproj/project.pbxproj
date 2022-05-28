@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A166BF8283F45DE003AC3F7 /* YujinStoryboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A166BF7283F45DE003AC3F7 /* YujinStoryboard2.storyboard */; };
+		1A166BFB283F460B003AC3F7 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A166BF9283F460B003AC3F7 /* ProfileTableViewCell.swift */; };
+		1A166BFC283F460B003AC3F7 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A166BFA283F460B003AC3F7 /* ProfileTableViewCell.xib */; };
+		1A166BFE283F4D03003AC3F7 /* YujinStoryboard2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A166BFD283F4D03003AC3F7 /* YujinStoryboard2ViewController.swift */; };
+		1A166C00283F5F59003AC3F7 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A166BFF283F5F59003AC3F7 /* ProfileModel.swift */; };
+		1A166C03283F66FB003AC3F7 /* TabmanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A166C01283F66FB003AC3F7 /* TabmanTableViewCell.swift */; };
+		1A166C04283F66FB003AC3F7 /* TabmanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A166C02283F66FB003AC3F7 /* TabmanTableViewCell.xib */; };
 		1A41E4602835D1BE006073D5 /* TabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E45F2835D1BE006073D5 /* TabManViewController.swift */; };
-		1A41E4622835D2E3006073D5 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */; };
+		1A41E4622835D2E3006073D5 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4612835D2E3006073D5 /* HomeTabViewController.swift */; };
 		1A41E4642835D2F4006073D5 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */; };
 		1A41E4662835D300006073D5 /* ThirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4652835D300006073D5 /* ThirdTabViewController.swift */; };
 		1A41E4682835D317006073D5 /* FourthTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4672835D317006073D5 /* FourthTabViewController.swift */; };
@@ -17,6 +24,7 @@
 		1A41E47328360504006073D5 /* TwitterRetwittTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */; };
 		1A41E4762836051A006073D5 /* TwitterMyTwittTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */; };
 		1A41E4772836051A006073D5 /* TwitterMyTwittTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */; };
+		1A457DD12837753700DD123C /* TwittModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A457DD02837753700DD123C /* TwittModel.swift */; };
 		1A4C317F283362C1007A48A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C317E283362C1007A48A3 /* TabBar.storyboard */; };
 		1A4C3182283362D7007A48A3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3181283362D7007A48A3 /* Profile.storyboard */; };
 		1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Suyeon.storyboard */; };
@@ -83,8 +91,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A166BF7283F45DE003AC3F7 /* YujinStoryboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YujinStoryboard2.storyboard; sourceTree = "<group>"; };
+		1A166BF9283F460B003AC3F7 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		1A166BFA283F460B003AC3F7 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		1A166BFD283F4D03003AC3F7 /* YujinStoryboard2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YujinStoryboard2ViewController.swift; sourceTree = "<group>"; };
+		1A166BFF283F5F59003AC3F7 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		1A166C01283F66FB003AC3F7 /* TabmanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabmanTableViewCell.swift; sourceTree = "<group>"; };
+		1A166C02283F66FB003AC3F7 /* TabmanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabmanTableViewCell.xib; sourceTree = "<group>"; };
 		1A41E45F2835D1BE006073D5 /* TabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManViewController.swift; sourceTree = "<group>"; };
-		1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		1A41E4612835D2E3006073D5 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		1A41E4652835D300006073D5 /* ThirdTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabViewController.swift; sourceTree = "<group>"; };
 		1A41E4672835D317006073D5 /* FourthTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTabViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +108,7 @@
 		1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterRetwittTableViewCell.xib; sourceTree = "<group>"; };
 		1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterMyTwittTableViewCell.swift; sourceTree = "<group>"; };
 		1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterMyTwittTableViewCell.xib; sourceTree = "<group>"; };
+		1A457DD02837753700DD123C /* TwittModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittModel.swift; sourceTree = "<group>"; };
 		1A4C317E283362C1007A48A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		1A4C3181283362D7007A48A3 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Suyeon.storyboard; path = ../Suyeon.storyboard; sourceTree = "<group>"; };
@@ -171,16 +187,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A41E46F2835FF7C006073D5 /* CustomTabBar */ = {
+		1A41E46F2835FF7C006073D5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1A41E478283694F9006073D5 /* TableView */,
 				1A41E45F2835D1BE006073D5 /* TabManViewController.swift */,
-				1A41E4612835D2E3006073D5 /* FirstTabViewController.swift */,
+				1A41E4612835D2E3006073D5 /* HomeTabViewController.swift */,
 				1A41E4632835D2F4006073D5 /* SecondTabViewController.swift */,
 				1A41E4652835D300006073D5 /* ThirdTabViewController.swift */,
 				1A41E4672835D317006073D5 /* FourthTabViewController.swift */,
 			);
-			path = CustomTabBar;
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1A41E478283694F9006073D5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				1A41E47028360504006073D5 /* TwitterRetwittTableViewCell.swift */,
+				1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		1A41E47928369514006073D5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */,
+				1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */,
+				1A166BF9283F460B003AC3F7 /* ProfileTableViewCell.swift */,
+				1A166BFA283F460B003AC3F7 /* ProfileTableViewCell.xib */,
+				1A166C01283F66FB003AC3F7 /* TabmanTableViewCell.swift */,
+				1A166C02283F66FB003AC3F7 /* TabmanTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		1A457DC928374D9800DD123C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A457DD02837753700DD123C /* TwittModel.swift */,
+				1A166BFF283F5F59003AC3F7 /* ProfileModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1A4C317D283362A8007A48A3 /* TabBar */ = {
@@ -413,6 +461,7 @@
 		4D32E2042831151C00A3DD31 /* Yujin */ = {
 			isa = PBXGroup;
 			children = (
+				1A457DC928374D9800DD123C /* Model */,
 				4D32E20D2831162300A3DD31 /* ViewController */,
 				4D32E20F2831163100A3DD31 /* StoryBoard */,
 				4D32E2102831164D00A3DD31 /* Xib */,
@@ -503,12 +552,9 @@
 		4D32E20D2831162300A3DD31 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1A41E46F2835FF7C006073D5 /* CustomTabBar */,
+				1A41E46F2835FF7C006073D5 /* TabBar */,
 				4D32E2262831190D00A3DD31 /* YuJinProfileViewController.swift */,
-				1A41E47028360504006073D5 /* TwitterRetwittTableViewCell.swift */,
-				1A41E47128360504006073D5 /* TwitterRetwittTableViewCell.xib */,
-				1A41E4742836051A006073D5 /* TwitterMyTwittTableViewCell.swift */,
-				1A41E4752836051A006073D5 /* TwitterMyTwittTableViewCell.xib */,
+				1A166BFD283F4D03003AC3F7 /* YujinStoryboard2ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -523,8 +569,10 @@
 		4D32E20F2831163100A3DD31 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				1A41E47928369514006073D5 /* TableView */,
 				1A4C3185283362E7007A48A3 /* Yujin.storyboard */,
 				1A41E4692835FCC2006073D5 /* TableView.storyboard */,
+				1A166BF7283F45DE003AC3F7 /* YujinStoryboard2.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -765,11 +813,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A166BF8283F45DE003AC3F7 /* YujinStoryboard2.storyboard in Resources */,
 				4D32E2372832762100A3DD31 /* Roboto-Regular.ttf in Resources */,
 				4D32E2322832761600A3DD31 /* Helvetica Bold.ttf in Resources */,
 				1A4C3182283362D7007A48A3 /* Profile.storyboard in Resources */,
 				4D32E1EE283108CF00A3DD31 /* LaunchScreen.storyboard in Resources */,
 				1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */,
+				1A166C04283F66FB003AC3F7 /* TabmanTableViewCell.xib in Resources */,
 				1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */,
 				4D32E2382832762100A3DD31 /* Roboto-Medium.ttf in Resources */,
 				B5939ACB2834F95100A769BF /* TweetTableViewCell.xib in Resources */,
@@ -783,6 +833,7 @@
 				4D32E1E9283108CC00A3DD31 /* Main.storyboard in Resources */,
 				4D32E23D2832762700A3DD31 /* Roboto-Black.ttf in Resources */,
 				1A41E4772836051A006073D5 /* TwitterMyTwittTableViewCell.xib in Resources */,
+				1A166BFC283F460B003AC3F7 /* ProfileTableViewCell.xib in Resources */,
 				4D32E2392832762100A3DD31 /* Roboto-Light.ttf in Resources */,
 				4D32E2332832761600A3DD31 /* Helvetica Light.ttf in Resources */,
 				1A41E47328360504006073D5 /* TwitterRetwittTableViewCell.xib in Resources */,
@@ -796,6 +847,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A166BFE283F4D03003AC3F7 /* YujinStoryboard2ViewController.swift in Sources */,
+				1A457DD12837753700DD123C /* TwittModel.swift in Sources */,
 				4D153CBF28389FD10072B731 /* NetworkConstants.swift in Sources */,
 				1A41E4762836051A006073D5 /* TwitterMyTwittTableViewCell.swift in Sources */,
 				B5DEFEA528349CBB00D64C5E /* FavoriteViewController.swift in Sources */,
@@ -803,10 +856,14 @@
 				4D153CC72838A01B0072B731 /* BaseService.swift in Sources */,
 				1A41E4622835D2E3006073D5 /* FirstTabViewController.swift in Sources */,
 				B5DEFEA328349CA700D64C5E /* MediaViewController.swift in Sources */,
+				1A166BFB283F460B003AC3F7 /* ProfileTableViewCell.swift in Sources */,
+				1A41E4622835D2E3006073D5 /* HomeTabViewController.swift in Sources */,
 				4D32E251283287D100A3DD31 /* UITextField+Extension.swift in Sources */,
 				1A41E4642835D2F4006073D5 /* SecondTabViewController.swift in Sources */,
+				1A166C03283F66FB003AC3F7 /* TabmanTableViewCell.swift in Sources */,
 				4D32E2492832852A00A3DD31 /* UILabel+Extension.swift in Sources */,
 				4DC622E82834C4D400186517 /* IconCollectionViewCell.swift in Sources */,
+				1A166C00283F5F59003AC3F7 /* ProfileModel.swift in Sources */,
 				4D32E24D2832855100A3DD31 /* UIViewController+Extension.swift in Sources */,
 				4DC622E028348B0900186517 /* WritingToolBar.swift in Sources */,
 				4D32E25928328A2800A3DD31 /* NSObject+Extension.swift in Sources */,

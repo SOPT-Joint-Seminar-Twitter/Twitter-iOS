@@ -11,6 +11,8 @@ class TweetViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    
     private var tweetDataList = TweetResponse.sampleData
     
     override func viewDidLoad() {
@@ -25,7 +27,8 @@ class TweetViewController: UIViewController {
     }
 
     private func setTableView() {
-        tableView.delegate = self
+//        tableView.delegate = self
+        tableView.isScrollEnabled = false
         tableView.dataSource = self
 
         tableView.rowHeight = UITableView.automaticDimension
@@ -45,6 +48,27 @@ extension TweetViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as? TweetTableViewCell else { return UITableViewCell() }
+        
+        switch tweetDataList[indexPath.row].isReTweet {
+        case false:
+            // 리트윗 표시 icon & label
+            // cell 위로 숨기는 방법
+            cell.retweetIconTopConstraint.constant = -24
+            cell.retweetIconBottomConstraint.constant = 7
+            cell.bottomRetweetIcon.tintColor = .twitter_gray50
+            cell.retweetCountLabel.isHidden = true
+            
+            // 높이 0 주는 방법
+//            retweetIcon.heightAnchor.constraint(equalToConstant: 0).isActive = true
+//            retweetLabel.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        case true:
+            cell.activityBtn.isHidden = true
+            cell.shareBtn.isHidden = true
+            cell.bottomRetweetIcon.tintColor = .twitter_green
+            cell.retweetIcon.tintColor = .twitter_gray50
+            cell.bottomStackViewTrailing.constant = 70
+            
+        }
         
         cell.setData(dataModel: tweetDataList[indexPath.row])
         return cell
