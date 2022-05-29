@@ -50,7 +50,10 @@ extension BaseRouter {
 
         case .auth:
             request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-            request.setValue(ContentType.tokenSerial.rawValue, forHTTPHeaderField: HTTPHeaderField.accesstoken.rawValue)
+            /// 이번에는 userId가 1로 고정되어 있어서 토큰 대신 임시로 넣어두었습니다.
+            /// 아래는 토큰을 넣어주는 기존 코드입니다.
+            /// request.setValue(ContentType.tokenSerial.rawValue, forHTTPHeaderField: HTTPHeaderField.accesstoken.rawValue)
+            request.setValue(ContentType.userId.rawValue, forHTTPHeaderField: HTTPHeaderField.userId.rawValue)
 
         case .multiPart:
             request.setValue(ContentType.multiPart.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
