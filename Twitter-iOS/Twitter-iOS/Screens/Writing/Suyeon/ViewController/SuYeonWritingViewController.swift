@@ -11,6 +11,9 @@ import SnapKit
 
 class SuYeonWritingViewController: UIViewController {
 
+    var userId: String?
+    var userName: String?
+
     private let placeHolder: UILabel = {
         let label = UILabel()
         label.text = "무슨 일이 일어나고 있나요?"
@@ -135,7 +138,7 @@ class SuYeonWritingViewController: UIViewController {
         albumCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(commentPermissionView.snp.top).offset(-10)
-            $0.height.equalTo(78.adjustedH)
+            $0.height.equalTo(80.adjustedH)
         }
     }
 
@@ -174,6 +177,7 @@ class SuYeonWritingViewController: UIViewController {
         writingToolBar.isHidden = true
         albumCollectionView.isHidden = true
         commentPermissionView.isHidden = true
+        postTwit()
         self.dismiss(animated: true)
     }
 
@@ -213,6 +217,32 @@ extension SuYeonWritingViewController: UITextViewDelegate {
         if twitTextView.text.isEmpty {
             twitTextView.text = "무슨 일이 일어나고 있나요?"
             twitTextView.textColor = .twitter_gray50
+        }
+    }
+}
+
+extension SuYeonWritingViewController {
+    private func postTwit() {
+        guard let content = twitTextView.text
+        else { return }
+
+        /// 이전 트윗 화면에서 받아와야되는데 일단은 임시로 넣어둠 ! 민재 유진 화면에서 화면 전환할때 userId랑 userName 데이터 전달 해주세요!
+        let userId = "6290711bc126089210da4b1a"
+        let userName = "먀막"
+
+        TwitPostService.shared.postTwit(content: content, writer: Writer(id: userId, userName: userName)) { result in
+            switch result {
+            case .success:
+                print("성공")
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
 }
