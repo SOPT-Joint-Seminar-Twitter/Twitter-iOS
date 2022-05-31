@@ -16,6 +16,7 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var retweetIconBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImageLeading: NSLayoutConstraint!
     @IBOutlet weak var profileImageTrailing: NSLayoutConstraint!
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeCountLabel: UILabel!
     // 숨김 처리해야할 부분
     @IBOutlet weak var activityBtn: UIButton!
@@ -45,12 +46,12 @@ class TweetTableViewCell: UITableViewCell {
     
     let labelTrailingConstant: CGFloat = 27
     
-    func setData(dataModel: TweetResponse) {
-        profileImage.image = UIImage(named: dataModel.profileImage)
+    func setData(dataModel: Twit) {
+        profileImage.image = ImageLiteral.Writing.imgProfile4
         profileImage.makeRounded(cornerRadius: profileImage.frame.width / 2)
-        profileIDAndSec.text = "@\(dataModel.profileID) ∙ \(dataModel.createdAt)"
+        profileIDAndSec.text = "@\(dataModel.id) ∙ 2일전"
 
-        profileName.text = dataModel.profileName
+        profileName.text = dataModel.writer.userName
         tweetContent.text = dataModel.content
         if dataModel.likeCount == 0 {
             likeCountLabel.isHidden = true
@@ -58,7 +59,10 @@ class TweetTableViewCell: UITableViewCell {
             likeCountLabel.text = String(dataModel.likeCount)
         }
         
-
+        if dataModel.isLike {
+            likeButton.tintColor = .systemRed
+        }
+        
         contentWidth.constant = UIScreen.main.bounds.width - (profileImage.frame.width + profileImageLeading.constant + profileImageTrailing.constant + labelTrailingConstant)
 
     }

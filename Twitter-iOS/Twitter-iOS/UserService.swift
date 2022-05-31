@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 
+// 변수 변경할 경우 or 상속
 class UserService: BaseService {
     static let shared = UserService()
 
@@ -40,7 +41,7 @@ class UserService: BaseService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let data = response.data else { return }
-                let networkResult = self.judgeStatus(by: statusCode, data, Twit.self)
+                let networkResult = self.judgeStatus(by: statusCode, data, [Twit].self)
 
                 completion(networkResult)
 

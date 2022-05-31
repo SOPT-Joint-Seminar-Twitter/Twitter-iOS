@@ -180,6 +180,7 @@
                 <outlet property="bottomRetweetIcon" destination="Ffz-Ss-JwL" id="Bsj-lM-QeB"/>
                 <outlet property="bottomStackViewTrailing" destination="fMa-jZ-1TT" id="Jun-qg-Kmf"/>
                 <outlet property="contentWidth" destination="r2P-n4-k70" id="mdw-fM-YQ8"/>
+                <outlet property="likeButton" destination="ZmW-Fd-kkk" id="IgK-zo-hM4"/>
                 <outlet property="likeCountLabel" destination="12u-rA-4Ay" id="Csc-zz-mtR"/>
                 <outlet property="profileIDAndSec" destination="Wil-AQ-uKK" id="wGg-4C-Pz8"/>
                 <outlet property="profileImage" destination="NS4-DW-9L4" id="MN1-ig-XMy"/>

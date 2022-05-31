@@ -13,12 +13,13 @@ class TweetViewController: UIViewController {
     
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
-    private var tweetDataList = TweetResponse.sampleData
+    var tweetDataList: [Twit] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerXib()
         setTableView()
+        getTwitList()
     }
 
     private func registerXib() {
@@ -43,13 +44,13 @@ extension TweetViewController: UITableViewDelegate {
 extension TweetViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TweetResponse.sampleData.count
+        return tweetDataList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as? TweetTableViewCell else { return UITableViewCell() }
         
-        switch tweetDataList[indexPath.row].isReTweet {
+        switch tweetDataList[indexPath.row].isRetwit {
         case false:
             // 리트윗 표시 icon & label
             // cell 위로 숨기는 방법
@@ -57,7 +58,7 @@ extension TweetViewController: UITableViewDataSource {
             cell.retweetIconBottomConstraint.constant = 7
             cell.bottomRetweetIcon.tintColor = .twitter_gray50
             cell.retweetCountLabel.isHidden = true
-            
+
             // 높이 0 주는 방법
 //            retweetIcon.heightAnchor.constraint(equalToConstant: 0).isActive = true
 //            retweetLabel.heightAnchor.constraint(equalToConstant: 0).isActive = true
@@ -67,11 +68,35 @@ extension TweetViewController: UITableViewDataSource {
             cell.bottomRetweetIcon.tintColor = .twitter_green
             cell.retweetIcon.tintColor = .twitter_gray50
             cell.bottomStackViewTrailing.constant = 70
-            
+
         }
-        
+
         cell.setData(dataModel: tweetDataList[indexPath.row])
         return cell
     }
 
+}
+
+
+extension TweetViewController {
+    private func getTwitList() {
+        
+        UserService.shared.getTwitList { result in
+            switch result {
+            case .success(let data):
+                guard let twitList = data as? [Twit] else { return }
+                self.tweetDataList = twitList
+                
+                self.tableView.reloadData()
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
 }
