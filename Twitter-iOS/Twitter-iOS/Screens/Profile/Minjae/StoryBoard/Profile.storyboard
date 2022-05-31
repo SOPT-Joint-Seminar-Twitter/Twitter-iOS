@@ -59,14 +59,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-gX-49O" userLabel="ProfileInfoView">
                                                 <rect key="frame" x="16" y="179" width="398" height="116"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먀막" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIy-X9-Jy5">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마마" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIy-X9-Jy5">
                                                         <rect key="frame" x="0.0" y="0.0" width="38.5" height="26"/>
                                                         <color key="tintColor" name="twitter_white"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                                                         <color key="textColor" name="twitter_white"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0518" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qes-Kk-D23">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0522" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qes-Kk-D23">
                                                         <rect key="frame" x="0.0" y="30" width="82" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="twitter_gray50"/>
@@ -90,7 +90,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디자인/일상/인사이트/틈새기록/구독계" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKl-lj-5P8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디자인/일상/인사이트/기록기록/구독계" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKl-lj-5P8">
                                                         <rect key="frame" x="0.0" y="54.5" width="217" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="twitter_gray10"/>
@@ -286,7 +286,11 @@
                         <outlet property="barViewWidth" destination="6eM-1H-p4T" id="zHP-4s-JGN"/>
                         <outlet property="containerView" destination="4dk-CO-bTe" id="Oxz-Jj-XYW"/>
                         <outlet property="containerViewHeight" destination="5cX-HP-TZC" id="nMn-dS-clQ"/>
+                        <outlet property="createdAtLabel" destination="kXh-3O-ulT" id="Ioc-Gh-E5x"/>
+                        <outlet property="introductionLabel" destination="nKl-lj-5P8" id="nx0-2O-bT7"/>
+                        <outlet property="profileIdLabel" destination="qes-Kk-D23" id="HoV-ng-YmD"/>
                         <outlet property="profileImageView" destination="Isd-Lq-Jnk" id="Fkf-DX-Wgk"/>
+                        <outlet property="profileNameLabel" destination="AIy-X9-Jy5" id="SEi-Zy-aUw"/>
                         <outlet property="scrollView" destination="cLp-u0-Uf9" id="9rj-wj-m67"/>
                         <outlet property="searchButton" destination="PWr-mg-xlA" id="lpK-wi-ZwZ"/>
                         <outlet property="tabStackView" destination="yYZ-FX-eRo" id="rSu-sl-Ph6"/>
