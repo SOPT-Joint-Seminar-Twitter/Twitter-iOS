@@ -47,6 +47,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     private var currentIdx = 0
     private var btnTapped = false
     
+    private var userId = ""
+    private var userName = ""
+    
     // MARK: Floating Button
     private let floatingButton = UIButton()
     private func setFloatingButton() {
@@ -59,6 +62,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     @objc func plutBtnTapped() {
         let writingVC = SuYeonWritingViewController()
         writingVC.modalPresentationStyle = .fullScreen
+        writingVC.userId = userId
+        writingVC.userName = userName
         self.present(writingVC, animated: true)
     }
     
@@ -276,6 +281,9 @@ extension ProfileViewController {
                 self.profileNameLabel.text = data.userName
                 self.profileIdLabel.text = data.userId
                 self.introductionLabel.text = data.introduce
+                
+                self.userId = data.userId
+                self.userName = data.userName
                 
                 if let date = data.createdAt.toDate() {
                     let calendarDate = Calendar.current.dateComponents([.year, .month], from: date)

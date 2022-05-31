@@ -84,7 +84,6 @@ extension TweetTableViewCell {
         UserService.shared.likeTwit(postId: postId) { result in
             switch result {
             case .success(let data):
-                print("ddddd")
                 guard let data = data as? Like else { return }
                 self.likeCountLabel.text = data.likeCount.description
                 self.likeButton.isSelected = data.isLike
