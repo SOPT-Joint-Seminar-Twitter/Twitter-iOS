@@ -6,11 +6,11 @@
 //
 import UIKit
 
-public enum CellType {
+enum CellType {
     case myTwitt
     case reTwitt
 }
-public struct TwittModel {
+struct TwittModel {
     let type : CellType
     let profileImageName : String
     var profileImage : UIImage? {

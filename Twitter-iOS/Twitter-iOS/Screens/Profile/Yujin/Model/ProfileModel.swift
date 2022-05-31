@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public struct ProfileModel {
+struct ProfileModel {
     let name : String
     let profileImageName : String
     var profileImage : UIImage? {
@@ -24,7 +24,7 @@ public struct ProfileModel {
     let follwing : Int
     let follower : Int
 }
-extension ProfileModel{
+extension ProfileModel {
     static let sampleData : [ProfileModel] = [
         ProfileModel(name: "먀막" , profileImageName: "imgProfile6", instagramID: "@hoho_0518", content: "디자인/일상/인사이트/틈새기록/구독계", madeAccountYear: 2021, madeAccountMonth: 11, follwing: 192, follower: 6)]
 }
