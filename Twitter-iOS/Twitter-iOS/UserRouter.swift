@@ -11,7 +11,7 @@ import Alamofire
 enum UserRouter {
     case getUserInfo
     case getTwitList
-    case likeTwit(postId: Int)
+    case likeTwit(postId: String)
 }
 
 extension UserRouter: BaseRouter {

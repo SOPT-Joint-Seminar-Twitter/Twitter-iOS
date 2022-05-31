@@ -38,6 +38,10 @@ class TweetViewController: UIViewController {
 }
 
 extension TweetViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as? TweetTableViewCell else { return }
+        cell.postId = tweetDataList[indexPath.row].id
+    }
 
 }
 

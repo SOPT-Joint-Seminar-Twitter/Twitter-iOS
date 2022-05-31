@@ -51,7 +51,7 @@ class UserService: BaseService {
         }
     }
     
-    func likeTwit(postId: Int, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    func likeTwit(postId: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
         AFmanager.request(UserRouter.likeTwit(postId: postId))
             .validate(statusCode: 200...500)
             .responseData { response in

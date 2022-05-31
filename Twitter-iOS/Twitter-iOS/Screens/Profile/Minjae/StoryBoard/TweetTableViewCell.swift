@@ -46,6 +46,8 @@ class TweetTableViewCell: UITableViewCell {
     
     let labelTrailingConstant: CGFloat = 27
     
+    var postId = ""
+    
     func setData(dataModel: Twit) {
         profileImage.image = ImageLiteral.Writing.imgProfile4
         profileImage.makeRounded(cornerRadius: profileImage.frame.width / 2)
@@ -59,12 +61,44 @@ class TweetTableViewCell: UITableViewCell {
             likeCountLabel.text = String(dataModel.likeCount)
         }
         
-        if dataModel.isLike {
-            likeButton.tintColor = .systemRed
+        if likeButton.isSelected {
+            likeButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
+        } else {
+            likeButton.setImage(UIImage(named: "iconHeart"), for: .normal)
         }
         
         contentWidth.constant = UIScreen.main.bounds.width - (profileImage.frame.width + profileImageLeading.constant + profileImageTrailing.constant + labelTrailingConstant)
 
     }
     
+    @IBAction func likeBtnDidTapped(_ sender: UIButton) {
+        likeTwit(postId: postId)
+    }
+    
+}
+
+
+extension TweetTableViewCell {
+    
+    private func likeTwit(postId: String) {
+        UserService.shared.likeTwit(postId: postId) { result in
+            switch result {
+            case .success(let data):
+                print("ddddd")
+                guard let data = data as? Like else { return }
+                self.likeCountLabel.text = data.likeCount.description
+                self.likeButton.isSelected = data.isLike
+                print("성공")
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+        
+    }
 }
