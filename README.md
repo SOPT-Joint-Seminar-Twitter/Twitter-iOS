@@ -1,8 +1,8 @@
 # Twitter-iOS
 🐥합동세미나 9조 짹짹 아요🐥
 
-![Frame 1](https://user-images.githubusercontent.com/81313960/170677825-71bed241-c89e-4c76-836f-1e61aa524b97.jpg)
 
+![ㄴㄴㄴ](https://user-images.githubusercontent.com/81313960/171354170-97dd3934-fdc2-4940-b178-735e417a1da7.jpg)
 
 
 
