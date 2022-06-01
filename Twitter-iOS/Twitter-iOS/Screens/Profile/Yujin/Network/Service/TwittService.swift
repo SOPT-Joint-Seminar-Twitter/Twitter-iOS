@@ -46,7 +46,7 @@ class TwittService : BaseService {
                 }
             }
     }
-    func postLike(postId : Int, completion : @escaping (NetworkResult<Any>) -> (Void)) {
+    func postLike(postId : String, completion : @escaping (NetworkResult<Any>) -> (Void)) {
         AFmanager.request(UserRouter.postLike(postId: postId))
             .validate(statusCode: 200...500)
             .responseData { response in
