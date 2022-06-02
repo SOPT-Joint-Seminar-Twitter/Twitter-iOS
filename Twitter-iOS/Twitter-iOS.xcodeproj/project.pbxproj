@@ -133,6 +133,11 @@
 		4D153CC42838A00F0072B731 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseRouter.swift; path = Network/Foundation/BaseRouter.swift; sourceTree = "<group>"; };
 		4D153CC62838A01B0072B731 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseService.swift; path = Network/Foundation/BaseService.swift; sourceTree = "<group>"; };
 		4D153CC82838B1E20072B731 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeneralResponse.swift; path = Network/Model/GeneralResponse.swift; sourceTree = "<group>"; };
+		1A8FFC192847307600F7E1B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1A8FFC1B284733D200F7E1B9 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		1A8FFC1D2847381100F7E1B9 /* TwittService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittService.swift; sourceTree = "<group>"; };
+		1A8FFC1F28473CCF00F7E1B9 /* Twitt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitt.swift; sourceTree = "<group>"; };
+		1A8FFC212847426E00F7E1B9 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
