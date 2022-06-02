@@ -176,13 +176,6 @@
 		4DC622EB2834C6F700186517 /* WritingViewController+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WritingViewController+Extesion.swift"; sourceTree = "<group>"; };
 		4DC622ED2834DA5300186517 /* MyPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhoto.swift; sourceTree = "<group>"; };
 		4DE1C5FB284200B800B68602 /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
-		B58AC0C0284611D000AD88D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B58AC0C22846142C00AD88D3 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		B58AC0C4284616F500AD88D3 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		B58AC0C6284618AA00AD88D3 /* Twit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twit.swift; sourceTree = "<group>"; };
-		B58AC0C828461A7500AD88D3 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
-		B58AC0CA284624E200AD88D3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		B58AC0CC2848AAE300AD88D3 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		B5939AC82834F95100A769BF /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetTableViewCell.swift; path = "Twitter-iOS/Screens/Profile/Minjae/StoryBoard/TweetTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		B5939AC92834F95100A769BF /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TweetTableViewCell.xib; path = "Twitter-iOS/Screens/Profile/Minjae/Xib/TweetTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		B5D95D452835329800AA3C1F /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
@@ -440,8 +433,6 @@
 				4D32E25A28328A6700A3DD31 /* UITableView+Extension.swift */,
 				4D32E25C28328A7600A3DD31 /* UICollectionView+Extension.swift */,
 				4DC622E128348F2800186517 /* UIStackView+Extension.swift */,
-				B58AC0CA284624E200AD88D3 /* String+Extension.swift */,
-				B58AC0CC2848AAE300AD88D3 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
