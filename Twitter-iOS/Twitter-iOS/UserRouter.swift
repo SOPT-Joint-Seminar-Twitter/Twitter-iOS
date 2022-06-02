@@ -50,32 +50,5 @@ extension UserRouter: BaseRouter {
         }
     }
     
-//    var multipart: MultipartFormData {
-//        switch self {
-//        case .upload(let image):
-//            let multiPart = MultipartFormData()
-//
-//            let images = image
-//
-//            let contentStr = "안녕하세요"
-//            let userNameStr = "안현주친구"
-//            let profileURL = "https://thesopt.s3.ap-northeast-2.amazonaws.com/sample-profile-picture.png"
-//
-//            let content = contentStr.data(using: .utf8) ?? Data()
-//            let userprofile = profileURL.data(using: .utf8) ?? Data()
-//            let userName = userNameStr.data(using: .utf8) ?? Data()
-//            let imageData = images.pngData() ?? Data()
-//
-//            multiPart.append(content, withName: "content")
-//            multiPart.append(userName, withName: "userName")
-//            multiPart.append(userprofile, withName: "userProfileImage")
-//            multiPart.append(imageData, withName: "image", fileName: "profileImage.png", mimeType: "image/png")
-//
-//            return multiPart
-//
-//        default: return MultipartFormData()
-//        }
-//    }
-
     
 }
