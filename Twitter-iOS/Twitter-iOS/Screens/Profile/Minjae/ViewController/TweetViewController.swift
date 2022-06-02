@@ -42,8 +42,13 @@ class TweetViewController: UIViewController {
 
 extension TweetViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as? TweetTableViewCell else { return }
-        cell.postId = tweetDataList[indexPath.row].id
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 
 }
@@ -77,7 +82,8 @@ extension TweetViewController: UITableViewDataSource {
             cell.bottomStackViewTrailing.constant = 70
 
         }
-
+        
+        cell.postId = tweetDataList[indexPath.row].id
         cell.setData(dataModel: tweetDataList[indexPath.row])
         return cell
     }

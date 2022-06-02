@@ -10,7 +10,7 @@ import Foundation
 struct Twit: Codable {
     let id: String
     let content: String
-    let writer: Writer
+    let writer: UserResponse
     let likeCount: Int
     let isLike: Bool
     let isRetwit: Bool
