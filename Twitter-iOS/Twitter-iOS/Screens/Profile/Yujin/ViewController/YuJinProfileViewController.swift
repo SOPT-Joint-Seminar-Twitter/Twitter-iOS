@@ -25,12 +25,5 @@ class YuJinProfileViewController: UIViewController {
        
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView == self.scrollView {
-//            tableView.isScrollEnabled = (self.scrollView.contentOffset.y >= 200)
-//        }
-//
-//        if scrollView == self.tableView {
-//            self.tableView.isScrollEnabled = (tableView.contentOffset.y > 0)
-//        }
     }
 }

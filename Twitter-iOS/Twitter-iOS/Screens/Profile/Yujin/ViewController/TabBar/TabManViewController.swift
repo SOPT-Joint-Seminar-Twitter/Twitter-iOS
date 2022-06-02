@@ -40,7 +40,6 @@ class TabManViewController: TabmanViewController {
         bar.layout.contentMode = .intrinsic
         //        .fit : indicator가 버튼크기로 설정됨
         bar.layout.interButtonSpacing = view.bounds.width / 8
-
         
         //배경색
         bar.backgroundView.style = .clear

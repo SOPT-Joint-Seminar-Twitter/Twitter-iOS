@@ -14,19 +14,11 @@ class HomeTabVHomeTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+        setDelegation()
         registerCell()
-        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        let tables = tableView.compactMap { $0 as? UITableViewController }
-//        tables.forEach {
-//            $0.tableView.contentInset = UIEdgeInsets(top: headerView.bounds.height, left: 0, bottom: 0, right: 0)
-//            $0.tableView.contentOffset = CGPoint(x: 0, y: -headerView.bounds.height)
-//        }
     }
     private func registerCell() {
         let myTwittNib = UINib(nibName: TwitterMyTwittTableViewCell.identifier, bundle: nil)
@@ -35,16 +27,13 @@ class HomeTabVHomeTabViewController: UIViewController {
         tableView.register(myTwittNib, forCellReuseIdentifier: TwitterMyTwittTableViewCell.identifier)
         tableView.register(reTwittNib, forCellReuseIdentifier: TwitterRetwittTableViewCell.identifier)
     }
-    
+    private func setDelegation(){
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
 }
 extension HomeTabVHomeTabViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        //        let twitt = TwittModel.sampleData[indexPath.row]
-        //        switch twitt.type {
-        //        case .myTwitt:
-        //            return 87
-        //        default:
-        //            return 204
         return UITableView.automaticDimension
     }
 }

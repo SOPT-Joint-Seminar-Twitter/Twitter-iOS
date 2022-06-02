@@ -39,8 +39,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rP6-AU-spA" userLabel="UpperHeaderView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디자인/일상/인사이트/틈새기록/구독계" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzB-gl-ygQ">
-                                                <rect key="frame" x="16" y="236.5" width="217" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzB-gl-ygQ">
+                                                <rect key="frame" x="16" y="236.5" width="75" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_white"/>
                                                 <nil key="highlightedColor"/>
@@ -107,20 +107,20 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먀막" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-Ix-Evc">
-                                                <rect key="frame" x="16" y="182" width="38.5" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-Ix-Evc">
+                                                <rect key="frame" x="16" y="182" width="102" height="26"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                                                 <color key="textColor" name="twitter_white"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0518" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg9-K6-YaR">
-                                                <rect key="frame" x="16" y="212" width="82" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userId" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg9-K6-YaR">
+                                                <rect key="frame" x="16" y="212" width="39" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 11월에 가입함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-rB-kOV">
-                                                <rect key="frame" x="32" y="270" width="109" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createdAt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-rB-kOV">
+                                                <rect key="frame" x="32" y="270" width="52" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                 <color key="textColor" name="twitter_gray50"/>
                                                 <nil key="highlightedColor"/>
@@ -252,11 +252,15 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="createdAt" destination="ehH-rB-kOV" id="BbD-8K-vva"/>
                         <outlet property="headerView" destination="kDK-kb-kRG" id="h4D-5F-vJ7"/>
                         <outlet property="heightConstraint" destination="SQO-yA-2Ay" id="SfI-7s-9PE"/>
+                        <outlet property="introduce" destination="kzB-gl-ygQ" id="uBf-zm-d0t"/>
                         <outlet property="mainTableView" destination="rGH-OT-Xef" id="LM4-DH-6Ah"/>
                         <outlet property="tabbar" destination="liG-xW-F7l" id="vce-dp-gU4"/>
                         <outlet property="upperHeaderView" destination="rP6-AU-spA" id="4RD-t1-pX2"/>
+                        <outlet property="userId" destination="Mg9-K6-YaR" id="dbY-s2-wa6"/>
+                        <outlet property="userName" destination="WeF-Ix-Evc" id="kla-HF-V3g"/>
                         <outlet property="width" destination="E5g-sb-18T" id="bvD-ID-nxg"/>
                     </connections>
                 </viewController>
