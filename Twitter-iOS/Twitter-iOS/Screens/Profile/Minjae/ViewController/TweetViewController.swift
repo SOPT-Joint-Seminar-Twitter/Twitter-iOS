@@ -19,6 +19,9 @@ class TweetViewController: UIViewController {
         super.viewDidLoad()
         registerXib()
         setTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getTwitList()
     }
 
