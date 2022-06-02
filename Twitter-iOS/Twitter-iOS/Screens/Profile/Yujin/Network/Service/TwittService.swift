@@ -14,7 +14,6 @@ class TwittService : BaseService {
     private override init() { }
     
     func getUser (completion : @escaping (NetworkResult<Any>) -> (Void)) {
-        
         AFmanager.request(YJUserRouter.getUser)
             .validate(statusCode: 200...500)
             .responseData { response in
@@ -33,7 +32,6 @@ class TwittService : BaseService {
     }
     
     func getList(completion : @escaping (NetworkResult<Any>) -> (Void)) {
-        
         AFmanager.request(YJUserRouter.getList)
             .validate(statusCode: 200...500)
             .responseData { response in
@@ -52,7 +50,6 @@ class TwittService : BaseService {
             }
     }
     func postLike(postId : String, completion : @escaping (NetworkResult<Any>) -> (Void)) {
-        
         AFmanager.request(YJUserRouter.postLike(postId: postId))
             .validate(statusCode: 200...500)
             .responseData { response in

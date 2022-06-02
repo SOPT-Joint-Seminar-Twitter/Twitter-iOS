@@ -155,7 +155,6 @@ extension YujinStoryboard2ViewController {
         myDateFomatter.timeZone = TimeZone(identifier: "UTC")
         
         let convertStr = myDateFomatter.string(from: convertDate)
-//        print("This is convertStr",convertStr)
         return convertStr
     }
 }
