@@ -10,7 +10,7 @@ import Foundation
 
 import Foundation
 
-struct Writer: Codable {
+struct YJWriter: Codable {
     let id: String
     let userName : String
     let introduce : String

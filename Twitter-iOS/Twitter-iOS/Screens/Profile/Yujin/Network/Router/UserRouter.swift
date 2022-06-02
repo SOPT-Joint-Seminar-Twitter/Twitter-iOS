@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 import UIKit
 
-enum UserRouter {
+enum YJUserRouter {
     case getUser
     case getList
     case postLike(postId : String)
 }
 
-extension UserRouter : BaseRouter {
+extension YJUserRouter : BaseRouter {
     
     var method: HTTPMethod {
         switch self{

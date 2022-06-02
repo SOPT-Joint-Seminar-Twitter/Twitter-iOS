@@ -55,7 +55,7 @@ class YujinStoryboard2ViewController: UIViewController {
     }
     private func setDelegation() {
         mainTableView.delegate = self
-        mainTableView.dataSource = self
+//        mainTableView.dataSource = self
     }
     private func setFloatingButton() {
         self.view.addSubView(floatingButton)
@@ -98,24 +98,24 @@ extension YujinStoryboard2ViewController : UITableViewDelegate{
         upperHeaderView.alpha = percentage
     }
 }
-extension YujinStoryboard2ViewController : UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let twittCells = TwittModel.sampleData[indexPath.row]
-        
-        if twittCells.type == .myTwitt {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
-            cell.setData(TwittModel.sampleData[indexPath.row])
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
-            cell.setData(TwittModel.sampleData[indexPath.row])
-            return cell
-        }
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TwittModel.sampleData.count
-    }
-}
+//extension YujinStoryboard2ViewController : UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let twittCells = TwittModel.sampleData[indexPath.row]
+//
+//        if twittCells.type == .myTwitt {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
+//            cell.setData(TwittModel.sampleData[indexPath.row])
+//            return cell
+//        } else {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
+//            cell.setData(TwittModel.sampleData[indexPath.row])
+//            return cell
+//        }
+//    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return TwittModel.sampleData.count
+//    }
+//}
 extension YujinStoryboard2ViewController {
     func getUser() {
     
