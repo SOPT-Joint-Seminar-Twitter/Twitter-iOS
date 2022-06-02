@@ -286,10 +286,8 @@ extension ProfileViewController {
                 self.userName = data.userName
                 
                 if let date = data.createdAt.toDate() {
-                    let calendarDate = Calendar.current.dateComponents([.year, .month], from: date)
-                    if let year = calendarDate.year, let month = calendarDate.month {
-                        self.createdAtLabel.text = "\(year)년 \(month)월에 가입함"
-                    }
+                    let SignUpDateString = date.formatted("yyyy년 MM월에 가입함")
+                    self.createdAtLabel.text = SignUpDateString
                 }
                 
             case .requestErr:
