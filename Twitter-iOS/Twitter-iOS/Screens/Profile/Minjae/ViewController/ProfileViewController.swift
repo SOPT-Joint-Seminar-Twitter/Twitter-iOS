@@ -8,18 +8,28 @@
 import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate {
-
+    
+    // MARK: UI
     @IBOutlet weak var backArrow: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var profileIdLabel: UILabel!
+    @IBOutlet weak var introductionLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tabStackView: UIStackView!
     @IBOutlet weak var barView: UIView!
     @IBOutlet weak var barBackgroundView: UIView!
+    
+    // MARK: Passing Data
+    private var userKeyId = ""
+    private var userName = ""
+    
+    // MARK: Constraints
     @IBOutlet weak var barViewLeading: NSLayoutConstraint!
     @IBOutlet weak var barViewWidth: NSLayoutConstraint!
-    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     
@@ -38,8 +48,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     private var currentIdx = 0
     private var btnTapped = false
     
-    private let floatingButton = UIButton()
     
+    
+    // MARK: Floating Button
+    private let floatingButton = UIButton()
     private func setFloatingButton() {
         floatingButton.frame = CGRect(x: self.view.frame.size.width - 112, y: UIScreen.main.bounds.height - 160, width: 56, height: 56)
         floatingButton.setImage(ImageLiteral.Writing.iconBigPlus, for: .normal)
@@ -50,18 +62,27 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     @objc func plutBtnTapped() {
         let writingVC = SuYeonWritingViewController()
         writingVC.modalPresentationStyle = .fullScreen
+        writingVC.userId = userKeyId
+        writingVC.userName = userName
         self.present(writingVC, animated: true)
     }
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setProfileUI()
         setFloatingButton()
         setPageVC()
-        
+        getUserInfo()
         scrollView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    // MARK: Custom Function
     private func setProfileUI() {
         makeImageCircle(profileImageView)
         makeButtonCircle(backArrow)
@@ -245,5 +266,39 @@ extension UIPageViewController {
     var scrollView: UIScrollView? {
 
         return view.subviews.filter { $0 is UIScrollView }.first as? UIScrollView
+    }
+}
+
+
+extension ProfileViewController {
+    private func getUserInfo() {
+
+        UserService.shared.getUserInfo { result in
+            switch result {
+            case .success(let data):
+                guard let data = data as? UserResponse else { return }
+                self.userKeyId = data.id
+                self.profileNameLabel.text = data.userName
+                self.profileIdLabel.text = data.userId
+                self.introductionLabel.text = data.introduce
+                
+                self.userKeyId = data.id
+                self.userName = data.userName
+                
+                if let date = data.createdAt.toDate() {
+                    let SignUpDateString = date.formatted("yyyy년 MM월에 가입함")
+                    self.createdAtLabel.text = SignUpDateString
+                }
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
 }

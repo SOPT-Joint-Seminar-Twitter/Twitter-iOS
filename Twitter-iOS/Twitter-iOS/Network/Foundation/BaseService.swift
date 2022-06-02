@@ -35,7 +35,7 @@ class BaseService {
         case 200:
             return .success(decodedData.data ?? "None-Data")
         case 201..<300:
-            return .success(decodedData.status)
+            return .success(decodedData.data as Any)
         case 400..<500:
             return .requestErr(decodedData.status)
         case 500:
