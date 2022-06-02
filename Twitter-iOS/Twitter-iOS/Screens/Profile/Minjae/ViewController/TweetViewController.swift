@@ -79,7 +79,7 @@ extension TweetViewController: UITableViewDataSource {
             cell.shareBtn.isHidden = true
             cell.bottomRetweetIcon.tintColor = .twitter_green
             cell.retweetIcon.tintColor = .twitter_gray50
-            cell.bottomStackViewTrailing.isActive = false
+            cell.bottomStackViewTrailing.constant = 109
 
         }
         
