@@ -107,10 +107,12 @@ extension YujinStoryboard2ViewController : UITableViewDataSource{
         if twittDataList[indexPath.row].isRetwit == false {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
             cell.setData(twittDataList[indexPath.row])
+            cell.postId = twittDataList[indexPath.row].twitId
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
             cell.setData(twittDataList[indexPath.row])
+            cell.postId = twittDataList[indexPath.row].twitId
             return cell
         }
     }
@@ -118,7 +120,9 @@ extension YujinStoryboard2ViewController : UITableViewDataSource{
         return twittDataList.count
     }
 }
+// MARK: - 서버 통신
 extension YujinStoryboard2ViewController {
+    
     func getTwittList() {
         TwittService.shared.getList {
             result in

@@ -82,7 +82,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="KUa-hS-aRg">
-                        <rect key="frame" x="75" y="164" width="242" height="24"/>
+                        <rect key="frame" x="75" y="164" width="208.5" height="24"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="crg-fy-kM6">
                                 <rect key="frame" x="0.0" y="0.0" width="35" height="24"/>
@@ -125,7 +125,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LrC-zs-qp0">
-                                <rect key="frame" x="184.5" y="0.0" width="57.5" height="24"/>
+                                <rect key="frame" x="184.5" y="0.0" width="24" height="24"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv0-2b-LK8">
                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -135,9 +135,12 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="iconHeart"/>
+                                        <connections>
+                                            <action selector="heartButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="301-zE-2Ho"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.437" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfv-3G-VRB">
-                                        <rect key="frame" x="28" y="0.0" width="29.5" height="24"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfv-3G-VRB">
+                                        <rect key="frame" x="24" y="0.0" width="0.0" height="24"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
                                         <color key="textColor" name="twitter_gray50"/>
                                         <nil key="highlightedColor"/>
@@ -171,18 +174,14 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="commentButton" destination="pj4-Fg-FWQ" id="gMJ-cc-oDc"/>
-                <outlet property="commentCountLabel" destination="9fW-Ti-LSv" id="tkd-Jc-AaN"/>
-                <outlet property="contentLabel" destination="cIt-Kw-mTW" id="J53-XM-BB0"/>
-                <outlet property="didRetwittLabel" destination="Sig-kS-Efv" id="gWq-Ft-ru9"/>
-                <outlet property="heartButton" destination="Gv0-2b-LK8" id="ggI-hL-pE4"/>
-                <outlet property="heartCountLabel" destination="Zfv-3G-VRB" id="b3u-Gw-iL2"/>
-                <outlet property="idLabel" destination="536-6R-Rdu" id="8rt-wU-91X"/>
-                <outlet property="menuButton" destination="HED-UJ-yms" id="Dw8-fv-duN"/>
-                <outlet property="nameLabel" destination="OIf-yX-LTH" id="Odg-Xw-slX"/>
-                <outlet property="profileImg" destination="0SV-3q-S4S" id="8Jj-ZM-6CP"/>
-                <outlet property="retwittButton" destination="8Nx-ko-hMo" id="aXj-ZB-n1T"/>
-                <outlet property="retwittCountLabel" destination="jDM-ZD-iLT" id="h1l-KY-UE6"/>
+                <outlet property="contentLabel" destination="cIt-Kw-mTW" id="mp9-xf-hYI"/>
+                <outlet property="heartButton" destination="Gv0-2b-LK8" id="cdg-Go-O0z"/>
+                <outlet property="heartCountLabel" destination="Zfv-3G-VRB" id="3yW-d3-RE6"/>
+                <outlet property="idLabel" destination="536-6R-Rdu" id="E0V-Sb-5ra"/>
+                <outlet property="nameLabel" destination="OIf-yX-LTH" id="eag-iu-zpb"/>
+                <outlet property="profileImg" destination="0SV-3q-S4S" id="tFs-OL-rjX"/>
+                <outlet property="retwittButton" destination="8Nx-ko-hMo" id="4re-8S-LC1"/>
+                <outlet property="retwittCountLabel" destination="jDM-ZD-iLT" id="Xqq-Ep-DK6"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="38.839285714285715"/>
         </tableViewCell>
