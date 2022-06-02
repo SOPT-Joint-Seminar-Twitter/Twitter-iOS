@@ -26,11 +26,11 @@
 		1A4C3184283362DF007A48A3 /* Suyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3183283362DF007A48A3 /* Suyeon.storyboard */; };
 		1A4C3186283362E7007A48A3 /* Yujin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3185283362E7007A48A3 /* Yujin.storyboard */; };
 		1A4C3188283362FF007A48A3 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4C3187283362FF007A48A3 /* Alarm.storyboard */; };
-		1A8FFC1A2847307600F7E1B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC192847307600F7E1B9 /* User.swift */; };
-		1A8FFC1C284733D200F7E1B9 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC1B284733D200F7E1B9 /* UserRouter.swift */; };
+		1A5FFB282848FFC80075F3B6 /* YJWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FFB272848FFC80075F3B6 /* YJWriter.swift */; };
+		1A8FFC1C284733D200F7E1B9 /* YJUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC1B284733D200F7E1B9 /* YJUserRouter.swift */; };
 		1A8FFC1E2847381100F7E1B9 /* TwittService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC1D2847381100F7E1B9 /* TwittService.swift */; };
-		1A8FFC2028473CCF00F7E1B9 /* Twitt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC1F28473CCF00F7E1B9 /* Twitt.swift */; };
-		1A8FFC222847426E00F7E1B9 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC212847426E00F7E1B9 /* Like.swift */; };
+		1A8FFC2028473CCF00F7E1B9 /* YJTwitt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC1F28473CCF00F7E1B9 /* YJTwitt.swift */; };
+		1A8FFC222847426E00F7E1B9 /* YJLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FFC212847426E00F7E1B9 /* YJLike.swift */; };
 		1A99661028355E23000A9BC8 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 1A99660F28355E23000A9BC8 /* Tabman */; };
 		4D153CBD28389FAF0072B731 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D153CBC28389FAF0072B731 /* APIEnvironment.swift */; };
 		4D153CBF28389FD10072B731 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D153CBE28389FD00072B731 /* NetworkConstants.swift */; };
@@ -121,17 +121,18 @@
 		1A4C3183283362DF007A48A3 /* Suyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Suyeon.storyboard; path = ../Suyeon.storyboard; sourceTree = "<group>"; };
 		1A4C3185283362E7007A48A3 /* Yujin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yujin.storyboard; sourceTree = "<group>"; };
 		1A4C3187283362FF007A48A3 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
+		1A5FFB272848FFC80075F3B6 /* YJWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJWriter.swift; sourceTree = "<group>"; };
+		1A8FFC192847307600F7E1B9 /* YJUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJUser.swift; sourceTree = "<group>"; };
+		1A8FFC1B284733D200F7E1B9 /* YJUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJUserRouter.swift; sourceTree = "<group>"; };
+		1A8FFC1D2847381100F7E1B9 /* TwittService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittService.swift; sourceTree = "<group>"; };
+		1A8FFC1F28473CCF00F7E1B9 /* YJTwitt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJTwitt.swift; sourceTree = "<group>"; };
+		1A8FFC212847426E00F7E1B9 /* YJLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJLike.swift; sourceTree = "<group>"; };
 		4D153CBC28389FAF0072B731 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIEnvironment.swift; path = Network/Foundation/APIEnvironment.swift; sourceTree = "<group>"; };
 		4D153CBE28389FD00072B731 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkConstants.swift; path = Network/Foundation/APIConstants/NetworkConstants.swift; sourceTree = "<group>"; };
 		4D153CC22838A0010072B731 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkResult.swift; path = Network/Foundation/NetworkResult.swift; sourceTree = "<group>"; };
 		4D153CC42838A00F0072B731 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseRouter.swift; path = Network/Foundation/BaseRouter.swift; sourceTree = "<group>"; };
 		4D153CC62838A01B0072B731 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseService.swift; path = Network/Foundation/BaseService.swift; sourceTree = "<group>"; };
 		4D153CC82838B1E20072B731 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeneralResponse.swift; path = Network/Model/GeneralResponse.swift; sourceTree = "<group>"; };
-		1A8FFC192847307600F7E1B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1A8FFC1B284733D200F7E1B9 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		1A8FFC1D2847381100F7E1B9 /* TwittService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittService.swift; sourceTree = "<group>"; };
-		1A8FFC1F28473CCF00F7E1B9 /* Twitt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitt.swift; sourceTree = "<group>"; };
-		1A8FFC212847426E00F7E1B9 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		4D32E1DE283108CC00A3DD31 /* Twitter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D32E1E1283108CC00A3DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D32E1E3283108CC00A3DD31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,9 +226,10 @@
 			children = (
 				1A457DD02837753700DD123C /* TwittModel.swift */,
 				1A166BFF283F5F59003AC3F7 /* ProfileModel.swift */,
-				1A8FFC192847307600F7E1B9 /* User.swift */,
-				1A8FFC1F28473CCF00F7E1B9 /* Twitt.swift */,
-				1A8FFC212847426E00F7E1B9 /* Like.swift */,
+				1A8FFC192847307600F7E1B9 /* YJUser.swift */,
+				1A8FFC1F28473CCF00F7E1B9 /* YJTwitt.swift */,
+				1A8FFC212847426E00F7E1B9 /* YJLike.swift */,
+				1A5FFB272848FFC80075F3B6 /* YJWriter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,7 +256,7 @@
 		1A8FFC172847305700F7E1B9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				1A8FFC1B284733D200F7E1B9 /* UserRouter.swift */,
+				1A8FFC1B284733D200F7E1B9 /* YJUserRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -890,7 +892,7 @@
 				1A166BFE283F4D03003AC3F7 /* YujinStoryboard2ViewController.swift in Sources */,
 				1A457DD12837753700DD123C /* TwittModel.swift in Sources */,
 				4D153CBF28389FD10072B731 /* NetworkConstants.swift in Sources */,
-				1A8FFC222847426E00F7E1B9 /* Like.swift in Sources */,
+				1A8FFC222847426E00F7E1B9 /* YJLike.swift in Sources */,
 				1A41E4762836051A006073D5 /* TwitterMyTwittTableViewCell.swift in Sources */,
 				B5DEFEA528349CBB00D64C5E /* FavoriteViewController.swift in Sources */,
 				4D32E25D28328A7600A3DD31 /* UICollectionView+Extension.swift in Sources */,
@@ -917,7 +919,7 @@
 				4D32E225283118FA00A3DD31 /* ProfileViewController.swift in Sources */,
 				B5DEFEA128349C9900D64C5E /* TweetAndReplyViewController.swift in Sources */,
 				4DC622EC2834C6F700186517 /* WritingViewController+Extesion.swift in Sources */,
-				1A8FFC2028473CCF00F7E1B9 /* Twitt.swift in Sources */,
+				1A8FFC2028473CCF00F7E1B9 /* YJTwitt.swift in Sources */,
 				4D39BF75283FDB3A0097A6EF /* EventLogger.swift in Sources */,
 				4D32E225283118FA00A3DD31 /* ProfileViewController.swift in Sources */,
 				4D32E2292831192100A3DD31 /* SuYeonProfileViewController.swift in Sources */,
@@ -925,6 +927,7 @@
 				4D32E1E2283108CC00A3DD31 /* AppDelegate.swift in Sources */,
 				4DC622EE2834DA5300186517 /* MyPhoto.swift in Sources */,
 				4D39BF6F283FCF1C0097A6EF /* Auth.swift in Sources */,
+				1A5FFB282848FFC80075F3B6 /* YJWriter.swift in Sources */,
 				4D32E24B2832853C00A3DD31 /* UIButton+Extension.swift in Sources */,
 				4DC622E228348F2800186517 /* UIStackView+Extension.swift in Sources */,
 				1A41E47228360504006073D5 /* TwitterRetwittTableViewCell.swift in Sources */,
@@ -952,7 +955,7 @@
 				4D39BF71283FCF430097A6EF /* AuthRouter.swift in Sources */,
 				B58AC0CB284624E200AD88D3 /* String+Extension.swift in Sources */,
 				B5DEFE9F28349C7C00D64C5E /* TweetViewController.swift in Sources */,
-				1A8FFC1C284733D200F7E1B9 /* UserRouter.swift in Sources */,
+				1A8FFC1C284733D200F7E1B9 /* YJUserRouter.swift in Sources */,
 				4D39BF73283FCF5E0097A6EF /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
