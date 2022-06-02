@@ -9,7 +9,7 @@ import UIKit
 class YujinStoryboard2ViewController: UIViewController {
     
     // MARK: - Profile
-    private var _id : String = ""
+    private var userKeyId : String = ""
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userId: UILabel!
     @IBOutlet weak var createdAt: UILabel!
@@ -123,7 +123,7 @@ extension YujinStoryboard2ViewController {
             switch result {
             case .success(let data):
                 guard let data = data as? UserResponse else {return}
-                self._id = data.id
+                self.userKeyId = data.id
                 self.userName.text = data.userName
                 self.userId.text = data.userId
                 self.introduce.text = data.introduce
