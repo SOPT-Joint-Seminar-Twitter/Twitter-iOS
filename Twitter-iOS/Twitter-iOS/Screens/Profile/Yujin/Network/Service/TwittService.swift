@@ -43,7 +43,7 @@ class TwittService : BaseService {
                     guard let statusCode = response.response?.statusCode
                     else {return}
                     guard let data = response.data else {return}
-                    let networkResult = self.judgeStatus(by: statusCode, data,TwittResponse.self)
+                    let networkResult = self.judgeStatus(by: statusCode, data,[TwittResponse].self)
                     completion(networkResult)
                     
                 case .failure(let err):

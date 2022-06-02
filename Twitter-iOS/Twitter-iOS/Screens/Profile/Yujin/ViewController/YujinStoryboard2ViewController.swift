@@ -78,6 +78,7 @@ class YujinStoryboard2ViewController: UIViewController {
         self.present(SuYeonWritingViewController, animated: true)
     }
     private func registerCell() {
+//        print("registerCell")
         let myTwittNib = UINib(nibName: TwitterMyTwittTableViewCell.identifier, bundle: nil)
         let reTwittNib = UINib(nibName: TwitterRetwittTableViewCell.identifier, bundle: nil)
         mainTableView.register(myTwittNib, forCellReuseIdentifier: TwitterMyTwittTableViewCell.identifier)
@@ -103,7 +104,6 @@ extension YujinStoryboard2ViewController : UITableViewDelegate{
 }
 extension YujinStoryboard2ViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if twittDataList[indexPath.row].isRetwit == false {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
             cell.setData(twittDataList[indexPath.row])
@@ -120,12 +120,11 @@ extension YujinStoryboard2ViewController : UITableViewDataSource{
 }
 extension YujinStoryboard2ViewController {
     func getTwittList() {
-        
         TwittService.shared.getList {
             result in
             switch result {
-            case .success(let dataList):
-                guard let twittList = dataList as? [TwittResponse] else {return}
+            case .success(let data):
+                guard let twittList = data as? [TwittResponse] else {return}
                 self.twittDataList = twittList
                 self.mainTableView.reloadData()
             case .requestErr:
@@ -143,7 +142,6 @@ extension YujinStoryboard2ViewController {
 extension YujinStoryboard2ViewController {
     
     func getUser() {
-        
         TwittService.shared.getUser() { result in
             switch result {
             case .success(let data):
