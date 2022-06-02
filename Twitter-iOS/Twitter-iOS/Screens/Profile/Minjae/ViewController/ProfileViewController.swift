@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     
     // MARK: Passing Data
     private var userKeyId = ""
+    private var userName = ""
     
     // MARK: Constraints
     @IBOutlet weak var barViewLeading: NSLayoutConstraint!
@@ -47,6 +48,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     private var currentIdx = 0
     private var btnTapped = false
     
+    
+    
     // MARK: Floating Button
     private let floatingButton = UIButton()
     private func setFloatingButton() {
@@ -59,6 +62,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     @objc func plutBtnTapped() {
         let writingVC = SuYeonWritingViewController()
         writingVC.modalPresentationStyle = .fullScreen
+        writingVC.userId = userKeyId
+        writingVC.userName = userName
         self.present(writingVC, animated: true)
     }
     
@@ -277,11 +282,12 @@ extension ProfileViewController {
                 self.profileIdLabel.text = data.userId
                 self.introductionLabel.text = data.introduce
                 
+                self.userKeyId = data.id
+                self.userName = data.userName
+                
                 if let date = data.createdAt.toDate() {
-                    let calendarDate = Calendar.current.dateComponents([.year, .month], from: date)
-                    if let year = calendarDate.year, let month = calendarDate.month {
-                        self.createdAtLabel.text = "\(year)년 \(month)월에 가입함"
-                    }
+                    let SignUpDateString = date.formatted("yyyy년 MM월에 가입함")
+                    self.createdAtLabel.text = SignUpDateString
                 }
                 
             case .requestErr:
