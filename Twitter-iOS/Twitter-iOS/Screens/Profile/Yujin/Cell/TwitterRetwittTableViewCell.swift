@@ -36,10 +36,10 @@ class TwitterRetwittTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setData(_ reTwittModel : TwittModel) {
-        profileImg.image = reTwittModel.profileImage
-        nameLabel.text = reTwittModel.nickName
-        idLabel.text = reTwittModel.idLabel
+    func setData(_ reTwittModel : TwittResponse) {
+        profileImg.image = ImageLiteral.Writing.imgProfile4
+        nameLabel.text = reTwittModel.writer.userName
+        idLabel.text = reTwittModel.writer.id
         contentLabel.text = reTwittModel.content
     }
     

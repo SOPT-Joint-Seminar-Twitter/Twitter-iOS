@@ -7,9 +7,6 @@
 
 import Foundation
 
-
-import Foundation
-
 struct YJWriter: Codable {
     let id: String
     let userName : String

@@ -16,6 +16,7 @@ class YujinStoryboard2ViewController: UIViewController {
     @IBOutlet weak var introduce: UILabel!
     
     // MARK: - TableView
+    var twittDataList : [TwittResponse] = []
     @IBOutlet weak var tabbar: UIView!
     
     @IBOutlet weak var width: NSLayoutConstraint! //headerVIew의 최소 높이값
@@ -48,18 +49,20 @@ class YujinStoryboard2ViewController: UIViewController {
     // MARK: - Set 함수
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        registerCell()
         getUser()
         setDelegation()
         setFloatingButton()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        getTwittList()
+    }
     private func setDelegation() {
         mainTableView.delegate = self
-//        mainTableView.dataSource = self
+        mainTableView.dataSource = self
     }
     private func setFloatingButton() {
         self.view.addSubView(floatingButton)
-        registerCell()
         floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
     override func viewDidLayoutSubviews() {
@@ -98,27 +101,49 @@ extension YujinStoryboard2ViewController : UITableViewDelegate{
         upperHeaderView.alpha = percentage
     }
 }
-//extension YujinStoryboard2ViewController : UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let twittCells = TwittModel.sampleData[indexPath.row]
-//
-//        if twittCells.type == .myTwitt {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
-//            cell.setData(TwittModel.sampleData[indexPath.row])
-//            return cell
-//        } else {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
-//            cell.setData(TwittModel.sampleData[indexPath.row])
-//            return cell
-//        }
-//    }
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return TwittModel.sampleData.count
-//    }
-//}
+extension YujinStoryboard2ViewController : UITableViewDataSource{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if twittDataList[indexPath.row].isRetwit == false {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
+            cell.setData(twittDataList[indexPath.row])
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
+            cell.setData(twittDataList[indexPath.row])
+            return cell
+        }
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return twittDataList.count
+    }
+}
 extension YujinStoryboard2ViewController {
-    func getUser() {
+    func getTwittList() {
+        
+        TwittService.shared.getList {
+            result in
+            switch result {
+            case .success(let dataList):
+                guard let twittList = dataList as? [TwittResponse] else {return}
+                self.twittDataList = twittList
+                self.mainTableView.reloadData()
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+}
+extension YujinStoryboard2ViewController {
     
+    func getUser() {
+        
         TwittService.shared.getUser() { result in
             switch result {
             case .success(let data):
@@ -141,7 +166,6 @@ extension YujinStoryboard2ViewController {
         }
     }
     func formatDate(dataStr : String) -> String {
-//        print("This is dataStr",dataStr)
         //문자열 -> Date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
@@ -149,7 +173,6 @@ extension YujinStoryboard2ViewController {
         
         //Date -> 문자열
         guard let convertDate = dateFormatter.date(from: dataStr) else{return ""}// Date터입으로 변환
-//        print("This is convertDate",convertDate)
         let myDateFomatter = DateFormatter()
         myDateFomatter.dateFormat = "YYYY년 MM월에 가입함"
         myDateFomatter.timeZone = TimeZone(identifier: "UTC")

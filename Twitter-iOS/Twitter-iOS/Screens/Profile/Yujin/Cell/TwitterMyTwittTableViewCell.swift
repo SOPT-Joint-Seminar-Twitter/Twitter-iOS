@@ -22,36 +22,18 @@ class TwitterMyTwittTableViewCell: UITableViewCell {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var staticsButton: UIButton!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
-    }
-    func setUI() {
-        makeImageCircle(profileImage)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
-    func setData(_ myTwittData : TwittModel) {
-        profileImage.image = myTwittData.profileImage
-        nickNameLabel.text = myTwittData.nickName
-        idLabel.text = myTwittData.idLabel
+    func setData(_ myTwittData : TwittResponse) {
+        profileImage.image = ImageLiteral.Writing.imgProfile6
+        profileImage.makeRounded(cornerRadius: profileImage.frame.width / 2)
+        nickNameLabel.text = myTwittData.writer.userName
         contentLabel.text = myTwittData.content
-    }
-    
-}
-extension TwitterMyTwittTableViewCell{
-    func makeImageCircle(_ imageView: UIImageView) {
-        imageView.layer.cornerRadius = imageView.frame.height / 2
-        imageView.layer.borderWidth = 4
-        imageView.layer.borderColor = UIColor.twitter_black.cgColor
-        
-        // 뷰의 경계에 맞춰주기
-        imageView.clipsToBounds = true
+        idLabel.text = myTwittData.writer.id
     }
 }
