@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     
     // MARK: Passing Data
     private var userKeyId = ""
+    private var userName = ""
     
     // MARK: Constraints
     @IBOutlet weak var barViewLeading: NSLayoutConstraint!
@@ -47,8 +48,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     private var currentIdx = 0
     private var btnTapped = false
     
-    private var userId = ""
-    private var userName = ""
+    
     
     // MARK: Floating Button
     private let floatingButton = UIButton()
@@ -62,7 +62,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
     @objc func plutBtnTapped() {
         let writingVC = SuYeonWritingViewController()
         writingVC.modalPresentationStyle = .fullScreen
-        writingVC.userId = userId
+        writingVC.userId = userKeyId
         writingVC.userName = userName
         self.present(writingVC, animated: true)
     }
@@ -282,7 +282,7 @@ extension ProfileViewController {
                 self.profileIdLabel.text = data.userId
                 self.introductionLabel.text = data.introduce
                 
-                self.userId = data.userId
+                self.userKeyId = data.id
                 self.userName = data.userName
                 
                 if let date = data.createdAt.toDate() {

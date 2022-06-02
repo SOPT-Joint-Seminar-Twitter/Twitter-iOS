@@ -87,7 +87,6 @@ extension TweetTableViewCell {
                 guard let data = data as? Like else { return }
                 self.likeCountLabel.text = data.likeCount.description
                 self.likeButton.isSelected = data.isLike
-                print("성공")
             case .requestErr:
                 print("requestErr")
             case .pathErr:
