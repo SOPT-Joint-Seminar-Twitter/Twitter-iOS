@@ -28,10 +28,7 @@ extension YJUserRouter : BaseRouter {
     
     var parameters: RequestParams {
         switch self {
-        case .postLike(let postId):
-            let body: [String : Any] = ["postId" : postId]
-            return .requestBody(body)
-        case .getList, .getUser :
+        case .getList, .getUser, .postLike:
             return .requestPlain
         }
     }

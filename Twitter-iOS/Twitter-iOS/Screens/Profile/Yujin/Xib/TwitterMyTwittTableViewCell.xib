@@ -11,6 +11,9 @@
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
@@ -18,11 +21,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TwitterMyTwittTableViewCell" customModule="Twitter_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="87"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="KGk-i7-Jjw" customClass="TwitterMyTwittTableViewCell" customModule="Twitter_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="138"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="390" height="87"/>
+                <rect key="frame" x="0.0" y="0.0" width="425" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile5" translatesAutoresizingMaskIntoConstraints="NO" id="gif-H1-mOt">
@@ -33,13 +36,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먀막" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-Wb-CrF">
-                        <rect key="frame" x="76" y="5" width="24.5" height="19.5"/>
+                        <rect key="frame" x="76" y="5" width="24.5" height="70.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_white"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@hoho_0518 · 2초" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7I-yt-dYe">
-                        <rect key="frame" x="108.5" y="5" width="112.5" height="19.5"/>
+                        <rect key="frame" x="108.5" y="5" width="112.5" height="70.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_gray50"/>
                         <nil key="highlightedColor"/>
@@ -54,13 +57,13 @@
                         <buttonConfiguration key="configuration" style="plain" image="iconMoreButton"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="트위터로 글 작성하기~!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-Hy-gpt">
-                        <rect key="frame" x="76" y="28.5" width="129.5" height="16.5"/>
+                        <rect key="frame" x="76" y="79.5" width="129.5" height="16.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" name="twitter_white"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-tS-0x1">
-                        <rect key="frame" x="72" y="50" width="304" height="24"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-tS-0x1">
+                        <rect key="frame" x="72" y="101" width="300" height="24"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-AO-g4k">
                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -72,7 +75,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="iconComment"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpA-Ml-4Os">
-                                <rect key="frame" x="70" y="0.0" width="24" height="24"/>
+                                <rect key="frame" x="63" y="0.0" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="N7A-sf-bm8"/>
                                     <constraint firstAttribute="width" constant="24" id="eQo-mw-Uby"/>
@@ -80,17 +83,31 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="iconRetweetGray"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLE-tY-Gvu">
-                                <rect key="frame" x="140" y="0.0" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="HfN-4p-hnB"/>
-                                    <constraint firstAttribute="width" constant="24" id="lis-qe-dz2"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="iconHeart"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="D9h-q4-IvJ">
+                                <rect key="frame" x="126" y="0.0" width="48" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9N-7b-yVo">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="7iY-KH-6hi"/>
+                                            <constraint firstAttribute="height" constant="24" id="DF7-zl-fgR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="iconHeart"/>
+                                        <connections>
+                                            <action selector="heartButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OLs-go-5Q3"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-47-Vzb">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                                        <color key="textColor" name="twitter_gray50"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0e-1S-JHs">
-                                <rect key="frame" x="210" y="0.0" width="24" height="24"/>
+                                <rect key="frame" x="213" y="0.0" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="8DE-4F-M9g"/>
                                     <constraint firstAttribute="height" constant="24" id="eC4-fU-VO2"/>
@@ -99,7 +116,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="iconShare"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-J2-HpJ">
-                                <rect key="frame" x="280" y="0.0" width="24" height="24"/>
+                                <rect key="frame" x="276" y="0.0" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="KCg-Fe-b27"/>
                                     <constraint firstAttribute="height" constant="24" id="vU9-Hd-95b"/>
@@ -118,6 +135,7 @@
                     <constraint firstItem="khh-Hy-gpt" firstAttribute="top" secondItem="q7I-yt-dYe" secondAttribute="bottom" constant="4" id="Dxx-oM-GIB"/>
                     <constraint firstItem="gif-H1-mOt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GJl-KI-uAk"/>
                     <constraint firstAttribute="bottom" secondItem="J3V-tS-0x1" secondAttribute="bottom" constant="13" id="NiV-SP-CpA"/>
+                    <constraint firstAttribute="trailing" secondItem="J3V-tS-0x1" secondAttribute="trailing" constant="18" id="OPY-VL-co5"/>
                     <constraint firstItem="J3V-tS-0x1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="72" id="Pqg-ax-tPb"/>
                     <constraint firstItem="khh-Hy-gpt" firstAttribute="top" secondItem="cYL-Wb-CrF" secondAttribute="bottom" constant="4" id="XIZ-3y-snY"/>
                     <constraint firstItem="q7I-yt-dYe" firstAttribute="leading" secondItem="cYL-Wb-CrF" secondAttribute="trailing" constant="8" id="aQj-JR-f6v"/>
@@ -130,17 +148,18 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="chatButton" destination="yXV-AO-g4k" id="Vd9-Kg-XJb"/>
-                <outlet property="contentLabel" destination="khh-Hy-gpt" id="Yje-bG-Sp0"/>
-                <outlet property="heartButton" destination="B0e-1S-JHs" id="Fg5-pf-pKH"/>
-                <outlet property="idLabel" destination="q7I-yt-dYe" id="iI6-4Y-1qp"/>
-                <outlet property="nickNameLabel" destination="cYL-Wb-CrF" id="vUI-iG-QQ9"/>
-                <outlet property="profileImage" destination="gif-H1-mOt" id="OWL-0N-UQu"/>
-                <outlet property="retwittButton" destination="kpA-Ml-4Os" id="djq-8y-Fds"/>
-                <outlet property="shareButton" destination="B0e-1S-JHs" id="msg-eJ-YPx"/>
-                <outlet property="staticsButton" destination="oTQ-J2-HpJ" id="37t-au-5to"/>
+                <outlet property="chatButton" destination="yXV-AO-g4k" id="edp-MH-Nif"/>
+                <outlet property="contentLabel" destination="khh-Hy-gpt" id="svt-UY-NZ0"/>
+                <outlet property="heartButton" destination="n9N-7b-yVo" id="XFL-qf-3Ce"/>
+                <outlet property="idLabel" destination="q7I-yt-dYe" id="xYl-mE-ELh"/>
+                <outlet property="likeCount" destination="3m1-47-Vzb" id="qOp-Di-M57"/>
+                <outlet property="nickNameLabel" destination="cYL-Wb-CrF" id="kSX-xl-BmQ"/>
+                <outlet property="profileImage" destination="gif-H1-mOt" id="OTe-qh-aBm"/>
+                <outlet property="retwittButton" destination="kpA-Ml-4Os" id="PLA-a6-cdc"/>
+                <outlet property="shareButton" destination="B0e-1S-JHs" id="j7w-ZT-Pcy"/>
+                <outlet property="staticsButton" destination="oTQ-J2-HpJ" id="cji-vH-SSU"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="124.21875"/>
+            <point key="canvasLocation" x="163.04347826086959" y="141.29464285714286"/>
         </tableViewCell>
     </objects>
     <resources>

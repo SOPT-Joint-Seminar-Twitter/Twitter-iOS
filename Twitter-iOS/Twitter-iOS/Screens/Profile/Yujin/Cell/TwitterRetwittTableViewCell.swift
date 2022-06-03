@@ -8,17 +8,15 @@
 import UIKit
 
 class TwitterRetwittTableViewCell: UITableViewCell {
-
+    
     static let identifier = "TwitterRetwittTableViewCell"
+    
+    var postId = ""
     
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var didRetwittLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet weak var commentButton: UIButton!
-    @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var retwittButton: UIButton!
     @IBOutlet weak var retwittCountLabel: UILabel!
     @IBOutlet weak var heartButton: UIButton!
@@ -28,22 +26,71 @@ class TwitterRetwittTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setUI()
     }
+    
     func setUI() {
+        postLike(postId: postId)
         makeImageCircle(profileImg)
-    }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    func setData(_ reTwittModel : TwittModel) {
-        profileImg.image = reTwittModel.profileImage
-        nameLabel.text = reTwittModel.nickName
-        idLabel.text = reTwittModel.idLabel
-        contentLabel.text = reTwittModel.content
+        setHeartImage()
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        postLike(postId: postId)
+    }
+    
+    func setData(_ reTwittModel : TwittResponse) {
+        profileImg.image = ImageLiteral.Writing.imgProfile3
+        nameLabel.text = reTwittModel.writer.userName
+        idLabel.text = "\(reTwittModel.writer.userId) ∙ 3일전"
+        contentLabel.text = reTwittModel.content
+        postId = reTwittModel.twitId
+        setHeartImage()
+    }
+    
+    @IBAction func heartButtonDidTapped(_ sender: UIButton) {
+        postLike(postId: postId)
+    }
 }
+// MARK: - 서버 통신
+extension TwitterRetwittTableViewCell{
+    func postLike(postId:String) {
+        TwittService.shared.postLike(postId: postId){
+            result in
+            switch result{
+            case .success(let data):
+                guard let data = data as? LikeResponse else { return }
+                self.makeHiddenWhenHeartCountLabelIsZero(data: data)
+                self.heartButton.isSelected = data.isLike
+                self.setHeartImage()
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    func setHeartImage() {
+        if self.heartButton.isSelected {
+            self.heartButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
+        } else {
+            self.heartButton.setImage(UIImage(named: "iconHeart"), for: .normal)
+        }
+    }
+    func makeHiddenWhenHeartCountLabelIsZero(data : LikeResponse) {
+        if data.likeCount == 0 {
+            self.heartCountLabel.isHidden = true
+        }
+        else {
+            self.heartCountLabel.isHidden = false
+            self.heartCountLabel.text = data.likeCount.description
+        }
+    }
+}
+// MARK: - UI
 extension TwitterRetwittTableViewCell{
     func makeImageCircle(_ imageView: UIImageView) {
         imageView.layer.cornerRadius = imageView.frame.height / 2

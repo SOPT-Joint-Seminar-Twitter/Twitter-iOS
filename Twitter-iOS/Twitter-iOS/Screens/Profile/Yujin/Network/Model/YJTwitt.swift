@@ -8,12 +8,12 @@
 import Foundation
 
 struct TwittResponse : Codable {
-    let twitId : String
-    let content : String
-    let writer : YJWriter
-    let likeCount : Int
     let isLike : Bool
     let isRetwit : Bool
+    let twitId : String
+    let content : String
+    let likeCount : Int
+    let writer : YJWriter
     
     enum CodingKeys : String, CodingKey {
         case twitId = "_id"
