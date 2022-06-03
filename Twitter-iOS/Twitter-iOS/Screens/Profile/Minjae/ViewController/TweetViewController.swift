@@ -14,6 +14,7 @@ class TweetViewController: UIViewController {
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     var tweetDataList: [Twit] = []
+    var likeModel: Like?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,6 @@ class TweetViewController: UIViewController {
     }
 
     private func setTableView() {
-//        tableView.delegate = self
         tableView.isScrollEnabled = false
         tableView.dataSource = self
 
@@ -79,11 +79,16 @@ extension TweetViewController: UITableViewDataSource {
             cell.shareBtn.isHidden = true
             cell.bottomRetweetIcon.tintColor = .twitter_green
             cell.retweetIcon.tintColor = .twitter_gray50
-            cell.bottomStackViewTrailing.constant = 109
-
+            cell.bottomStackViewTrailing.constant = 120
         }
         
-        cell.postId = tweetDataList[indexPath.row].id
+        cell.closure = {
+            self.likeTwit(postId: self.tweetDataList[indexPath.row].id)
+            if let model = self.likeModel {
+                cell.setLikeData(dataModel: model)
+            }
+        }
+        
         cell.setData(dataModel: tweetDataList[indexPath.row])
         return cell
     }
@@ -111,5 +116,31 @@ extension TweetViewController {
                 print("networkFail")
             }
         }
+    }
+}
+
+
+extension TweetViewController {
+    
+    private func likeTwit(postId: String) {
+        UserService.shared.likeTwit(postId: postId) { result in
+            switch result {
+            case .success(let data):
+                guard let data = data as? Like else { return }
+                self.likeModel = data
+//                let cellVC = Bundle.main.loadNibNamed("TweetTableViewCell", owner: nil)?.first as? TweetTableViewCell
+//                cellVC?.setLikeData(dataModel: data)
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+        
     }
 }

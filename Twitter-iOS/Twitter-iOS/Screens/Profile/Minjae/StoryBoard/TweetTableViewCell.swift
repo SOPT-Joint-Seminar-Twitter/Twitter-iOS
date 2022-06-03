@@ -46,7 +46,7 @@ class TweetTableViewCell: UITableViewCell {
     
     let labelTrailingConstant: CGFloat = 27
     
-    var postId = ""
+    var closure: (() -> Void)?
     
     func setData(dataModel: Twit) {
         profileImage.image = ImageLiteral.Writing.imgProfile4
@@ -62,7 +62,6 @@ class TweetTableViewCell: UITableViewCell {
         }
         
         likeButton.isSelected = dataModel.isLike
-        
         if likeButton.isSelected {
             likeButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
         } else {
@@ -70,48 +69,25 @@ class TweetTableViewCell: UITableViewCell {
         }
         
         contentWidth.constant = UIScreen.main.bounds.width - (profileImage.frame.width + profileImageLeading.constant + profileImageTrailing.constant + labelTrailingConstant)
-
+    }
+    
+    func setLikeData(dataModel: Like) {
+        likeButton.isSelected = dataModel.isLike
+        if dataModel.likeCount == 0 {
+            likeCountLabel.isHidden = true
+        } else {
+            likeCountLabel.text = dataModel.likeCount.description
+        }
+        
+        if likeButton.isSelected {
+            likeButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
+        } else {
+            likeButton.setImage(UIImage(named: "iconHeart"), for: .normal)
+        }
     }
     
     @IBAction func likeBtnDidTapped(_ sender: UIButton) {
-        likeTwit(postId: postId)
+        closure?()
     }
     
-}
-
-
-extension TweetTableViewCell {
-    
-    private func likeTwit(postId: String) {
-        UserService.shared.likeTwit(postId: postId) { result in
-            switch result {
-            case .success(let data):
-                guard let data = data as? Like else { return }
-                if data.likeCount == 0 {
-                    self.likeCountLabel.isHidden = true
-                } else {
-                    self.likeCountLabel.isHidden = false
-                    self.likeCountLabel.text = data.likeCount.description
-                }
-                
-                self.likeButton.isSelected = data.isLike
-                
-                if self.likeButton.isSelected {
-                    self.likeButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
-                } else {
-                    self.likeButton.setImage(UIImage(named: "iconHeart"), for: .normal)
-                }
-                
-            case .requestErr:
-                print("requestErr")
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
-        
-    }
 }
