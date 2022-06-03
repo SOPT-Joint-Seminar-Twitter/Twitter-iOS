@@ -8,6 +8,14 @@
 import UIKit
 class YujinStoryboard2ViewController: UIViewController {
     
+    // MARK: - Profile
+    private var userKeyId : String = ""
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userId: UILabel!
+    @IBOutlet weak var createdAt: UILabel!
+    @IBOutlet weak var introduce: UILabel!
+    
+    // MARK: - TableView
     @IBOutlet weak var tabbar: UIView!
     
     @IBOutlet weak var width: NSLayoutConstraint! //headerVIew의 최소 높이값
@@ -21,7 +29,7 @@ class YujinStoryboard2ViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var upperHeaderView: UIView!
     
-    // MARK: - UI
+    // MARK: - Floating Button
     private let floatingButton : UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         button.backgroundColor = .twitter_blue1
@@ -37,12 +45,19 @@ class YujinStoryboard2ViewController: UIViewController {
             heightConstraint.constant = maxHeight
         }
     }
+    // MARK: - Set 함수
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getUser()
+        setDelegation()
+        setFloatingButton()
+    }
+    private func setDelegation() {
         mainTableView.delegate = self
-        mainTableView.dataSource = self
-        
+//        mainTableView.dataSource = self
+    }
+    private func setFloatingButton() {
         self.view.addSubView(floatingButton)
         registerCell()
         floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
@@ -67,7 +82,7 @@ class YujinStoryboard2ViewController: UIViewController {
     }
 }
 
-// MARK: - Delegate
+// MARK: - TableView Delegate
 extension YujinStoryboard2ViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
@@ -83,29 +98,64 @@ extension YujinStoryboard2ViewController : UITableViewDelegate{
         upperHeaderView.alpha = percentage
     }
 }
-extension YujinStoryboard2ViewController : UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        print(indexPath.row)
-        let twittCells = TwittModel.sampleData[indexPath.row]
-        
-        switch indexPath.row {
-            
-        default:
-            if twittCells.type == .myTwitt {
-                //                print("indexPath == myTwitt", indexPath.row)
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
-                cell.setData(TwittModel.sampleData[indexPath.row])
-                return cell
-            } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
-                cell.setData(TwittModel.sampleData[indexPath.row])
-                return cell
+//extension YujinStoryboard2ViewController : UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let twittCells = TwittModel.sampleData[indexPath.row]
+//
+//        if twittCells.type == .myTwitt {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterMyTwittTableViewCell.identifier) as? TwitterMyTwittTableViewCell else {return UITableViewCell() }
+//            cell.setData(TwittModel.sampleData[indexPath.row])
+//            return cell
+//        } else {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
+//            cell.setData(TwittModel.sampleData[indexPath.row])
+//            return cell
+//        }
+//    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return TwittModel.sampleData.count
+//    }
+//}
+extension YujinStoryboard2ViewController {
+    func getUser() {
+    
+        TwittService.shared.getUser() { result in
+            switch result {
+            case .success(let data):
+                guard let data = data as? UserResponse else {return}
+                self.userKeyId = data.id
+                self.userName.text = data.userName
+                self.userId.text = data.userId
+                self.introduce.text = data.introduce
+                self.createdAt.text = self.formatDate(dataStr: data.createdAt)
+                print("성공")
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
             }
         }
-        
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TwittModel.sampleData.count
+    func formatDate(dataStr : String) -> String {
+//        print("This is dataStr",dataStr)
+        //문자열 -> Date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        
+        //Date -> 문자열
+        guard let convertDate = dateFormatter.date(from: dataStr) else{return ""}// Date터입으로 변환
+//        print("This is convertDate",convertDate)
+        let myDateFomatter = DateFormatter()
+        myDateFomatter.dateFormat = "YYYY년 MM월에 가입함"
+        myDateFomatter.timeZone = TimeZone(identifier: "UTC")
+        
+        let convertStr = myDateFomatter.string(from: convertDate)
+        return convertStr
     }
 }
 
