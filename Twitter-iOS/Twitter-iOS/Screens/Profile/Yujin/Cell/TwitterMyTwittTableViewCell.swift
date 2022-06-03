@@ -28,33 +28,32 @@ class TwitterMyTwittTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
-        postLike(postId: postId)
     }
+    
     func setUI() {
+        postLike(postId: postId)
         makeImageCircle(profileImage)
+        setHeartImage()
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if heartButton.isSelected {
-            print("pushed!!")
-            heartButton.setImage(UIImage(named:"iconHeartOn"), for: .selected)
-        }
-        else {
-            print("not pushed!!")
-            heartButton.setImage(UIImage(named: "iconHeart"), for: .normal)
-        }
+        postLike(postId: postId)
     }
+    
     func setData(_ myTwittData : TwittResponse) {
         profileImage.image = ImageLiteral.Writing.imgProfile6
         nickNameLabel.text = myTwittData.writer.userName
         contentLabel.text = myTwittData.content
         idLabel.text = "\(myTwittData.writer.userId) ∙ 2일전"
         postId = myTwittData.twitId
+        setHeartImage()
     }
+    
     @IBAction func heartButtonDidTapped(_ sender: UIButton) {
-        print("pushed tapped")
         postLike(postId: postId)
     }
+    
 }
 // MARK: - 서버 통신
 extension TwitterMyTwittTableViewCell{
@@ -64,15 +63,9 @@ extension TwitterMyTwittTableViewCell{
             switch result{
             case .success(let data):
                 guard let data = data as? LikeResponse else { return }
-                if data.likeCount.description == "0"{
-                    self.likeCount.isHidden = true
-                }
-                else {
-                    self.likeCount.isHidden = false
-                    self.likeCount.text = data.likeCount.description
-                }
+                self.makeHiddenWhenHeartCountLabelIsZero(data: data)
                 self.heartButton.isSelected = data.isLike
-                self.setSelected(true, animated: true)
+                self.setHeartImage()
             case .requestErr:
                 print("requestErr")
             case .pathErr:
@@ -82,6 +75,22 @@ extension TwitterMyTwittTableViewCell{
             case .networkFail:
                 print("networkFail")
             }
+        }
+    }
+    func setHeartImage() {
+        if self.heartButton.isSelected {
+            self.heartButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
+        } else {
+            self.heartButton.setImage(UIImage(named: "iconHeart"), for: .normal)
+        }
+    }
+    func makeHiddenWhenHeartCountLabelIsZero(data : LikeResponse) {
+        if data.likeCount == 0 {
+            self.likeCount.isHidden = true
+        }
+        else {
+            self.likeCount.isHidden = false
+            self.likeCount.text = data.likeCount.description
         }
     }
 }

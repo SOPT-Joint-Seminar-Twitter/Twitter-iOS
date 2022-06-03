@@ -8,8 +8,9 @@
 import UIKit
 
 class TwitterRetwittTableViewCell: UITableViewCell {
-
+    
     static let identifier = "TwitterRetwittTableViewCell"
+    
     var postId = ""
     
     @IBOutlet weak var profileImg: UIImageView!
@@ -25,38 +26,27 @@ class TwitterRetwittTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setUI()
     }
+    
     func setUI() {
+        postLike(postId: postId)
         makeImageCircle(profileImg)
+        setHeartImage()
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        if heartButton.isSelected {
-            print("pushed!!")
-            heartButton.setImage(UIImage(named:"iconHeartOn"), for: .selected)
-        }
-        else {
-            print("not pushed!!")
-            heartButton.setImage(UIImage(named: "iconHeart"), for: .normal)
-        }
+        postLike(postId: postId)
     }
+    
     func setData(_ reTwittModel : TwittResponse) {
         profileImg.image = ImageLiteral.Writing.imgProfile3
         nameLabel.text = reTwittModel.writer.userName
         idLabel.text = "\(reTwittModel.writer.userId) ∙ 3일전"
         contentLabel.text = reTwittModel.content
         postId = reTwittModel.twitId
-        print(postId,"postIDDDD")
-        if heartButton.isSelected {
-            print("pushed!!")
-            self.heartCountLabel.isHidden = false
-            heartButton.setImage(UIImage(named:"iconHeartOn"), for: .selected)
-        }
-        else {
-            print("not pushed!!")
-            heartButton.setImage(UIImage(named: "iconHeart"), for: .normal)
-        }
+        setHeartImage()
     }
+    
     @IBAction func heartButtonDidTapped(_ sender: UIButton) {
         postLike(postId: postId)
     }
@@ -69,15 +59,9 @@ extension TwitterRetwittTableViewCell{
             switch result{
             case .success(let data):
                 guard let data = data as? LikeResponse else { return }
-                if data.likeCount.description == "0"{
-                    self.heartCountLabel.isHidden = true
-                }
-                else {
-                    self.heartCountLabel.isHidden = false
-                    self.heartCountLabel.text = data.likeCount.description
-                }
+                self.makeHiddenWhenHeartCountLabelIsZero(data: data)
                 self.heartButton.isSelected = data.isLike
-                self.setSelected(true, animated: true)
+                self.setHeartImage()
             case .requestErr:
                 print("requestErr")
             case .pathErr:
@@ -87,6 +71,22 @@ extension TwitterRetwittTableViewCell{
             case .networkFail:
                 print("networkFail")
             }
+        }
+    }
+    func setHeartImage() {
+        if self.heartButton.isSelected {
+            self.heartButton.setImage(UIImage(named: "iconHeartOn"), for: .selected)
+        } else {
+            self.heartButton.setImage(UIImage(named: "iconHeart"), for: .normal)
+        }
+    }
+    func makeHiddenWhenHeartCountLabelIsZero(data : LikeResponse) {
+        if data.likeCount == 0 {
+            self.heartCountLabel.isHidden = true
+        }
+        else {
+            self.heartCountLabel.isHidden = false
+            self.heartCountLabel.text = data.likeCount.description
         }
     }
 }

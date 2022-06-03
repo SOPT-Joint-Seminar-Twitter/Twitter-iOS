@@ -75,10 +75,11 @@ class YujinStoryboard2ViewController: UIViewController {
     @objc private func didTapButton() {
         let SuYeonWritingViewController = SuYeonWritingViewController()
         SuYeonWritingViewController.modalPresentationStyle = .fullScreen
+        SuYeonWritingViewController.userId = userKeyId
+        SuYeonWritingViewController.userName = userName.text
         self.present(SuYeonWritingViewController, animated: true)
     }
     private func registerCell() {
-//        print("registerCell")
         let myTwittNib = UINib(nibName: TwitterMyTwittTableViewCell.identifier, bundle: nil)
         let reTwittNib = UINib(nibName: TwitterRetwittTableViewCell.identifier, bundle: nil)
         mainTableView.register(myTwittNib, forCellReuseIdentifier: TwitterMyTwittTableViewCell.identifier)
@@ -112,6 +113,7 @@ extension YujinStoryboard2ViewController : UITableViewDataSource{
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TwitterRetwittTableViewCell.identifier) as? TwitterRetwittTableViewCell else {return UITableViewCell() }
             cell.setData(twittDataList[indexPath.row])
+            
             cell.postId = twittDataList[indexPath.row].twitId
             return cell
         }
